@@ -1,6 +1,6 @@
 Array
 (
-    [0] => https://laravel.bigcartel.com/products
+    [0] => https://forge.laravel.com
     [1] => /
     [2] => https://forge.laravel.com
     [3] => https://vapor.laravel.com
