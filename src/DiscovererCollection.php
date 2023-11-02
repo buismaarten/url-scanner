@@ -19,6 +19,8 @@ class DiscovererCollection
     {
         $results = [];
 
+        // @todo: convert relative links to absolute
+        // @todo: apply filters
         foreach ($this->discoverers as $discoverer) {
             $results = array_merge($results, $discoverer->discover($content));
         }
