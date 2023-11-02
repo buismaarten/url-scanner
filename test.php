@@ -13,33 +13,9 @@ require_once __DIR__.'/src/Filters/AbstractFilter.php';
 require_once __DIR__.'/src/Filters/AllowedHostsFilter.php';
 require_once __DIR__.'/src/Filters/AllowedSchemeFilter.php';
 
+require_once __DIR__.'/src/DiscovererCollection.php';
 
-class DiscovererCollection
-{
-    private array $discoverers = [];
-    private array $filters = [];
 
-    public function addDiscoverer(AbstractDiscoverer $discoverer): void
-    {
-        $this->discoverers[] = $discoverer;
-    }
-
-    public function addFilter(AbstractFilter $filter): void
-    {
-        $this->filters[] = $filter;
-    }
-
-    public function discover(string $content): array
-    {
-        $results = [];
-
-        foreach ($this->discoverers as $discoverer) {
-            $results = array_merge($results, $discoverer->discover($content));
-        }
-
-        return $results;
-    }
-}
 
 class Spider
 {
@@ -72,9 +48,9 @@ class Spider
 }
 
 
-
 $spider = new Spider;
 $spider->getDiscovererCollection()->addDiscoverer(new CssSelectorDiscoverer('a[href]', 'href'));
 $spider->getDiscovererCollection()->addFilter(new AllowedSchemeFilter(['http', 'https']));
 
 print_r($spider->crawl('https://laravel.com'));
+exit;
