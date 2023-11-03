@@ -1,5 +1,7 @@
 <?php
 
+use Symfony\Component\DomCrawler\UriResolver;
+
 class DiscovererCollection
 {
     private array $discoverers = [];
@@ -19,10 +21,13 @@ class DiscovererCollection
     {
         $results = [];
 
-        // @todo: convert relative links to absolute
-        // @todo: apply filters
         foreach ($this->discoverers as $discoverer) {
-            $results = array_merge($results, $discoverer->discover($resource));
+            $urls = $discoverer->discover($resource);
+
+            // @todo: apply filters
+            foreach ($urls as $url) {
+                $results[] = UriResolver::resolve($url, $resource->getUrl());
+            }
         }
 
         return $results;

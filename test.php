@@ -53,5 +53,5 @@ $spider = new Spider;
 $spider->getDiscovererCollection()->addDiscoverer(new CssSelectorDiscoverer('a[href]', 'href'));
 $spider->getDiscovererCollection()->addFilter(new AllowedSchemeFilter(['http', 'https']));
 
-print_r($spider->crawl('https://laravel.com'));
+print_r($spider->crawl('https://laravel.com/docs'));
 exit;
