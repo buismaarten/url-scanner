@@ -25,6 +25,6 @@ class Resource
 
     public function getCrawler(): Crawler
     {
-        return new Crawler($this->content);
+        return new Crawler($this->getContent());
     }
 }
