@@ -15,14 +15,14 @@ class DiscovererCollection
         $this->filters[] = $filter;
     }
 
-    public function discover(string $content): array
+    public function discover(Resource $resource): array
     {
         $results = [];
 
         // @todo: convert relative links to absolute
         // @todo: apply filters
         foreach ($this->discoverers as $discoverer) {
-            $results = array_merge($results, $discoverer->discover($content));
+            $results = array_merge($results, $discoverer->discover($resource));
         }
 
         return $results;

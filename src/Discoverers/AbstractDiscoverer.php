@@ -13,12 +13,12 @@ abstract class AbstractDiscoverer
         $this->attribute = $attribute;
     }
 
-    public function discover(string $content): array
+    public function discover(Resource $resource): array
     {
-        return $this->getFilteredCrawler($content)->each(function (Crawler $node): string {
+        return $this->getFilteredCrawler($resource)->each(function (Crawler $node): string {
             return $node->attr($this->attribute);
         });
     }
 
-    abstract protected function getFilteredCrawler(string $content): Crawler;
+    abstract protected function getFilteredCrawler(Resource $resource): Crawler;
 }

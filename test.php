@@ -14,6 +14,7 @@ require_once __DIR__.'/src/Filters/AllowedHostsFilter.php';
 require_once __DIR__.'/src/Filters/AllowedSchemeFilter.php';
 
 require_once __DIR__.'/src/DiscovererCollection.php';
+require_once __DIR__.'/src/Resource.php';
 
 
 
@@ -40,8 +41,8 @@ class Spider
 
     public function crawl(string $url): array
     {
-        $content = $this->getDownloader()->download($url);
-        $results = $this->getDiscovererCollection()->discover($content);
+        $resource = $this->getDownloader()->download($url);
+        $results = $this->getDiscovererCollection()->discover($resource);
 
         return $results;
     }
