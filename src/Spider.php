@@ -24,8 +24,12 @@ class Spider
     public function crawl(string $url): array
     {
         $resource = $this->getDownloader()->download($url);
-        $results = $this->getDiscovererCollection()->discover($resource);
 
-        return $results;
+        // @todo: error handling
+        if ($resource === null) {
+            return [];
+        }
+
+        return $this->getDiscovererCollection()->discover($resource);
     }
 }

@@ -1,7 +1,7 @@
 Array
 (
     [0] => https://laravel.com/docs#main-content
-    [1] => https://vapor.laravel.com
+    [1] => https://laracon.au
     [2] => https://laravel.com/
     [3] => https://laravel.com/docs/10.x/releases
     [4] => https://laravel.com/docs/10.x/upgrade

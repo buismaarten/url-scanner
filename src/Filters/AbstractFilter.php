@@ -2,5 +2,5 @@
 
 abstract class AbstractFilter
 {
-    abstract public function match(string $uri): bool;
+    abstract public function match(string $url): bool;
 }

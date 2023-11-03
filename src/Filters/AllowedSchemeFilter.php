@@ -9,7 +9,7 @@ class AllowedSchemeFilter extends AbstractFilter
         $this->allowedSchemes = $allowedSchemes;
     }
 
-    public function match(string $uri): bool
+    public function match(string $url): bool
     {
         // @todo: implement filter
         return true;

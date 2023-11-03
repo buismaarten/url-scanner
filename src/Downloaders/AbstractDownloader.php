@@ -2,5 +2,5 @@
 
 abstract class AbstractDownloader
 {
-    abstract public function download(string $url): Resource;
+    abstract public function download(string $url): ?Resource;
 }
