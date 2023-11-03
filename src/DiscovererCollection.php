@@ -33,9 +33,7 @@ class DiscovererCollection
         }
 
         foreach ($this->filters as $filter) {
-            $results = array_filter($results, function (string $url) use ($filter): bool {
-                return ($filter->match($url) === false);
-            });
+            $results = array_filter($results, fn (string $url) => ($filter->match($url) === false));
         }
 
         return $results;
