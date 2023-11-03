@@ -24,9 +24,13 @@ class DiscovererCollection
         foreach ($this->discoverers as $discoverer) {
             $urls = $discoverer->discover($resource);
 
-            // @todo: apply filters
             foreach ($urls as $url) {
-                $results[] = UriResolver::resolve($url, $resource->getUrl());
+                $resolvedUrl = UriResolver::resolve($url, $resource->getUrl());
+
+                // @todo: apply filters
+                if ($resolvedUrl) {
+                    $results[] = $resolvedUrl;
+                }
             }
         }
 

@@ -1,7 +1,7 @@
 Array
 (
     [0] => https://laravel.com/docs#main-content
-    [1] => https://forge.laravel.com
+    [1] => https://vapor.laravel.com
     [2] => https://laravel.com/
     [3] => https://laravel.com/docs/10.x/releases
     [4] => https://laravel.com/docs/10.x/upgrade
@@ -97,7 +97,7 @@ Array
     [94] => https://laravel.com/docs/10.x/telescope
     [95] => https://laravel.com/docs/10.x/valet
     [96] => https://laravel.com/api/10.x
-    [97] => https://vapor.laravel.com
+    [97] => https://nova.laravel.com
     [98] => https://laravel.com/
     [99] => https://laravel.com/docs/10.x/releases
     [100] => https://laravel.com/docs/10.x/upgrade
