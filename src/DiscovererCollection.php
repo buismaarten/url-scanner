@@ -4,7 +4,10 @@ use Symfony\Component\DomCrawler\UriResolver;
 
 class DiscovererCollection
 {
+    /** @var AbstractDiscoverer[] */
     private array $discoverers = [];
+
+    /** @var AbstractFilter[] */
     private array $filters = [];
 
     public function addDiscoverer(AbstractDiscoverer $discoverer): void
@@ -25,13 +28,14 @@ class DiscovererCollection
             $urls = $discoverer->discover($resource);
 
             foreach ($urls as $url) {
-                $resolvedUrl = UriResolver::resolve($url, $resource->getUrl());
-
-                // @todo: apply filters
-                if ($resolvedUrl) {
-                    $results[] = $resolvedUrl;
-                }
+                $results[] = UriResolver::resolve($url, $resource->getUrl());
             }
+        }
+
+        foreach ($this->filters as $filter) {
+            $results = array_filter($results, function (string $url) use ($filter): bool {
+                return ($filter->match($url) === false);
+            });
         }
 
         return $results;

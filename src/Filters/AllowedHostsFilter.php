@@ -2,6 +2,7 @@
 
 class AllowedHostsFilter extends AbstractFilter
 {
+    /** @var string[] */
     private array $allowedHosts = [];
 
     public function __construct(array $allowedHosts = [])
@@ -12,6 +13,6 @@ class AllowedHostsFilter extends AbstractFilter
     public function match(string $url): bool
     {
         // @todo: implement filter
-        return true;
+        return false;
     }
 }

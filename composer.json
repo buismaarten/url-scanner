@@ -1,5 +1,6 @@
 {
     "require": {
+        "php": "^8.2",
         "symfony/dom-crawler": "^6.3",
         "symfony/css-selector": "^6.3"
     }
