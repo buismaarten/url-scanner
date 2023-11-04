@@ -30,6 +30,6 @@ class Spider
             return [];
         }
 
-        return $this->getDiscovererCollection()->discover($resource);
+        return $this->getDiscovererCollection()->crawl($resource);
     }
 }

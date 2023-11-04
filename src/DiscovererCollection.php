@@ -20,7 +20,7 @@ class DiscovererCollection
         $this->filters[] = $filter;
     }
 
-    public function discover(Resource $resource): array
+    public function crawl(Resource $resource): array
     {
         $results = [];
 
@@ -36,7 +36,9 @@ class DiscovererCollection
             $results = array_filter($results, fn (string $url) => ($filter->match($url) === false));
         }
 
-        // @todo: remove duplicates
+        $results = array_unique($results);
+        $results = array_values($results);
+
         return $results;
     }
 }
