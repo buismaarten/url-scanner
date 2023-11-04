@@ -10,17 +10,15 @@ require_once __DIR__.'/src/Discoverers/CssSelectorDiscoverer.php';
 require_once __DIR__.'/src/Discoverers/XPathSelectorDiscoverer.php';
 
 require_once __DIR__.'/src/Filters/AbstractFilter.php';
-require_once __DIR__.'/src/Filters/AllowedHostsFilter.php';
 require_once __DIR__.'/src/Filters/AllowedSchemeFilter.php';
 
-require_once __DIR__.'/src/DiscovererCollection.php';
 require_once __DIR__.'/src/Resource.php';
 require_once __DIR__.'/src/Spider.php';
 
 
 $spider = new Spider;
-$spider->getDiscovererCollection()->addDiscoverer(new CssSelectorDiscoverer('a[href]', 'href'));
-$spider->getDiscovererCollection()->addFilter(new AllowedSchemeFilter(['http', 'https']));
+$spider->addDiscoverer(new CssSelectorDiscoverer('a[href]', 'href'));
+$spider->addFilter(new AllowedSchemeFilter(['http', 'https']));
 
 print_r($spider->crawl('https://laravel.com/docs'));
 exit;

@@ -1,14 +1,27 @@
 <?php
 
+use Symfony\Component\DomCrawler\UriResolver;
+
 class Spider
 {
     private AbstractDownloader $downloader;
-    private DiscovererCollection $discovererCollection;
 
-    public function __construct(AbstractDownloader $downloader = null, DiscovererCollection $discovererCollection = null)
+    /** @var AbstractDiscoverer[] */
+    private array $discoverers = [];
+
+    /** @var AbstractFilter[] */
+    private array $filters = [];
+
+    /**
+     * @param AbstractDiscoverer[] $discoverers
+     * @param AbstractFilter[]     $filters
+     */
+    public function __construct(AbstractDownloader $downloader = null, array $discoverers = [], array $filters = [])
     {
         $this->downloader = ($downloader ?? new NativeDownloader);
-        $this->discovererCollection = ($discovererCollection ?? new DiscovererCollection);
+
+        $this->discoverers = $discoverers;
+        $this->filters = $filters;
     }
 
     public function getDownloader(): AbstractDownloader
@@ -16,13 +29,19 @@ class Spider
         return $this->downloader;
     }
 
-    public function getDiscovererCollection(): DiscovererCollection
+    public function addDiscoverer(AbstractDiscoverer $discoverer): void
     {
-        return $this->discovererCollection;
+        $this->discoverers[] = $discoverer;
+    }
+
+    public function addFilter(AbstractFilter $filter): void
+    {
+        $this->filters[] = $filter;
     }
 
     public function crawl(string $url): array
     {
+        $results = [];
         $resource = $this->getDownloader()->download($url);
 
         // @todo: error handling
@@ -30,6 +49,21 @@ class Spider
             return [];
         }
 
-        return $this->getDiscovererCollection()->crawl($resource);
+        foreach ($this->discoverers as $discoverer) {
+            $urls = $discoverer->discover($resource);
+
+            foreach ($urls as $url) {
+                $results[] = UriResolver::resolve($url, $resource->getUrl());
+            }
+        }
+
+        foreach ($this->filters as $filter) {
+            $results = array_filter($results, fn (string $url) => ($filter->match($url) === false));
+        }
+
+        $results = array_unique($results);
+        $results = array_values($results);
+
+        return $results;
     }
 }
