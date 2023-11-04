@@ -5,7 +5,7 @@ class AllowedSchemeFilter extends AbstractFilter
     /** @var string[] */
     private array $allowedSchemes = [];
 
-    public function __construct(array $allowedSchemes = [])
+    public function __construct(array $allowedSchemes)
     {
         $this->allowedSchemes = $allowedSchemes;
     }
