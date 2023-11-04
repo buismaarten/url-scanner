@@ -36,6 +36,7 @@ class DiscovererCollection
             $results = array_filter($results, fn (string $url) => ($filter->match($url) === false));
         }
 
+        // @todo: remove duplicates
         return $results;
     }
 }
