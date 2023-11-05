@@ -1,8 +1,8 @@
 Array
 (
     [0] => https://laravel.com/docs#main-content
-    [1] => https://forge.laravel.com
-    [2] => https://laravel.com/
+    [1] => https://laracon.eu
+    [2] => https://laravel.com
     [3] => https://laravel.com/docs/10.x/releases
     [4] => https://laravel.com/docs/10.x/upgrade
     [5] => https://laravel.com/docs/10.x/contributions
@@ -96,7 +96,7 @@ Array
     [93] => https://laravel.com/docs/10.x/telescope
     [94] => https://laravel.com/docs/10.x/valet
     [95] => https://laravel.com/api/10.x
-    [96] => https://nova.laravel.com
+    [96] => https://forge.laravel.com
     [97] => https://laravel.com/docs#meet-laravel
     [98] => https://laravel.com/docs#why-laravel
     [99] => https://laravel.com/docs#your-first-laravel-project
@@ -124,18 +124,18 @@ Array
     [121] => https://www.docker.com/products/docker-desktop
     [122] => http://localhost
     [123] => https://docs.microsoft.com/en-us/windows/wsl/install-win10
-    [124] => https://docs.docker.com/docker-for-windows/wsl/
+    [124] => https://docs.docker.com/docker-for-windows/wsl
     [125] => https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701?rtc=1&activetab=pivot:overviewtab
     [126] => https://code.visualstudio.com
     [127] => https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack
-    [128] => https://docs.docker.com/compose/install/
+    [128] => https://docs.docker.com/compose/install
     [129] => https://laravel.com/docs/10.x/sail#using-devcontainers
     [130] => https://laravel.com/docs/10.x/configuration#environment-configuration
-    [131] => https://dbngin.com/
+    [131] => https://dbngin.com
     [132] => https://www.sqlite.org/index.html
-    [133] => https://www.jetbrains.com/phpstorm/laravel/
+    [133] => https://www.jetbrains.com/phpstorm/laravel
     [134] => https://www.jetbrains.com/help/phpstorm/using-laravel-pint.html
-    [135] => https://laravel-idea.com/
+    [135] => https://laravel-idea.com
     [136] => https://inertiajs.com
     [137] => https://livewire.laravel.com
     [138] => https://nextjs.org
@@ -149,27 +149,27 @@ Array
     [146] => https://laravel-news.com
     [147] => https://laracon.us
     [148] => https://laracon.au
-    [149] => https://laracon.eu/
-    [150] => https://laracon.in/
-    [151] => https://larabelles.com/
-    [152] => https://larajobs.com
-    [153] => https://laracasts.com/discuss
-    [154] => https://laravel.bigcartel.com/products
-    [155] => https://laravel.com/trademark
-    [156] => https://vehikl.com
-    [157] => https://webreinvent.com/?utm_source=laravel&utm_medium=laravel.com&utm_campaign=footer-link
-    [158] => https://tighten.co
-    [159] => https://www.bacancytechnology.com/hire-laravel-developer?utm_source=laravel&utm_medium=partners.laravel&utm_campaign=sponsors
-    [160] => https://64robots.com/
-    [161] => https://activelogic.com/
-    [162] => https://www.blackairplane.com/
-    [163] => https://www.byte5.net/
-    [164] => https://www.curotec.com/services/technologies/laravel/
-    [165] => https://www.cyber-duck.co.uk/how-we-work/technology/laravel?utm_source=Laravel%20Partner&utm_medium=Sponsorship
-    [166] => https://devsquad.com/
-    [167] => https://jump24.co.uk/
-    [168] => https://kirschbaumdevelopment.com/
-    [169] => https://envoyer.io
+    [149] => https://laracon.in
+    [150] => https://larabelles.com
+    [151] => https://larajobs.com
+    [152] => https://laracasts.com/discuss
+    [153] => https://laravel.bigcartel.com/products
+    [154] => https://laravel.com/trademark
+    [155] => https://vehikl.com
+    [156] => https://webreinvent.com/?utm_source=laravel&utm_medium=laravel.com&utm_campaign=footer-link
+    [157] => https://tighten.co
+    [158] => https://www.bacancytechnology.com/hire-laravel-developer?utm_source=laravel&utm_medium=partners.laravel&utm_campaign=sponsors
+    [159] => https://64robots.com
+    [160] => https://activelogic.com
+    [161] => https://www.blackairplane.com
+    [162] => https://www.byte5.net
+    [163] => https://www.curotec.com/services/technologies/laravel
+    [164] => https://www.cyber-duck.co.uk/how-we-work/technology/laravel?utm_source=Laravel%20Partner&utm_medium=Sponsorship
+    [165] => https://devsquad.com
+    [166] => https://jump24.co.uk
+    [167] => https://kirschbaumdevelopment.com
+    [168] => https://envoyer.io
+    [169] => https://nova.laravel.com
     [170] => https://spark.laravel.com
     [171] => https://torchlight.dev
 )
