@@ -44,7 +44,6 @@ class Spider
         $results = [];
         $resource = $this->getDownloader()->download($url);
 
-        // @todo: error handling
         if ($resource === null) {
             return [];
         }
