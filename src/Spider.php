@@ -24,9 +24,9 @@ class Spider
         $this->filters = $filters;
     }
 
-    public function getDownloader(): AbstractDownloader
+    public function setDownloader(AbstractDownloader $downloader): void
     {
-        return $this->downloader;
+        $this->downloader = $downloader;
     }
 
     public function addDiscoverer(AbstractDiscoverer $discoverer): void
@@ -42,7 +42,7 @@ class Spider
     public function crawl(string $url): array
     {
         $results = [];
-        $resource = $this->getDownloader()->download($url);
+        $resource = $this->downloader->download($url);
 
         if ($resource === null) {
             return [];
