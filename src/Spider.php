@@ -53,7 +53,7 @@ class Spider
             $urls = $discoverer->discover($resource);
 
             foreach ($urls as $url) {
-                $results[] = UriResolver::resolve($url, $resource->getUrl());
+                $results[] = self::normalizeUrl($url, $resource->getUrl());
             }
         }
 
@@ -65,5 +65,13 @@ class Spider
         $results = array_values($results);
 
         return $results;
+    }
+
+    private static function normalizeUrl(string $url, string $baseUrl): string
+    {
+        $url = UriResolver::resolve($url, $baseUrl);
+        $url = rtrim($url, '/');
+
+        return $url;
     }
 }
