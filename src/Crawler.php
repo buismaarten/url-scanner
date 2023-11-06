@@ -8,7 +8,7 @@ use Buismaarten\Crawler\Downloaders\NativeDownloader;
 use Buismaarten\Crawler\Filters\AbstractFilter;
 use Symfony\Component\DomCrawler\UriResolver;
 
-class Spider
+class Crawler
 {
     private AbstractDownloader $downloader;
 
