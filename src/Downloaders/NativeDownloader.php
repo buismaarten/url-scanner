@@ -1,5 +1,9 @@
 <?php
 
+namespace Buismaarten\Crawler\Downloaders;
+
+use Buismaarten\Crawler\Resource;
+
 class NativeDownloader extends AbstractDownloader
 {
     public function download(string $url): ?Resource

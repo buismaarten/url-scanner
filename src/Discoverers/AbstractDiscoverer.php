@@ -1,5 +1,8 @@
 <?php
 
+namespace Buismaarten\Crawler\Discoverers;
+
+use Buismaarten\Crawler\Resource;
 use Symfony\Component\DomCrawler\Crawler;
 
 abstract class AbstractDiscoverer

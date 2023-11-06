@@ -1,19 +1,10 @@
 <?php
 
+use Buismaarten\Crawler\Discoverers\CssSelectorDiscoverer;
+use Buismaarten\Crawler\Filters\AllowedSchemeFilter;
+use Buismaarten\Crawler\Spider;
+
 require_once __DIR__.'/vendor/autoload.php';
-
-require_once __DIR__.'/src/Downloaders/AbstractDownloader.php';
-require_once __DIR__.'/src/Downloaders/NativeDownloader.php';
-
-require_once __DIR__.'/src/Discoverers/AbstractDiscoverer.php';
-require_once __DIR__.'/src/Discoverers/CssSelectorDiscoverer.php';
-require_once __DIR__.'/src/Discoverers/XPathSelectorDiscoverer.php';
-
-require_once __DIR__.'/src/Filters/AbstractFilter.php';
-require_once __DIR__.'/src/Filters/AllowedSchemeFilter.php';
-
-require_once __DIR__.'/src/Resource.php';
-require_once __DIR__.'/src/Spider.php';
 
 
 $spider = new Spider;

@@ -1,5 +1,7 @@
 <?php
 
+namespace Buismaarten\Crawler;
+
 use Symfony\Component\DomCrawler\Crawler;
 
 class Resource

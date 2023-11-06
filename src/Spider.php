@@ -1,5 +1,11 @@
 <?php
 
+namespace Buismaarten\Crawler;
+
+use Buismaarten\Crawler\Discoverers\AbstractDiscoverer;
+use Buismaarten\Crawler\Downloaders\AbstractDownloader;
+use Buismaarten\Crawler\Downloaders\NativeDownloader;
+use Buismaarten\Crawler\Filters\AbstractFilter;
 use Symfony\Component\DomCrawler\UriResolver;
 
 class Spider

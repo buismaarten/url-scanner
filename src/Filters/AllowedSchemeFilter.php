@@ -1,5 +1,7 @@
 <?php
 
+namespace Buismaarten\Crawler\Filters;
+
 class AllowedSchemeFilter extends AbstractFilter
 {
     /** @var string[] */
