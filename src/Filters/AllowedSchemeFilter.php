@@ -2,6 +2,8 @@
 
 namespace Buismaarten\Crawler\Filters;
 
+use League\Uri\Contracts\UriInterface;
+
 class AllowedSchemeFilter extends AbstractFilter
 {
     /** @var string[] */
@@ -15,7 +17,7 @@ class AllowedSchemeFilter extends AbstractFilter
         $this->allowedSchemes = $allowedSchemes;
     }
 
-    public function match(string $url): bool
+    public function match(UriInterface $url): bool
     {
         // @todo: implement filter
         return false;

@@ -6,6 +6,7 @@ use Buismaarten\Crawler\Discoverers\AbstractDiscoverer;
 use Buismaarten\Crawler\Downloaders\AbstractDownloader;
 use Buismaarten\Crawler\Downloaders\NativeDownloader;
 use Buismaarten\Crawler\Filters\AbstractFilter;
+use League\Uri\Uri;
 use Symfony\Component\DomCrawler\UriResolver;
 
 final class Crawler
@@ -65,8 +66,9 @@ final class Crawler
             }
         }
 
+        // @todo
         foreach ($this->filters as $filter) {
-            $results = array_filter($results, fn (string $url) => ($filter->match($url) === false));
+            $results = array_filter($results, fn (string $url) => ($filter->match(Uri::new($url)) === false));
         }
 
         $results = array_unique($results);
