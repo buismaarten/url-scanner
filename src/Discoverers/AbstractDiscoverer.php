@@ -16,10 +16,13 @@ abstract class AbstractDiscoverer
         $this->attribute = $attribute;
     }
 
+    /**
+     * @return string[]
+     */
     public function discover(Resource $resource): array
     {
         return $this->getCrawler($resource)->each(function (Crawler $node): string {
-            return $node->attr($this->attribute);
+            return ($node->attr($this->attribute) ?? '');
         });
     }
 

@@ -45,6 +45,9 @@ final class Crawler
         $this->filters[] = $filter;
     }
 
+    /**
+     * @return string[]
+     */
     public function crawl(string $url): array
     {
         $results = [];
