@@ -6,8 +6,8 @@ use Symfony\Component\DomCrawler\Crawler;
 
 class Resource
 {
-    private string $url;
-    private string $content;
+    private readonly string $url;
+    private readonly string $content;
 
     public function __construct(string $url, string $content)
     {
