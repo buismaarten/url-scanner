@@ -2,7 +2,7 @@
 
 namespace Buismaarten\Crawler\Downloaders;
 
-use Buismaarten\Crawler\Resource;
+use Buismaarten\Crawler\Entities\Resource;
 
 class NativeDownloader extends AbstractDownloader
 {

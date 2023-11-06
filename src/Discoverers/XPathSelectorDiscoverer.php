@@ -2,7 +2,7 @@
 
 namespace Buismaarten\Crawler\Discoverers;
 
-use Buismaarten\Crawler\Resource;
+use Buismaarten\Crawler\Entities\Resource;
 use Symfony\Component\DomCrawler\Crawler;
 
 class XPathSelectorDiscoverer extends AbstractDiscoverer

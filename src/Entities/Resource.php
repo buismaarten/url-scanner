@@ -1,10 +1,10 @@
 <?php
 
-namespace Buismaarten\Crawler;
+namespace Buismaarten\Crawler\Entities;
 
 use Symfony\Component\DomCrawler\Crawler;
 
-class Resource
+final class Resource
 {
     private readonly string $url;
     private readonly string $content;
