@@ -1,155 +1,152 @@
-Array
-(
-    [0] => https://laravel.com/docs
-    [1] => https://vapor.laravel.com
-    [2] => https://laravel.com
-    [3] => https://laravel.com/docs/10.x/releases
-    [4] => https://laravel.com/docs/10.x/upgrade
-    [5] => https://laravel.com/docs/10.x/contributions
-    [6] => https://laravel.com/docs/10.x/installation
-    [7] => https://laravel.com/docs/10.x/configuration
-    [8] => https://laravel.com/docs/10.x/structure
-    [9] => https://laravel.com/docs/10.x/frontend
-    [10] => https://laravel.com/docs/10.x/starter-kits
-    [11] => https://laravel.com/docs/10.x/deployment
-    [12] => https://laravel.com/docs/10.x/lifecycle
-    [13] => https://laravel.com/docs/10.x/container
-    [14] => https://laravel.com/docs/10.x/providers
-    [15] => https://laravel.com/docs/10.x/facades
-    [16] => https://laravel.com/docs/10.x/routing
-    [17] => https://laravel.com/docs/10.x/middleware
-    [18] => https://laravel.com/docs/10.x/csrf
-    [19] => https://laravel.com/docs/10.x/controllers
-    [20] => https://laravel.com/docs/10.x/requests
-    [21] => https://laravel.com/docs/10.x/responses
-    [22] => https://laravel.com/docs/10.x/views
-    [23] => https://laravel.com/docs/10.x/blade
-    [24] => https://laravel.com/docs/10.x/vite
-    [25] => https://laravel.com/docs/10.x/urls
-    [26] => https://laravel.com/docs/10.x/session
-    [27] => https://laravel.com/docs/10.x/validation
-    [28] => https://laravel.com/docs/10.x/errors
-    [29] => https://laravel.com/docs/10.x/logging
-    [30] => https://laravel.com/docs/10.x/artisan
-    [31] => https://laravel.com/docs/10.x/broadcasting
-    [32] => https://laravel.com/docs/10.x/cache
-    [33] => https://laravel.com/docs/10.x/collections
-    [34] => https://laravel.com/docs/10.x/contracts
-    [35] => https://laravel.com/docs/10.x/events
-    [36] => https://laravel.com/docs/10.x/filesystem
-    [37] => https://laravel.com/docs/10.x/helpers
-    [38] => https://laravel.com/docs/10.x/http-client
-    [39] => https://laravel.com/docs/10.x/localization
-    [40] => https://laravel.com/docs/10.x/mail
-    [41] => https://laravel.com/docs/10.x/notifications
-    [42] => https://laravel.com/docs/10.x/packages
-    [43] => https://laravel.com/docs/10.x/processes
-    [44] => https://laravel.com/docs/10.x/queues
-    [45] => https://laravel.com/docs/10.x/rate-limiting
-    [46] => https://laravel.com/docs/10.x/strings
-    [47] => https://laravel.com/docs/10.x/scheduling
-    [48] => https://laravel.com/docs/10.x/authentication
-    [49] => https://laravel.com/docs/10.x/authorization
-    [50] => https://laravel.com/docs/10.x/verification
-    [51] => https://laravel.com/docs/10.x/encryption
-    [52] => https://laravel.com/docs/10.x/hashing
-    [53] => https://laravel.com/docs/10.x/passwords
-    [54] => https://laravel.com/docs/10.x/database
-    [55] => https://laravel.com/docs/10.x/queries
-    [56] => https://laravel.com/docs/10.x/pagination
-    [57] => https://laravel.com/docs/10.x/migrations
-    [58] => https://laravel.com/docs/10.x/seeding
-    [59] => https://laravel.com/docs/10.x/redis
-    [60] => https://laravel.com/docs/10.x/eloquent
-    [61] => https://laravel.com/docs/10.x/eloquent-relationships
-    [62] => https://laravel.com/docs/10.x/eloquent-collections
-    [63] => https://laravel.com/docs/10.x/eloquent-mutators
-    [64] => https://laravel.com/docs/10.x/eloquent-resources
-    [65] => https://laravel.com/docs/10.x/eloquent-serialization
-    [66] => https://laravel.com/docs/10.x/eloquent-factories
-    [67] => https://laravel.com/docs/10.x/testing
-    [68] => https://laravel.com/docs/10.x/http-tests
-    [69] => https://laravel.com/docs/10.x/console-tests
-    [70] => https://laravel.com/docs/10.x/dusk
-    [71] => https://laravel.com/docs/10.x/database-testing
-    [72] => https://laravel.com/docs/10.x/mocking
-    [73] => https://laravel.com/docs/10.x/billing
-    [74] => https://laravel.com/docs/10.x/cashier-paddle
-    [75] => https://laravel.com/docs/10.x/envoy
-    [76] => https://laravel.com/docs/10.x/fortify
-    [77] => https://laravel.com/docs/10.x/folio
-    [78] => https://laravel.com/docs/10.x/homestead
-    [79] => https://laravel.com/docs/10.x/horizon
-    [80] => https://jetstream.laravel.com
-    [81] => https://laravel.com/docs/10.x/mix
-    [82] => https://laravel.com/docs/10.x/octane
-    [83] => https://laravel.com/docs/10.x/passport
-    [84] => https://laravel.com/docs/10.x/pennant
-    [85] => https://laravel.com/docs/10.x/pint
-    [86] => https://laravel.com/docs/10.x/precognition
-    [87] => https://laravel.com/docs/10.x/prompts
-    [88] => https://laravel.com/docs/10.x/sail
-    [89] => https://laravel.com/docs/10.x/sanctum
-    [90] => https://laravel.com/docs/10.x/scout
-    [91] => https://laravel.com/docs/10.x/socialite
-    [92] => https://laravel.com/docs/10.x/telescope
-    [93] => https://laravel.com/docs/10.x/valet
-    [94] => https://laravel.com/api/10.x
-    [95] => https://forge.laravel.com
-    [96] => https://bootcamp.laravel.com
-    [97] => https://laracasts.com
-    [98] => https://github.com/laravel/framework
-    [99] => https://getcomposer.org
-    [100] => https://herd.laravel.com
-    [101] => https://nodejs.org
-    [102] => https://www.docker.com
-    [103] => https://www.docker.com/products/docker-desktop
-    [104] => http://localhost
-    [105] => https://docs.microsoft.com/en-us/windows/wsl/install-win10
-    [106] => https://docs.docker.com/docker-for-windows/wsl
-    [107] => https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701?rtc=1&activetab=pivot:overviewtab
-    [108] => https://code.visualstudio.com
-    [109] => https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack
-    [110] => https://docs.docker.com/compose/install
-    [111] => https://dbngin.com
-    [112] => https://www.sqlite.org/index.html
-    [113] => https://www.jetbrains.com/phpstorm/laravel
-    [114] => https://www.jetbrains.com/help/phpstorm/using-laravel-pint.html
-    [115] => https://laravel-idea.com
-    [116] => https://inertiajs.com
-    [117] => https://livewire.laravel.com
-    [118] => https://nextjs.org
-    [119] => https://github.com/laravel/breeze-next
-    [120] => https://x.com/laravelphp
-    [121] => https://github.com/laravel
-    [122] => https://discord.gg/laravel
-    [123] => https://www.youtube.com/laravelphp
-    [124] => https://laravel.com/team
-    [125] => https://laravel-news.com
-    [126] => https://laracon.us
-    [127] => https://laracon.au
-    [128] => https://laracon.eu
-    [129] => https://laracon.in
-    [130] => https://larabelles.com
-    [131] => https://larajobs.com
-    [132] => https://laracasts.com/discuss
-    [133] => https://laravel.bigcartel.com/products
-    [134] => https://laravel.com/trademark
-    [135] => https://vehikl.com
-    [136] => https://webreinvent.com?utm_source=laravel&utm_medium=laravel.com&utm_campaign=footer-link
-    [137] => https://tighten.co
-    [138] => https://www.bacancytechnology.com/hire-laravel-developer?utm_source=laravel&utm_medium=partners.laravel&utm_campaign=sponsors
-    [139] => https://64robots.com
-    [140] => https://activelogic.com
-    [141] => https://www.blackairplane.com
-    [142] => https://www.byte5.net
-    [143] => https://www.curotec.com/services/technologies/laravel
-    [144] => https://www.cyber-duck.co.uk/how-we-work/technology/laravel?utm_source=Laravel%20Partner&utm_medium=Sponsorship
-    [145] => https://devsquad.com
-    [146] => https://jump24.co.uk
-    [147] => https://kirschbaumdevelopment.com
-    [148] => https://envoyer.io
-    [149] => https://nova.laravel.com
-    [150] => https://spark.laravel.com
-    [151] => https://torchlight.dev
-)
+https://laravel.com/docs
+https://laracon.au
+https://laravel.com
+https://laravel.com/docs/10.x/releases
+https://laravel.com/docs/10.x/upgrade
+https://laravel.com/docs/10.x/contributions
+https://laravel.com/docs/10.x/installation
+https://laravel.com/docs/10.x/configuration
+https://laravel.com/docs/10.x/structure
+https://laravel.com/docs/10.x/frontend
+https://laravel.com/docs/10.x/starter-kits
+https://laravel.com/docs/10.x/deployment
+https://laravel.com/docs/10.x/lifecycle
+https://laravel.com/docs/10.x/container
+https://laravel.com/docs/10.x/providers
+https://laravel.com/docs/10.x/facades
+https://laravel.com/docs/10.x/routing
+https://laravel.com/docs/10.x/middleware
+https://laravel.com/docs/10.x/csrf
+https://laravel.com/docs/10.x/controllers
+https://laravel.com/docs/10.x/requests
+https://laravel.com/docs/10.x/responses
+https://laravel.com/docs/10.x/views
+https://laravel.com/docs/10.x/blade
+https://laravel.com/docs/10.x/vite
+https://laravel.com/docs/10.x/urls
+https://laravel.com/docs/10.x/session
+https://laravel.com/docs/10.x/validation
+https://laravel.com/docs/10.x/errors
+https://laravel.com/docs/10.x/logging
+https://laravel.com/docs/10.x/artisan
+https://laravel.com/docs/10.x/broadcasting
+https://laravel.com/docs/10.x/cache
+https://laravel.com/docs/10.x/collections
+https://laravel.com/docs/10.x/contracts
+https://laravel.com/docs/10.x/events
+https://laravel.com/docs/10.x/filesystem
+https://laravel.com/docs/10.x/helpers
+https://laravel.com/docs/10.x/http-client
+https://laravel.com/docs/10.x/localization
+https://laravel.com/docs/10.x/mail
+https://laravel.com/docs/10.x/notifications
+https://laravel.com/docs/10.x/packages
+https://laravel.com/docs/10.x/processes
+https://laravel.com/docs/10.x/queues
+https://laravel.com/docs/10.x/rate-limiting
+https://laravel.com/docs/10.x/strings
+https://laravel.com/docs/10.x/scheduling
+https://laravel.com/docs/10.x/authentication
+https://laravel.com/docs/10.x/authorization
+https://laravel.com/docs/10.x/verification
+https://laravel.com/docs/10.x/encryption
+https://laravel.com/docs/10.x/hashing
+https://laravel.com/docs/10.x/passwords
+https://laravel.com/docs/10.x/database
+https://laravel.com/docs/10.x/queries
+https://laravel.com/docs/10.x/pagination
+https://laravel.com/docs/10.x/migrations
+https://laravel.com/docs/10.x/seeding
+https://laravel.com/docs/10.x/redis
+https://laravel.com/docs/10.x/eloquent
+https://laravel.com/docs/10.x/eloquent-relationships
+https://laravel.com/docs/10.x/eloquent-collections
+https://laravel.com/docs/10.x/eloquent-mutators
+https://laravel.com/docs/10.x/eloquent-resources
+https://laravel.com/docs/10.x/eloquent-serialization
+https://laravel.com/docs/10.x/eloquent-factories
+https://laravel.com/docs/10.x/testing
+https://laravel.com/docs/10.x/http-tests
+https://laravel.com/docs/10.x/console-tests
+https://laravel.com/docs/10.x/dusk
+https://laravel.com/docs/10.x/database-testing
+https://laravel.com/docs/10.x/mocking
+https://laravel.com/docs/10.x/billing
+https://laravel.com/docs/10.x/cashier-paddle
+https://laravel.com/docs/10.x/envoy
+https://laravel.com/docs/10.x/fortify
+https://laravel.com/docs/10.x/folio
+https://laravel.com/docs/10.x/homestead
+https://laravel.com/docs/10.x/horizon
+https://jetstream.laravel.com
+https://laravel.com/docs/10.x/mix
+https://laravel.com/docs/10.x/octane
+https://laravel.com/docs/10.x/passport
+https://laravel.com/docs/10.x/pennant
+https://laravel.com/docs/10.x/pint
+https://laravel.com/docs/10.x/precognition
+https://laravel.com/docs/10.x/prompts
+https://laravel.com/docs/10.x/sail
+https://laravel.com/docs/10.x/sanctum
+https://laravel.com/docs/10.x/scout
+https://laravel.com/docs/10.x/socialite
+https://laravel.com/docs/10.x/telescope
+https://laravel.com/docs/10.x/valet
+https://laravel.com/api/10.x
+https://vapor.laravel.com
+https://bootcamp.laravel.com
+https://laracasts.com
+https://github.com/laravel/framework
+https://getcomposer.org
+https://herd.laravel.com
+https://nodejs.org
+https://www.docker.com
+https://www.docker.com/products/docker-desktop
+http://localhost
+https://docs.microsoft.com/en-us/windows/wsl/install-win10
+https://docs.docker.com/docker-for-windows/wsl
+https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701?rtc=1&activetab=pivot:overviewtab
+https://code.visualstudio.com
+https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack
+https://docs.docker.com/compose/install
+https://dbngin.com
+https://www.sqlite.org/index.html
+https://www.jetbrains.com/phpstorm/laravel
+https://www.jetbrains.com/help/phpstorm/using-laravel-pint.html
+https://laravel-idea.com
+https://inertiajs.com
+https://livewire.laravel.com
+https://nextjs.org
+https://github.com/laravel/breeze-next
+https://x.com/laravelphp
+https://github.com/laravel
+https://discord.gg/laravel
+https://www.youtube.com/laravelphp
+https://laravel.com/team
+https://laravel-news.com
+https://laracon.us
+https://laracon.eu
+https://laracon.in
+https://larabelles.com
+https://larajobs.com
+https://laracasts.com/discuss
+https://laravel.bigcartel.com/products
+https://laravel.com/trademark
+https://vehikl.com
+https://webreinvent.com?utm_source=laravel&utm_medium=laravel.com&utm_campaign=footer-link
+https://tighten.co
+https://www.bacancytechnology.com/hire-laravel-developer?utm_source=laravel&utm_medium=partners.laravel&utm_campaign=sponsors
+https://64robots.com
+https://activelogic.com
+https://www.blackairplane.com
+https://www.byte5.net
+https://www.curotec.com/services/technologies/laravel
+https://www.cyber-duck.co.uk/how-we-work/technology/laravel?utm_source=Laravel%20Partner&utm_medium=Sponsorship
+https://devsquad.com
+https://jump24.co.uk
+https://kirschbaumdevelopment.com
+https://envoyer.io
+https://forge.laravel.com
+https://nova.laravel.com
+https://spark.laravel.com
+https://torchlight.dev

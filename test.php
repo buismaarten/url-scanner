@@ -11,5 +11,6 @@ $crawler = new Crawler;
 $crawler->addDiscoverer(new CssSelectorDiscoverer('a[href]', 'href'));
 $crawler->addFilter(new AllowedSchemeFilter(['http', 'https']));
 
-print_r($crawler->crawl('https://laravel.com/docs'));
-exit;
+foreach ($crawler->crawl('https://laravel.com/docs') as $url) {
+    echo $url."\n";
+}
