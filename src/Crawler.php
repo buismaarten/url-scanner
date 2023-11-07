@@ -6,8 +6,8 @@ use Buismaarten\Crawler\Discoverers\AbstractDiscoverer;
 use Buismaarten\Crawler\Downloaders\AbstractDownloader;
 use Buismaarten\Crawler\Downloaders\NativeDownloader;
 use Buismaarten\Crawler\Filters\AbstractFilter;
+use League\Uri\Contracts\UriInterface;
 use League\Uri\Uri;
-use Symfony\Component\DomCrawler\UriResolver;
 
 final class Crawler
 {
@@ -66,22 +66,28 @@ final class Crawler
             }
         }
 
-        // @todo
         foreach ($this->filters as $filter) {
-            $results = array_filter($results, fn (string $url) => ($filter->match(Uri::new($url)) === false));
+            $results = array_filter($results, fn (UriInterface $url) => ($filter->match($url) === false));
         }
 
+        $results = array_map(fn (UriInterface $url) => $url->toString(), $results);
         $results = array_unique($results);
         $results = array_values($results);
 
         return $results;
     }
 
-    private static function normalizeUrl(string $url, string $baseUrl): string
+    private static function normalizeUrl(string $url, string $baseUrl): UriInterface
     {
-        $url = UriResolver::resolve($url, $baseUrl);
-        $url = rtrim($url, '/');
+        $components = Uri::fromBaseUri($url, $baseUrl)->getComponents();
+        $components['path'] = rtrim($components['path'], '/');
 
-        return $url;
+        return Uri::fromComponents([
+            'scheme' => $components['scheme'],
+            'host'   => $components['host'],
+            'port'   => $components['port'],
+            'path'   => $components['path'],
+            'query'  => $components['query'],
+        ]);
     }
 }
