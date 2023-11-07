@@ -67,7 +67,7 @@ final class Crawler
         }
 
         foreach ($this->filters as $filter) {
-            $results = array_filter($results, fn (UriInterface $url) => ($filter->match($url) === false));
+            $results = array_filter($results, fn (UriInterface $url) => (! $filter->match($url)));
         }
 
         $results = array_map(fn (UriInterface $url) => $url->toString(), $results);
