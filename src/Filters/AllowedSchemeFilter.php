@@ -19,7 +19,6 @@ class AllowedSchemeFilter extends AbstractFilter
 
     public function match(UriInterface $url): bool
     {
-        // @todo: implement filter
-        return false;
+        return (! in_array($url->getScheme(), $this->allowedSchemes));
     }
 }
