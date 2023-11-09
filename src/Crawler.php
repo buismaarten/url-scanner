@@ -13,16 +13,9 @@ final class Crawler
 {
     private AbstractDownloader $downloader;
 
-    /** @var AbstractDiscoverer[] */
     private array $discoverers = [];
-
-    /** @var AbstractFilter[] */
     private array $filters = [];
 
-    /**
-     * @param AbstractDiscoverer[] $discoverers
-     * @param AbstractFilter[]     $filters
-     */
     public function __construct(AbstractDownloader $downloader = null, array $discoverers = [], array $filters = [])
     {
         $this->downloader = ($downloader ?? new NativeDownloader);
@@ -46,9 +39,6 @@ final class Crawler
         $this->filters[] = $filter;
     }
 
-    /**
-     * @return string[]
-     */
     public function crawl(string $url): array
     {
         $results = [];
