@@ -1,6 +1,6 @@
 <?php
 
-namespace Buismaarten\Crawler\Downloaders;
+namespace Buismaarten\Crawler\Downloader;
 
 use Buismaarten\Crawler\Entities\Resource;
 

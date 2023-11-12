@@ -1,6 +1,6 @@
 <?php
 
-namespace Buismaarten\Crawler\Filters;
+namespace Buismaarten\Crawler\Filter;
 
 use League\Uri\Contracts\UriInterface;
 

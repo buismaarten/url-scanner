@@ -2,10 +2,10 @@
 
 namespace Buismaarten\Crawler;
 
-use Buismaarten\Crawler\Discoverers\AbstractDiscoverer;
-use Buismaarten\Crawler\Downloaders\AbstractDownloader;
-use Buismaarten\Crawler\Downloaders\NativeDownloader;
-use Buismaarten\Crawler\Filters\AbstractFilter;
+use Buismaarten\Crawler\Discoverer\AbstractDiscoverer;
+use Buismaarten\Crawler\Downloader\AbstractDownloader;
+use Buismaarten\Crawler\Downloader\NativeDownloader;
+use Buismaarten\Crawler\Filter\AbstractFilter;
 use League\Uri\Contracts\UriInterface;
 use League\Uri\Uri;
 
