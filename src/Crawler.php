@@ -7,6 +7,7 @@ use Buismaarten\Crawler\Downloader\AbstractDownloader;
 use Buismaarten\Crawler\Downloader\NativeDownloader;
 use Buismaarten\Crawler\Filter\AbstractFilter;
 use League\Uri\Contracts\UriInterface;
+use League\Uri\Exceptions\SyntaxError;
 use League\Uri\Uri;
 
 final class Crawler
@@ -39,38 +40,46 @@ final class Crawler
         $this->filters[] = $filter;
     }
 
-    public function crawl(string $url): array
+    public function crawl(string $input): array
     {
-        $results = [];
-        $resource = $this->downloader->download($url);
+        $resource = $this->downloader->download($input);
+        $urls = [];
 
         if ($resource === null) {
             return [];
         }
 
         foreach ($this->discoverers as $discoverer) {
-            $urls = $discoverer->discover($resource);
+            $discoveredUrls = $discoverer->discover($resource);
 
-            foreach ($urls as $url) {
-                $results[] = self::normalizeUrl($url, $resource->getUrl());
+            foreach ($discoveredUrls as $discoveredUrl) {
+                $normalizedUrl = self::normalizeUrl($discoveredUrl, $resource->getUrl());
+
+                if ($normalizedUrl !== null) {
+                    $urls[] = $normalizedUrl;
+                }
             }
         }
 
         foreach ($this->filters as $filter) {
-            $results = array_filter($results, fn (UriInterface $url) => (! $filter->match($url)));
+            $urls = array_filter($urls, fn (UriInterface $url) => (! $filter->match($url)));
         }
 
-        $results = array_map(fn (UriInterface $url) => $url->toString(), $results);
-        $results = array_unique($results);
-        $results = array_values($results);
+        $urls = array_map(fn (UriInterface $url) => $url->toString(), $urls);
+        $urls = array_unique($urls);
+        $urls = array_values($urls);
 
-        return $results;
+        return $urls;
     }
 
-    private static function normalizeUrl(string $url, string $baseUrl): UriInterface
+    private static function normalizeUrl(string $url, string $baseUrl): ?UriInterface
     {
-        $components = Uri::fromBaseUri($url, $baseUrl)->getComponents();
-        $components['path'] = rtrim($components['path'], '/');
+        try {
+            $components = Uri::fromBaseUri($url, $baseUrl)->getComponents();
+            $components['path'] = rtrim($components['path'], '/');
+        } catch (SyntaxError) {
+            return null;
+        }
 
         return Uri::fromComponents([
             'scheme' => $components['scheme'],
