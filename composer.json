@@ -1,10 +1,10 @@
 {
     "require": {
         "php": "^8.2",
-        "symfony/dom-crawler": "^6.3",
-        "symfony/css-selector": "^6.3",
+        "league/uri-interfaces": "^7.3",
         "league/uri": "^7.3",
-        "league/uri-interfaces": "^7.3"
+        "symfony/css-selector": "^6.3",
+        "symfony/dom-crawler": "^6.3"
     },
     "autoload": {
         "psr-4": {
