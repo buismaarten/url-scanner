@@ -1,7 +1,7 @@
 <?php
 
-use Buismaarten\Crawler\Discoverer\AbstractDiscoverer;
-use Buismaarten\Crawler\Discoverer\CssSelectorDiscoverer;
+use Buismaarten\Crawler\Discoverers\AbstractDiscoverer;
+use Buismaarten\Crawler\Discoverers\CssSelectorDiscoverer;
 use League\Uri\Uri;
 use Symfony\Component\DomCrawler\Crawler;
 

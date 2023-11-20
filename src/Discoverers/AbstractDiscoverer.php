@@ -1,6 +1,6 @@
 <?php
 
-namespace Buismaarten\Crawler\Discoverer;
+namespace Buismaarten\Crawler\Discoverers;
 
 use Symfony\Component\DomCrawler\Crawler;
 
