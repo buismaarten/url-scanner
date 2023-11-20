@@ -1,152 +1,45 @@
-https://laravel.com/docs
-https://laracon.au
-https://laravel.com
-https://laravel.com/docs/10.x/releases
-https://laravel.com/docs/10.x/upgrade
-https://laravel.com/docs/10.x/contributions
-https://laravel.com/docs/10.x/installation
-https://laravel.com/docs/10.x/configuration
-https://laravel.com/docs/10.x/structure
-https://laravel.com/docs/10.x/frontend
-https://laravel.com/docs/10.x/starter-kits
-https://laravel.com/docs/10.x/deployment
-https://laravel.com/docs/10.x/lifecycle
-https://laravel.com/docs/10.x/container
-https://laravel.com/docs/10.x/providers
-https://laravel.com/docs/10.x/facades
-https://laravel.com/docs/10.x/routing
-https://laravel.com/docs/10.x/middleware
-https://laravel.com/docs/10.x/csrf
-https://laravel.com/docs/10.x/controllers
-https://laravel.com/docs/10.x/requests
-https://laravel.com/docs/10.x/responses
-https://laravel.com/docs/10.x/views
-https://laravel.com/docs/10.x/blade
-https://laravel.com/docs/10.x/vite
-https://laravel.com/docs/10.x/urls
-https://laravel.com/docs/10.x/session
-https://laravel.com/docs/10.x/validation
-https://laravel.com/docs/10.x/errors
-https://laravel.com/docs/10.x/logging
-https://laravel.com/docs/10.x/artisan
-https://laravel.com/docs/10.x/broadcasting
-https://laravel.com/docs/10.x/cache
-https://laravel.com/docs/10.x/collections
-https://laravel.com/docs/10.x/contracts
-https://laravel.com/docs/10.x/events
-https://laravel.com/docs/10.x/filesystem
-https://laravel.com/docs/10.x/helpers
-https://laravel.com/docs/10.x/http-client
-https://laravel.com/docs/10.x/localization
-https://laravel.com/docs/10.x/mail
-https://laravel.com/docs/10.x/notifications
-https://laravel.com/docs/10.x/packages
-https://laravel.com/docs/10.x/processes
-https://laravel.com/docs/10.x/queues
-https://laravel.com/docs/10.x/rate-limiting
-https://laravel.com/docs/10.x/strings
-https://laravel.com/docs/10.x/scheduling
-https://laravel.com/docs/10.x/authentication
-https://laravel.com/docs/10.x/authorization
-https://laravel.com/docs/10.x/verification
-https://laravel.com/docs/10.x/encryption
-https://laravel.com/docs/10.x/hashing
-https://laravel.com/docs/10.x/passwords
-https://laravel.com/docs/10.x/database
-https://laravel.com/docs/10.x/queries
-https://laravel.com/docs/10.x/pagination
-https://laravel.com/docs/10.x/migrations
-https://laravel.com/docs/10.x/seeding
-https://laravel.com/docs/10.x/redis
-https://laravel.com/docs/10.x/eloquent
-https://laravel.com/docs/10.x/eloquent-relationships
-https://laravel.com/docs/10.x/eloquent-collections
-https://laravel.com/docs/10.x/eloquent-mutators
-https://laravel.com/docs/10.x/eloquent-resources
-https://laravel.com/docs/10.x/eloquent-serialization
-https://laravel.com/docs/10.x/eloquent-factories
-https://laravel.com/docs/10.x/testing
-https://laravel.com/docs/10.x/http-tests
-https://laravel.com/docs/10.x/console-tests
-https://laravel.com/docs/10.x/dusk
-https://laravel.com/docs/10.x/database-testing
-https://laravel.com/docs/10.x/mocking
-https://laravel.com/docs/10.x/billing
-https://laravel.com/docs/10.x/cashier-paddle
-https://laravel.com/docs/10.x/envoy
-https://laravel.com/docs/10.x/fortify
-https://laravel.com/docs/10.x/folio
-https://laravel.com/docs/10.x/homestead
-https://laravel.com/docs/10.x/horizon
-https://jetstream.laravel.com
-https://laravel.com/docs/10.x/mix
-https://laravel.com/docs/10.x/octane
-https://laravel.com/docs/10.x/passport
-https://laravel.com/docs/10.x/pennant
-https://laravel.com/docs/10.x/pint
-https://laravel.com/docs/10.x/precognition
-https://laravel.com/docs/10.x/prompts
-https://laravel.com/docs/10.x/sail
-https://laravel.com/docs/10.x/sanctum
-https://laravel.com/docs/10.x/scout
-https://laravel.com/docs/10.x/socialite
-https://laravel.com/docs/10.x/telescope
-https://laravel.com/docs/10.x/valet
-https://laravel.com/api/10.x
-https://vapor.laravel.com
-https://bootcamp.laravel.com
-https://laracasts.com
-https://github.com/laravel/framework
-https://getcomposer.org
-https://herd.laravel.com
-https://nodejs.org
-https://www.docker.com
-https://www.docker.com/products/docker-desktop
-http://localhost
-https://docs.microsoft.com/en-us/windows/wsl/install-win10
-https://docs.docker.com/docker-for-windows/wsl
-https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701?rtc=1&activetab=pivot:overviewtab
-https://code.visualstudio.com
-https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack
-https://docs.docker.com/compose/install
-https://dbngin.com
-https://www.sqlite.org/index.html
-https://www.jetbrains.com/phpstorm/laravel
-https://www.jetbrains.com/help/phpstorm/using-laravel-pint.html
-https://laravel-idea.com
-https://inertiajs.com
-https://livewire.laravel.com
-https://nextjs.org
-https://github.com/laravel/breeze-next
-https://x.com/laravelphp
-https://github.com/laravel
-https://discord.gg/laravel
-https://www.youtube.com/laravelphp
-https://laravel.com/team
-https://laravel-news.com
-https://laracon.us
-https://laracon.eu
-https://laracon.in
-https://larabelles.com
-https://larajobs.com
-https://laracasts.com/discuss
-https://laravel.bigcartel.com/products
-https://laravel.com/trademark
-https://vehikl.com
-https://webreinvent.com?utm_source=laravel&utm_medium=laravel.com&utm_campaign=footer-link
-https://tighten.co
-https://www.bacancytechnology.com/hire-laravel-developer?utm_source=laravel&utm_medium=partners.laravel&utm_campaign=sponsors
-https://64robots.com
-https://activelogic.com
-https://www.blackairplane.com
-https://www.byte5.net
-https://www.curotec.com/services/technologies/laravel
-https://www.cyber-duck.co.uk/how-we-work/technology/laravel?utm_source=Laravel%20Partner&utm_medium=Sponsorship
-https://devsquad.com
-https://jump24.co.uk
-https://kirschbaumdevelopment.com
-https://envoyer.io
-https://forge.laravel.com
-https://nova.laravel.com
-https://spark.laravel.com
-https://torchlight.dev
+Array
+(
+    [0] => https://letsbuildit.nl
+    [1] => https://letsbuildit.nl/strategie-en-ontwerp/
+    [2] => https://letsbuildit.nl/#
+    [3] => https://letsbuildit.nl/strategie-en-ontwerp/organisaties-verzekeringsbranche/
+    [4] => https://letsbuildit.nl/strategie-en-ontwerp/organisaties/
+    [5] => https://letsbuildit.nl/strategie-en-ontwerp/nieuwe-software-applicaties/
+    [6] => https://letsbuildit.nl/strategie-en-ontwerp/bestaande-applicaties/
+    [7] => https://letsbuildit.nl/strategie-en-ontwerp/werkwijze/
+    [8] => https://letsbuildit.nl/projecten/vkg-extranet/
+    [9] => https://letsbuildit.nl/projecten/vkg/
+    [10] => https://letsbuildit.nl/projecten/bdo-planningstool/
+    [11] => https://letsbuildit.nl/software-ontwikkeling/
+    [12] => https://letsbuildit.nl/software-ontwikkeling/maatwerk-software/
+    [13] => https://letsbuildit.nl/software-ontwikkeling/low-code-frameworks/
+    [14] => https://letsbuildit.nl/software-ontwikkeling/devops-teams/
+    [15] => https://letsbuildit.nl/software-ontwikkeling/technieken/
+    [16] => https://letsbuildit.nl/projecten/garagepolissysteem/
+    [17] => https://letsbuildit.nl/projecten/vkg-salesfunnels/
+    [18] => https://letsbuildit.nl/projecten/gladwell-academy/
+    [19] => https://letsbuildit.nl/websites-webshops/
+    [20] => https://letsbuildit.nl/websites-webshops/websites-met-cms-wordpress/
+    [21] => https://letsbuildit.nl/websites-webshops/webshops-woocommerce/
+    [22] => https://letsbuildit.nl/projecten/de-groene-linde/
+    [23] => https://letsbuildit.nl/projecten/prometheus/
+    [24] => https://letsbuildit.nl/projecten/jacob-hooy-co/
+    [25] => https://letsbuildit.nl/projecten/teka-kranen/
+    [26] => https://letsbuildit.nl/projecten/vkg-website/
+    [27] => https://letsbuildit.nl/onderhoud-beheer/
+    [28] => https://letsbuildit.nl/onderhoud-beheer/managed-hosting-cloud/
+    [29] => https://letsbuildit.nl/onderhoud-beheer/onderdhoud-beveiliging/
+    [30] => https://letsbuildit.nl/over-ons/
+    [31] => https://letsbuildit.nl/over-ons/over-lets-build-it/
+    [32] => https://letsbuildit.nl/over-ons/missie-visie/
+    [33] => https://letsbuildit.nl/over-ons/het-team/
+    [34] => https://letsbuildit.nl/over-ons/partners/
+    [35] => https://letsbuildit.nl/over-ons/werken-bij/
+    [36] => https://letsbuildit.nl/contact/
+    [37] => https://letsbuildit.nl/algemene-voorwaarden/
+    [38] => https://letsbuildit.nl/privacy-policy/
+    [39] => https://www.instagram.com/letsbuilditnl
+    [40] => https://www.linkedin.com/company/let's-build-it
+    [41] => https://letsbuildit.nl/cookie-policy/
+)

@@ -2,7 +2,6 @@
 
 namespace Buismaarten\Crawler\Discoverer;
 
-use Buismaarten\Crawler\Entities\Resource;
 use Symfony\Component\DomCrawler\Crawler;
 
 abstract class AbstractDiscoverer
@@ -16,12 +15,12 @@ abstract class AbstractDiscoverer
         $this->attribute = $attribute;
     }
 
-    public function discover(Resource $resource): array
+    public function discover(Crawler $crawler): array
     {
-        return $this->getCrawler($resource)->each(function (Crawler $node): string {
+        return $this->getFilteredCrawler($crawler)->each(function (Crawler $node): string {
             return ($node->attr($this->attribute) ?? '');
         });
     }
 
-    abstract protected function getCrawler(Resource $resource): Crawler;
+    abstract protected function getFilteredCrawler(Crawler $crawler): Crawler;
 }
