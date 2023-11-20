@@ -10,5 +10,10 @@
         "psr-4": {
             "Buismaarten\\Crawler\\": "src/"
         }
-    }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
 }
