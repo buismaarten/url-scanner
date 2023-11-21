@@ -2,12 +2,12 @@
 
 namespace Buismaarten\Crawler\Discoverers;
 
-use Symfony\Component\DomCrawler\Crawler;
+use Symfony\Component\DomCrawler\Crawler as DomCrawler;
 
 final class XPathSelectorDiscoverer extends AbstractDiscoverer
 {
-    public function getFilteredCrawler(Crawler $crawler): Crawler
+    public function getFilteredCrawler(DomCrawler $domCrawler): DomCrawler
     {
-        return $crawler->filterXPath($this->selector);
+        return $domCrawler->filterXPath($this->selector);
     }
 }
