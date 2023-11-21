@@ -7,7 +7,7 @@ use League\Uri\Contracts\UriInterface;
 use League\Uri\Uri;
 use Symfony\Component\DomCrawler\Crawler as DomCrawler;
 
-class Crawler
+final class Crawler
 {
     private DomCrawler $domCrawler;
     private ?string $baseUrl;

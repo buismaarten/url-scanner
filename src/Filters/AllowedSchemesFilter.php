@@ -4,7 +4,7 @@ namespace Buismaarten\Crawler\Filters;
 
 use League\Uri\Contracts\UriInterface;
 
-class AllowedSchemesFilter extends AbstractFilter
+final class AllowedSchemesFilter extends AbstractFilter
 {
     private readonly array $allowedSchemes;
 
