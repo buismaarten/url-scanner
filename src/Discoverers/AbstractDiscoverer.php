@@ -6,8 +6,8 @@ use Symfony\Component\DomCrawler\Crawler as DomCrawler;
 
 abstract class AbstractDiscoverer
 {
-    protected string $selector;
-    protected string $attribute;
+    protected readonly string $selector;
+    protected readonly string $attribute;
 
     public function __construct(string $selector, string $attribute)
     {
