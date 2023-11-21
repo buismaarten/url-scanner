@@ -4,6 +4,7 @@ namespace Buismaarten\Crawler;
 
 use Buismaarten\Crawler\Discoverers\AbstractDiscoverer;
 use League\Uri\Contracts\UriInterface;
+use League\Uri\Exceptions\SyntaxError;
 use League\Uri\Uri;
 use Symfony\Component\DomCrawler\Crawler as DomCrawler;
 
@@ -24,10 +25,10 @@ final class Crawler
         $urls = [];
 
         foreach ($discoveredUrls as $discoveredUrl) {
-            $url = Uri::fromBaseUri($discoveredUrl, $this->baseUrl);
+            $url = self::normalizeUrl($discoveredUrl, $this->baseUrl);
 
             // @todo
-            if (str_starts_with($url, 'http')) {
+            if ($url !== null && str_starts_with($url, 'http')) {
                 $urls[] = $url;
             }
         }
@@ -37,5 +38,23 @@ final class Crawler
         $urls = array_values($urls);
 
         return $urls;
+    }
+
+    private static function normalizeUrl(string $url, string $baseUrl): ?UriInterface
+    {
+        try {
+            $components = Uri::fromBaseUri($url, $baseUrl)->getComponents();
+            $components['path'] = rtrim($components['path'], '/');
+        } catch (SyntaxError) {
+            return null;
+        }
+
+        return Uri::fromComponents([
+            'scheme' => $components['scheme'],
+            'host'   => $components['host'],
+            'port'   => $components['port'],
+            'path'   => $components['path'],
+            'query'  => $components['query'],
+        ]);
     }
 }
