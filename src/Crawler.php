@@ -9,8 +9,8 @@ use Symfony\Component\DomCrawler\Crawler as DomCrawler;
 
 final class Crawler
 {
-    private DomCrawler $domCrawler;
-    private ?string $baseUrl;
+    private readonly DomCrawler $domCrawler;
+    private readonly ?string $baseUrl;
 
     public function __construct(string $html, ?string $baseUrl = null)
     {
