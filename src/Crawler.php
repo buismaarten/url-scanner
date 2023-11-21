@@ -14,7 +14,7 @@ final class Crawler
 
     public function __construct(string $html, ?string $baseUrl = null)
     {
-        $this->domCrawler = new DomCrawler($html);
+        $this->domCrawler = new DomCrawler($html, uri: $baseUrl);
         $this->baseUrl = $baseUrl;
     }
 
