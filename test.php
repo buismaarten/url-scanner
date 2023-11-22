@@ -10,5 +10,5 @@ $baseUrl = 'https://letsbuildit.nl';
 $html = file_get_contents($baseUrl);
 $crawler = new Crawler($html, $baseUrl);
 
-print_r($crawler->crawl(new CssSelectorDiscoverer('a[href]', 'href')));
+print_r($crawler->getUrls(new CssSelectorDiscoverer('a[href]', 'href')));
 exit;

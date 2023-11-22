@@ -6,22 +6,27 @@ use Buismaarten\Crawler\Discoverers\AbstractDiscoverer;
 use League\Uri\Contracts\UriInterface;
 use League\Uri\Exceptions\SyntaxError;
 use League\Uri\Uri;
-use Symfony\Component\DomCrawler\Crawler as DomCrawler;
+use Symfony\Component\DomCrawler;
 
 final class Crawler
 {
-    private readonly DomCrawler $domCrawler;
+    private readonly DomCrawler\Crawler $crawler;
     private readonly ?string $baseUrl;
 
     public function __construct(string $html, ?string $baseUrl = null)
     {
-        $this->domCrawler = new DomCrawler($html, uri: $baseUrl);
+        $this->crawler = new DomCrawler\Crawler($html, uri: $baseUrl);
         $this->baseUrl = $baseUrl;
     }
 
-    public function crawl(AbstractDiscoverer $discoverer): array
+    public function getCrawler(): DomCrawler\Crawler
     {
-        $discoveredUrls = $discoverer->discover($this->domCrawler);
+        return $this->crawler;
+    }
+
+    public function getUrls(AbstractDiscoverer $discoverer): array
+    {
+        $discoveredUrls = $discoverer->discover($this->getCrawler());
         $urls = [];
 
         foreach ($discoveredUrls as $discoveredUrl) {
