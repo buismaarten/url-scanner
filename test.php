@@ -7,8 +7,7 @@ require_once __DIR__.'/vendor/autoload.php';
 
 
 $baseUrl = 'https://letsbuildit.nl';
-$html = file_get_contents($baseUrl);
-$crawler = new Crawler($html, $baseUrl);
+$crawler = new Crawler(file_get_contents($baseUrl), $baseUrl);
 
 print_r($crawler->getUrls(new CssSelectorDiscoverer('a[href]', 'href')));
 exit;
