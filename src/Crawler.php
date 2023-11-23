@@ -40,7 +40,7 @@ final class Crawler
     public function getDomains(AbstractDiscoverer $discoverer): array
     {
         // @todo
-        $urls = array_map(fn (UriInterface $url) => $url->getAuthority(), $this->getDiscoveredUrls($discoverer));
+        $urls = array_map(fn (UriInterface $url) => $url->getHost(), $this->getDiscoveredUrls($discoverer));
         $urls = array_filter($urls);
         $urls = array_unique($urls);
         $urls = array_values($urls);
