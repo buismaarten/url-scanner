@@ -26,6 +26,26 @@ final class Crawler
 
     public function getUrls(AbstractDiscoverer $discoverer): array
     {
+        // @todo
+        $urls = array_map(fn (UriInterface $url): string => $url->toString(), $this->getDiscoveredUrls($discoverer));
+        $urls = array_unique($urls);
+        $urls = array_values($urls);
+
+        return $urls;
+    }
+
+    public function getDomains(AbstractDiscoverer $discoverer): array
+    {
+        // @todo
+        $urls = array_map(fn (UriInterface $url): string => $url->getAuthority(), $this->getDiscoveredUrls($discoverer));
+        $urls = array_unique($urls);
+        $urls = array_values($urls);
+
+        return $urls;
+    }
+
+    private function getDiscoveredUrls(AbstractDiscoverer $discoverer): array
+    {
         $discoveredUrls = $discoverer->discover($this->getCrawler());
         $urls = [];
 
@@ -37,10 +57,6 @@ final class Crawler
                 $urls[] = $url;
             }
         }
-
-        $urls = array_map(fn (UriInterface $url) => $url->toString(), $urls);
-        $urls = array_unique($urls);
-        $urls = array_values($urls);
 
         return $urls;
     }
