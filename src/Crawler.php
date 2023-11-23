@@ -24,26 +24,31 @@ final class Crawler
         return $this->crawler;
     }
 
+    /** @return string[] */
     public function getUrls(AbstractDiscoverer $discoverer): array
     {
         // @todo
-        $urls = array_map(fn (UriInterface $url): string => $url->toString(), $this->getDiscoveredUrls($discoverer));
+        $urls = array_map(fn (UriInterface $url) => $url->toString(), $this->getDiscoveredUrls($discoverer));
+        $urls = array_filter($urls);
         $urls = array_unique($urls);
         $urls = array_values($urls);
 
         return $urls;
     }
 
+    /** @return string[] */
     public function getDomains(AbstractDiscoverer $discoverer): array
     {
         // @todo
-        $urls = array_map(fn (UriInterface $url): string => $url->getAuthority(), $this->getDiscoveredUrls($discoverer));
+        $urls = array_map(fn (UriInterface $url) => $url->getAuthority(), $this->getDiscoveredUrls($discoverer));
+        $urls = array_filter($urls);
         $urls = array_unique($urls);
         $urls = array_values($urls);
 
         return $urls;
     }
 
+    /** @return UriInterface[] */
     private function getDiscoveredUrls(AbstractDiscoverer $discoverer): array
     {
         $discoveredUrls = $discoverer->discover($this->getCrawler());
@@ -61,7 +66,7 @@ final class Crawler
         return $urls;
     }
 
-    private static function normalizeUrl(string $url, string $baseUrl): ?UriInterface
+    private static function normalizeUrl(string $url, ?string $baseUrl): ?UriInterface
     {
         try {
             $components = Uri::fromBaseUri($url, $baseUrl)->getComponents();

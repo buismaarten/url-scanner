@@ -15,6 +15,7 @@ abstract class AbstractDiscoverer
         $this->attribute = $attribute;
     }
 
+    /** @return string[] */
     public function discover(DomCrawler\Crawler $crawler): array
     {
         return $this->getFilteredCrawler($crawler)->each(function (DomCrawler\Crawler $node): string {
