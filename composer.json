@@ -12,7 +12,6 @@
         }
     },
     "config": {
-        "lock": false,
         "sort-packages": true
     },
     "minimum-stability": "RC",
