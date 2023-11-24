@@ -39,7 +39,7 @@ final class Crawler
     }
 
     /** @return string[] */
-    public function getDomains(AbstractDiscoverer $discoverer): array
+    public function getHosts(AbstractDiscoverer $discoverer): array
     {
         $discoveredUrls = $this->getDiscoveredUrls($discoverer);
         $urls = [];
