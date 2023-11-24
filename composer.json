@@ -1,6 +1,6 @@
 {
     "require": {
-        "php": "^8.2",
+        "php": "^8.3",
         "league/uri": "^7.3",
         "league/uri-interfaces": "^7.3",
         "symfony/css-selector": "^7.0",
