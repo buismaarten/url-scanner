@@ -25,9 +25,13 @@ final class Crawler
     /** @return string[] */
     public function getUrls(AbstractDiscoverer $discoverer): array
     {
-        // @todo
-        $urls = array_map(fn (UriInterface $url) => $url->toString(), $this->getDiscoveredUrls($discoverer));
-        $urls = array_filter($urls);
+        $discoveredUrls = $this->getDiscoveredUrls($discoverer);
+        $urls = [];
+
+        foreach ($discoveredUrls as $discoveredUrl) {
+            $urls[] = $discoveredUrl->toString();
+        }
+
         $urls = array_unique($urls);
         $urls = array_values($urls);
 
@@ -37,9 +41,17 @@ final class Crawler
     /** @return string[] */
     public function getDomains(AbstractDiscoverer $discoverer): array
     {
-        // @todo
-        $urls = array_map(fn (UriInterface $url) => $url->getHost(), $this->getDiscoveredUrls($discoverer));
-        $urls = array_filter($urls);
+        $discoveredUrls = $this->getDiscoveredUrls($discoverer);
+        $urls = [];
+
+        foreach ($discoveredUrls as $discoveredUrl) {
+            $url = $discoveredUrl->getHost();
+
+            if ($url !== null) {
+                $urls[] = $url;
+            }
+        }
+
         $urls = array_unique($urls);
         $urls = array_values($urls);
 
@@ -47,19 +59,16 @@ final class Crawler
     }
 
     /** @return UriInterface[] */
-    private function getDiscoveredUrls(AbstractDiscoverer $discoverer): array
+    private function getDiscoveredUrls(AbstractDiscoverer $discoverer): iterable
     {
         $discoveredUrls = $discoverer->discover($this->getCrawler());
-        $urls = [];
 
         foreach ($discoveredUrls as $discoveredUrl) {
             $url = Utils::normalizeUrl($discoveredUrl, $this->baseUrl);
 
             if ($url instanceof UriInterface && Utils::isValidUrl($url)) {
-                $urls[] = $url;
+                yield $url;
             }
         }
-
-        return $urls;
     }
 }
