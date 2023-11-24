@@ -6,6 +6,9 @@
         "symfony/css-selector": "^7.0",
         "symfony/dom-crawler": "^7.0"
     },
+    "require-dev": {
+        "phpstan/phpstan": "^1.10"
+    },
     "autoload": {
         "psr-4": {
             "Buismaarten\\Crawler\\": "src/"
