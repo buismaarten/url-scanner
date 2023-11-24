@@ -28,7 +28,7 @@ final class Utils
 
     public static function isValidUrl(UriInterface $url): bool
     {
-        if (! str_starts_with($url, 'http')) {
+        if ($url->getScheme() === null || ! str_starts_with($url->getScheme(), 'http')) {
             return false;
         }
 
