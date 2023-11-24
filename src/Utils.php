@@ -28,6 +28,10 @@ final class Utils
 
     public static function isValidUrl(UriInterface $url): bool
     {
+        if (! str_starts_with($url, 'http')) {
+            return false;
+        }
+
         return true;
     }
 }
