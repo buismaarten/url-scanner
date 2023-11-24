@@ -44,6 +44,7 @@ final class Crawler
         $discoveredUrls = $this->getDiscoveredUrls($discoverer);
         $urls = [];
 
+        // @todo
         foreach ($discoveredUrls as $discoveredUrl) {
             $url = $discoveredUrl->getHost();
 
