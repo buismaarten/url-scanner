@@ -25,4 +25,9 @@ final class Utils
             'query'  => $components['query'],
         ]);
     }
+
+    public static function isValidUrl(UriInterface $url): bool
+    {
+        return true;
+    }
 }
