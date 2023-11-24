@@ -55,7 +55,7 @@ final class Crawler
         foreach ($discoveredUrls as $discoveredUrl) {
             $url = Utils::normalizeUrl($discoveredUrl, $this->baseUrl);
 
-            if ($url !== null && Utils::isValidUrl($url)) {
+            if ($url instanceof UriInterface && Utils::isValidUrl($url)) {
                 $urls[] = $url;
             }
         }
