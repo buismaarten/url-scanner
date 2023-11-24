@@ -55,8 +55,7 @@ final class Crawler
         foreach ($discoveredUrls as $discoveredUrl) {
             $url = Utils::normalizeUrl($discoveredUrl, $this->baseUrl);
 
-            // @todo
-            if ($url !== null && Utils::isValidUrl($url) && str_starts_with($url, 'http')) {
+            if ($url !== null && Utils::isValidUrl($url)) {
                 $urls[] = $url;
             }
         }
