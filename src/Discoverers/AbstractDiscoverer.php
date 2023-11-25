@@ -6,13 +6,9 @@ use Symfony\Component\DomCrawler\Crawler as DomCrawler;
 
 abstract class AbstractDiscoverer
 {
-    protected readonly string $selector;
-    protected readonly string $attribute;
-
-    public function __construct(string $selector, string $attribute)
+    public function __construct(protected readonly string $selector,
+                                protected readonly string $attribute)
     {
-        $this->selector = $selector;
-        $this->attribute = $attribute;
     }
 
     /** @return string[] */
