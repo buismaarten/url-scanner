@@ -42,21 +42,21 @@ final class Crawler
     public function getHosts(AbstractDiscoverer $discoverer): array
     {
         $discoveredUrls = $this->getDiscoveredUrls($discoverer);
-        $urls = [];
+        $hosts = [];
 
         // @todo
         foreach ($discoveredUrls as $discoveredUrl) {
-            $url = $discoveredUrl->getHost();
+            $host = $discoveredUrl->getHost();
 
-            if ($url !== null) {
-                $urls[] = $url;
+            if ($host !== null) {
+                $hosts[] = $host;
             }
         }
 
-        $urls = array_unique($urls);
-        $urls = array_values($urls);
+        $hosts = array_unique($hosts);
+        $hosts = array_values($hosts);
 
-        return $urls;
+        return $hosts;
     }
 
     /** @return UriInterface[] */
