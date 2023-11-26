@@ -1,6 +1,6 @@
 <?php
 
-namespace Buismaarten\UrlScanner\Detectors\Symfony\Discoverers;
+namespace Buismaarten\UrlScanner\Detectors\Symfony;
 
 abstract class AbstractDiscoverer
 {
