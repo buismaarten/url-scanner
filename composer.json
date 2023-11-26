@@ -11,7 +11,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Buismaarten\\Crawler\\": "src/"
+            "Buismaarten\\UrlScanner\\": "src/"
         }
     },
     "config": {
