@@ -11,4 +11,16 @@ final class SymfonyDetector extends AbstractDetector
     {
         return [];
     }
+
+    /** @return array<string, string> */
+    private static function getFilters(): array
+    {
+        return [
+            '//a[@href]' => 'href',
+            '//img[@src]' => 'src',
+            '//link[@href]' => 'href',
+            '//script[@src]' => 'src',
+            '//iframe[@src]' => 'src',
+        ];
+    }
 }
