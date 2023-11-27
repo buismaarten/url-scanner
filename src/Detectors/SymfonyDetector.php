@@ -26,6 +26,8 @@ final class SymfonyDetector extends AbstractDetector
             '//input[@formaction]' => 'formaction',
             '//input[@src]' => 'src',
             '//link[@href]' => 'href',
+            '//meta[@name="msapplication-TileImage"][@content]' => 'content',
+            '//meta[@name="twitter:image"][@content]' => 'content',
             '//meta[@property="og:audio:secure_url"][@content]' => 'content',
             '//meta[@property="og:audio"][@content]' => 'content',
             '//meta[@property="og:image:secure_url"][@content]' => 'content',
