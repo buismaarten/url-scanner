@@ -18,8 +18,13 @@ final class SymfonyDetector extends AbstractDetector
         return [
             '//a[@href]' => 'href',
             '//audio[@src]' => 'src',
+            '//base[@href]' => 'href',
+            '//button[@formaction]' => 'formaction',
+            '//form[@action]' => 'action',
             '//iframe[@src]' => 'src',
             '//img[@src]' => 'src',
+            '//input[@formaction]' => 'formaction',
+            '//input[@src]' => 'src',
             '//link[@href]' => 'href',
             '//meta[@property="og:audio:secure_url"][@content]' => 'content',
             '//meta[@property="og:audio"][@content]' => 'content',
