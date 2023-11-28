@@ -15,7 +15,7 @@ trait HasDetectorTrait
     public function setDetector(?AbstractDetector $detector): void
     {
         if ($detector === null) {
-            $detector = new SymfonyDetector;
+            $detector = static::getDefaultDetector();
         }
 
         if ($detector instanceof HasClient) {
@@ -28,5 +28,10 @@ trait HasDetectorTrait
     public function getDetector(): AbstractDetector
     {
         return $this->detector;
+    }
+
+    private static function getDefaultDetector(): AbstractDetector
+    {
+        return new SymfonyDetector;
     }
 }

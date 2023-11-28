@@ -10,7 +10,7 @@ trait HasClientTrait
     public function setClient(?object $client): void
     {
         if ($client === null) {
-            $client = new \stdClass;
+            $client = self::getDefaultClient();
         }
 
         $this->client = $client;
@@ -19,5 +19,10 @@ trait HasClientTrait
     public function getClient(): object
     {
         return $this->client;
+    }
+
+    private static function getDefaultClient(): object
+    {
+        return new \stdClass;
     }
 }
