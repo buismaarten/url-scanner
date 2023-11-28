@@ -7,7 +7,7 @@ use GuzzleHttp\RequestOptions;
 
 trait HasClientTrait
 {
-    protected Client $client;
+    private Client $client;
 
     public function setClient(?Client $client): void
     {

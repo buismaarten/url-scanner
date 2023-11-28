@@ -10,7 +10,7 @@ trait HasDetectorTrait
 {
     use HasClientTrait;
 
-    protected AbstractDetector $detector;
+    private AbstractDetector $detector;
 
     public function setDetector(?AbstractDetector $detector): void
     {
