@@ -2,9 +2,10 @@
 
 namespace Buismaarten\UrlScanner\Contracts;
 
-// @todo
+use GuzzleHttp\Client;
+
 interface HasClient
 {
-    public function setClient(object $client): void;
-    public function getClient(): object;
+    public function setClient(Client $client): void;
+    public function getClient(): Client;
 }

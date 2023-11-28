@@ -2,12 +2,13 @@
 
 namespace Buismaarten\UrlScanner\Traits;
 
-// @todo
+use GuzzleHttp\Client;
+
 trait HasClientTrait
 {
-    protected object $client;
+    protected Client $client;
 
-    public function setClient(?object $client): void
+    public function setClient(?Client $client): void
     {
         if ($client === null) {
             $client = self::getDefaultClient();
@@ -16,13 +17,13 @@ trait HasClientTrait
         $this->client = $client;
     }
 
-    public function getClient(): object
+    public function getClient(): Client
     {
         return $this->client;
     }
 
-    private static function getDefaultClient(): object
+    private static function getDefaultClient(): Client
     {
-        return new \stdClass;
+        return new Client;
     }
 }
