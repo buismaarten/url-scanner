@@ -3,6 +3,7 @@
 namespace Buismaarten\UrlScanner\Traits;
 
 use GuzzleHttp\Client;
+use GuzzleHttp\RequestOptions;
 
 trait HasClientTrait
 {
@@ -24,6 +25,11 @@ trait HasClientTrait
 
     private static function getDefaultClient(): Client
     {
-        return new Client;
+        return new Client([
+            RequestOptions::ALLOW_REDIRECTS => true,
+            RequestOptions::CONNECT_TIMEOUT => 30,
+            RequestOptions::HTTP_ERRORS => false,
+            RequestOptions::TIMEOUT => 30,
+        ]);
     }
 }
