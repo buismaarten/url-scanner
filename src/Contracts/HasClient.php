@@ -6,6 +6,6 @@ use GuzzleHttp\Client;
 
 interface HasClient
 {
-    public function setClient(Client $client): void;
+    public function setClient(?Client $client): void;
     public function getClient(): Client;
 }
