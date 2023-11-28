@@ -8,6 +8,8 @@ use Buismaarten\UrlScanner\Detectors\SymfonyDetector;
 
 trait HasDetectorTrait
 {
+    use HasClientTrait;
+
     protected AbstractDetector $detector;
 
     public function setDetector(?AbstractDetector $detector): void
