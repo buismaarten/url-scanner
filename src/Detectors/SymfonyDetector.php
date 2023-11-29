@@ -2,14 +2,10 @@
 
 namespace Buismaarten\UrlScanner\Detectors;
 
-use Buismaarten\UrlScanner\Contracts\HasClient;
-use Buismaarten\UrlScanner\Traits\HasClientTrait;
 use League\Uri\Contracts\UriInterface;
 
-final class SymfonyDetector extends AbstractDetector implements HasClient
+final class SymfonyDetector extends AbstractDetector
 {
-    use HasClientTrait;
-
     /** @return UriInterface[] */
     public function detect(UriInterface $url): array
     {
