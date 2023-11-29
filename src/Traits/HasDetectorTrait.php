@@ -10,15 +10,11 @@ trait HasDetectorTrait
 {
     use HasClientTrait;
 
-    private AbstractDetector $detector;
+    private ?AbstractDetector $detector = null;
 
-    public function setDetector(?AbstractDetector $detector): void
+    public function setDetector(AbstractDetector $detector): void
     {
-        if ($detector === null) {
-            $detector = static::getDefaultDetector();
-        }
-
-        if ($detector instanceof HasClient) {
+        if ($detector instanceof HasClient && $detector->getClient() === null) {
             $detector->setClient($this->getClient());
         }
 
@@ -27,6 +23,10 @@ trait HasDetectorTrait
 
     public function getDetector(): AbstractDetector
     {
+        if ($this->detector === null) {
+            $this->setDetector(static::getDefaultDetector());
+        }
+
         return $this->detector;
     }
 

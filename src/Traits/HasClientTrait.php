@@ -7,19 +7,19 @@ use GuzzleHttp\RequestOptions;
 
 trait HasClientTrait
 {
-    private Client $client;
+    private ?Client $client = null;
 
-    public function setClient(?Client $client): void
+    public function setClient(Client $client): void
     {
-        if ($client === null) {
-            $client = self::getDefaultClient();
-        }
-
         $this->client = $client;
     }
 
     public function getClient(): Client
     {
+        if ($this->client === null) {
+            $this->setClient(self::getDefaultClient());
+        }
+
         return $this->client;
     }
 
