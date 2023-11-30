@@ -2,13 +2,29 @@
 
 namespace Buismaarten\UrlScanner\Detectors;
 
-use Buismaarten\UrlScanner\Contracts\HasClient;
-use Buismaarten\UrlScanner\Traits\HasClientTrait;
+use GuzzleHttp\Client;
 use League\Uri\Contracts\UriInterface;
 
-abstract class AbstractDetector implements HasClient
+abstract class AbstractDetector
 {
-    use HasClientTrait;
+    protected Client $client;
+
+    public function __construct(?Client $client = null)
+    {
+        if ($client !== null) {
+            $this->setClient($client);
+        }
+    }
+
+    public function setClient(Client $client): void
+    {
+        $this->client = $client;
+    }
+
+    public function getClient(): Client
+    {
+        return $this->client;
+    }
 
     /** @return UriInterface[] */
     abstract public function detect(UriInterface $url): array;
