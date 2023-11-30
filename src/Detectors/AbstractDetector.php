@@ -7,7 +7,7 @@ use League\Uri\Contracts\UriInterface;
 
 abstract class AbstractDetector
 {
-    protected Client $client;
+    private Client $client;
 
     public function __construct(?Client $client = null)
     {
