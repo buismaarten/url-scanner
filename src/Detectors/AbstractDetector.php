@@ -3,6 +3,7 @@
 namespace Buismaarten\UrlScanner\Detectors;
 
 use GuzzleHttp\Client;
+use GuzzleHttp\RequestOptions;
 use League\Uri\Contracts\UriInterface;
 
 abstract class AbstractDetector
@@ -11,19 +12,31 @@ abstract class AbstractDetector
 
     public function __construct(?Client $client = null)
     {
-        if ($client !== null) {
-            $this->setClient($client);
-        }
+        $this->setClient($client);
     }
 
-    public function setClient(Client $client): void
+    public function setClient(?Client $client): void
     {
+        if ($client === null) {
+            $client = self::getDefaultClient();
+        }
+
         $this->client = $client;
     }
 
     public function getClient(): Client
     {
         return $this->client;
+    }
+
+    private static function getDefaultClient(): Client
+    {
+        return new Client([
+            RequestOptions::ALLOW_REDIRECTS => true,
+            RequestOptions::CONNECT_TIMEOUT => 30,
+            RequestOptions::HTTP_ERRORS => false,
+            RequestOptions::TIMEOUT => 30,
+        ]);
     }
 
     /** @return UriInterface[] */

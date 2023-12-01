@@ -3,6 +3,7 @@
 namespace Buismaarten\UrlScanner;
 
 use Buismaarten\UrlScanner\Detectors\AbstractDetector;
+use Buismaarten\UrlScanner\Detectors\SymfonyDetector;
 use League\Uri\Contracts\UriInterface;
 use League\Uri\Uri;
 
@@ -12,19 +13,26 @@ final class UrlScanner
 
     public function __construct(?AbstractDetector $detector = null)
     {
-        if ($detector !== null) {
-            $this->setDetector($detector);
-        }
+        $this->setDetector($detector);
     }
 
-    public function setDetector(AbstractDetector $detector): void
+    public function setDetector(?AbstractDetector $detector): void
     {
+        if ($detector === null) {
+            $detector = self::getDefaultDetector();
+        }
+
         $this->detector = $detector;
     }
 
     public function getDetector(): AbstractDetector
     {
         return $this->detector;
+    }
+
+    private static function getDefaultDetector(): AbstractDetector
+    {
+        return new SymfonyDetector;
     }
 
     /** @return UriInterface[] */
