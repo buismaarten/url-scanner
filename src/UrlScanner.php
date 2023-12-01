@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Buismaarten\UrlScanner;
 
 use Buismaarten\UrlScanner\Detectors\AbstractDetector;
