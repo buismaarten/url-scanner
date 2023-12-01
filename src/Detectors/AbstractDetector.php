@@ -18,7 +18,7 @@ abstract class AbstractDetector
     public function setClient(?Client $client): void
     {
         if ($client === null) {
-            $client = $this->getDefaultClient();
+            $client = static::getDefaultClient();
         }
 
         $this->client = $client;
@@ -29,7 +29,7 @@ abstract class AbstractDetector
         return $this->client;
     }
 
-    protected function getDefaultClient(): Client
+    protected static function getDefaultClient(): Client
     {
         return new Client([
             RequestOptions::ALLOW_REDIRECTS => true,

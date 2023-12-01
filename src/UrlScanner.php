@@ -19,7 +19,7 @@ final class UrlScanner
     public function setDetector(?AbstractDetector $detector): void
     {
         if ($detector === null) {
-            $detector = self::getDefaultDetector();
+            $detector = static::getDefaultDetector();
         }
 
         $this->detector = $detector;
