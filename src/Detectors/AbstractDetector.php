@@ -12,22 +12,17 @@ abstract class AbstractDetector
 {
     private Client $client;
 
-    public function __construct(?Client $client = null)
+    public function setClient(Client $client): void
     {
-        $this->setClient($client);
-    }
-
-    public function setClient(?Client $client): void
-    {
-        if ($client === null) {
-            $client = static::getDefaultClient();
-        }
-
         $this->client = $client;
     }
 
     public function getClient(): Client
     {
+        if (! isset($this->client)) {
+            $this->setClient(static::getDefaultClient());
+        }
+
         return $this->client;
     }
 
