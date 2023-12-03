@@ -5,13 +5,43 @@ declare(strict_types=1);
 namespace Buismaarten\UrlScanner\Detectors;
 
 use League\Uri\Contracts\UriInterface;
+use Symfony\Component\DomCrawler\Crawler;
+use Throwable;
 
 final class SymfonyDetector extends AbstractDetector
 {
+    // @todo
     /** @return string[] */
     public function detect(UriInterface $url): array
     {
-        return [];
+        $results = [];
+
+        $content = $this->getBodyFromClient($url->toString());
+        $crawler = new Crawler($content, $url->toString());
+
+        foreach (self::getFilters() as $query => $attribute) {
+            $results = array_merge($results, $crawler->filterXPath($query)->each(function (Crawler $node) use ($attribute) {
+                return ($node->attr($attribute) ?? '');
+            }));
+        }
+
+        return $results;
+    }
+
+    // @todo
+    private function getBodyFromClient(string $url): string
+    {
+        try {
+            $response = $this->getClient()->get($url);
+        } catch (Throwable) {
+            return '';
+        }
+
+        if (! str_starts_with($response->getHeaderLine('Content-Type'), 'text/html')) {
+            return '';
+        }
+
+        return $response->getBody()->getContents();
     }
 
     /** @return array<string, string> */
