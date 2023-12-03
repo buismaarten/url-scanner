@@ -6,7 +6,6 @@ namespace Buismaarten\UrlScanner;
 
 use Buismaarten\UrlScanner\Detectors\AbstractDetector;
 use Buismaarten\UrlScanner\Detectors\SymfonyDetector;
-use League\Uri\Contracts\UriInterface;
 use League\Uri\Uri;
 
 final class UrlScanner
@@ -35,6 +34,13 @@ final class UrlScanner
     /** @return string[] */
     public function scan(string $url): array
     {
-        return $this->getDetector()->detect(Uri::fromBaseUri($url));
+        $detectedUrls = $this->getDetector()->detect(Uri::fromBaseUri($url));
+        $normalizedUrls = [];
+
+        foreach ($detectedUrls as $detectedUrl) {
+            $normalizedUrls[] = Uri::fromBaseUri($detectedUrl, $url)->toString();
+        }
+
+        return $normalizedUrls;
     }
 }
