@@ -32,7 +32,7 @@ final class UrlScanner
         return new SymfonyDetector;
     }
 
-    /** @return UriInterface[] */
+    /** @return string[] */
     public function scan(string $url): array
     {
         return $this->getDetector()->detect(Uri::fromBaseUri($url));

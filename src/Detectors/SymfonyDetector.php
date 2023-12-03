@@ -8,7 +8,7 @@ use League\Uri\Contracts\UriInterface;
 
 final class SymfonyDetector extends AbstractDetector
 {
-    /** @return UriInterface[] */
+    /** @return string[] */
     public function detect(UriInterface $url): array
     {
         return [];
