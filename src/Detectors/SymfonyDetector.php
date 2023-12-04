@@ -11,21 +11,17 @@ use Throwable;
 final class SymfonyDetector extends AbstractDetector
 {
     // @todo
-    /** @return string[] */
-    public function detect(UriInterface $url): array
+    /** @return iterable<string> */
+    public function detect(UriInterface $url): iterable
     {
-        $results = [];
-
         $content = $this->getBodyFromClient($url->toString());
         $crawler = new Crawler($content, $url->toString());
 
         foreach (self::getFilters() as $query => $attribute) {
-            $results = array_merge($results, $crawler->filterXPath($query)->each(function (Crawler $node) use ($attribute) {
+            yield from $crawler->filterXPath($query)->each(function (Crawler $node) use ($attribute) {
                 return ($node->attr($attribute) ?? '');
-            }));
+            });
         }
-
-        return $results;
     }
 
     // @todo

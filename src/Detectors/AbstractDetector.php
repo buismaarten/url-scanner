@@ -36,6 +36,6 @@ abstract class AbstractDetector
         ]);
     }
 
-    /** @return string[] */
-    abstract public function detect(UriInterface $url): array;
+    /** @return iterable<string> */
+    abstract public function detect(UriInterface $url): iterable;
 }
