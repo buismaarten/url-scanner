@@ -27,11 +27,7 @@ final class SymfonyDetector extends AbstractDetector
     // @todo
     private function getBodyFromClient(string $url): string
     {
-        try {
-            $response = $this->getClient()->get($url);
-        } catch (Throwable) {
-            return '';
-        }
+        $response = $this->getClient()->get($url);
 
         if (! str_starts_with($response->getHeaderLine('Content-Type'), 'text/html')) {
             return '';
