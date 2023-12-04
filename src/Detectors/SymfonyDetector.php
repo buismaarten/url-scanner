@@ -13,26 +13,18 @@ final class SymfonyDetector extends AbstractDetector
     /** @return iterable<string> */
     public function detect(UriInterface $url): iterable
     {
-        $content = $this->getBodyFromClient($url->toString());
+        $response = $this->getClient()->get($url->toString());
+
+        if (! str_starts_with($response->getHeaderLine('Content-Type'), 'text/html')) {
+            return;
+        }
+
+        $content = $response->getBody()->getContents();
         $crawler = new Crawler($content, $url->toString());
 
         foreach (self::getFilters() as $query => $attribute) {
-            yield from $crawler->filterXPath($query)->each(function (Crawler $node) use ($attribute) {
-                return ($node->attr($attribute) ?? '');
-            });
+            yield from $crawler->filterXPath($query)->each(fn (Crawler $node) => ($node->attr($attribute) ?? ''));
         }
-    }
-
-    // @todo
-    private function getBodyFromClient(string $url): string
-    {
-        $response = $this->getClient()->get($url);
-
-        if (! str_starts_with($response->getHeaderLine('Content-Type'), 'text/html')) {
-            return '';
-        }
-
-        return $response->getBody()->getContents();
     }
 
     /** @return array<string, string> */
