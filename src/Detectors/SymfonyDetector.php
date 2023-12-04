@@ -6,7 +6,6 @@ namespace Buismaarten\UrlScanner\Detectors;
 
 use League\Uri\Contracts\UriInterface;
 use Symfony\Component\DomCrawler\Crawler;
-use Throwable;
 
 final class SymfonyDetector extends AbstractDetector
 {
