@@ -16,7 +16,7 @@
         }
     },
     "scripts": {
-        "analyse": "./vendor/bin/phpstan analyse src --level=9",
+        "analyse": "./vendor/bin/phpstan analyse -c phpstan.neon",
         "test": "./vendor/bin/phpunit tests"
     },
     "config": {
