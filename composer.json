@@ -17,7 +17,7 @@
     },
     "scripts": {
         "analyse": "./vendor/bin/phpstan analyse src --level=9",
-        "test": "./vendor/bin/phpunit tests --colors=always"
+        "test": "./vendor/bin/phpunit tests"
     },
     "config": {
         "sort-packages": true
