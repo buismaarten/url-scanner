@@ -18,12 +18,12 @@ final class UtilsTest extends TestCase
     {
         return [
             // Relative
-            ['https://localhost', ['/', 'https://localhost']],
-            ['https://localhost/test', ['/test', 'https://localhost']],
+            ['https://localhost', ['/', 'https://localhost/']],
+            ['https://localhost/test', ['/test', 'https://localhost/']],
 
             // Absolute
-            ['https://localhost', ['https://localhost', null]],
-            ['https://localhost/test', ['https://localhost/test', null]],
+            ['https://localhost', ['https://localhost/', null]],
+            ['https://localhost/test', ['https://localhost/test/', null]],
 
             // Invalid
             [null, ['://localhost', null]],
