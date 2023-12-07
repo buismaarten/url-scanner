@@ -198,7 +198,7 @@ final class SymfonyDetectorTest extends TestCase
                 ),
             ],
 
-            // Invalid Content-Type header
+            // Invalid header "Content-Type"
             [
                 'results' => [],
                 'response' => new Response(
@@ -206,6 +206,8 @@ final class SymfonyDetectorTest extends TestCase
                     body: '<a href="/path">Link</a>',
                 ),
             ],
+
+            // Missing header "Content-Type"
             [
                 'results' => [],
                 'response' => new Response(
