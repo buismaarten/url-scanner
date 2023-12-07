@@ -18,18 +18,18 @@ final class UtilsTest extends TestCase
     {
         return [
             // Relative
-            ['https://domain.com', ['/', 'https://domain.com/']],
-            ['https://domain.com/path', ['/path', 'https://domain.com/']],
-            ['https://domain.com/path?query=1', ['/path/?query=1', 'https://domain.com/']],
-            ['https://domain.com/path?query=1', ['/path/?query=1#fragment', 'https://domain.com/']],
+            ['https://localhost', ['/', 'https://localhost/']],
+            ['https://localhost/path', ['/path', 'https://localhost/']],
+            ['https://localhost/path?query=1', ['/path/?query=1', 'https://localhost/']],
+            ['https://localhost/path?query=1', ['/path/?query=1#fragment', 'https://localhost/']],
 
             // Absolute
-            ['https://domain.com', ['https://domain.com/', null]],
-            ['https://domain.com/path?query=1', ['https://domain.com/path/?query=1', null]],
-            ['https://domain.com/path?query=1', ['https://domain.com/path/?query=1#fragment', null]],
+            ['https://localhost', ['https://localhost/', null]],
+            ['https://localhost/path?query=1', ['https://localhost/path/?query=1', null]],
+            ['https://localhost/path?query=1', ['https://localhost/path/?query=1#fragment', null]],
 
             // Invalid
-            [null, ['://domain.com', null]],
+            [null, ['://localhost', null]],
         ];
     }
 }
