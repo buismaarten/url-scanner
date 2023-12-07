@@ -20,10 +20,12 @@ final class UtilsTest extends TestCase
             // Relative
             ['https://localhost', ['/', 'https://localhost/']],
             ['https://localhost/test', ['/test', 'https://localhost/']],
+            ['https://localhost/test', ['/test/#fragment', 'https://localhost/']],
 
             // Absolute
             ['https://localhost', ['https://localhost/', null]],
             ['https://localhost/test', ['https://localhost/test/', null]],
+            ['https://localhost/test', ['https://localhost/test/#fragment', null]],
 
             // Invalid
             [null, ['://localhost', null]],
