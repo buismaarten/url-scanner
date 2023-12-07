@@ -20,12 +20,13 @@ final class UtilsTest extends TestCase
             // Relative
             ['https://domain.com', ['/', 'https://domain.com/']],
             ['https://domain.com/path', ['/path', 'https://domain.com/']],
-            ['https://domain.com/path', ['/path/#fragment', 'https://domain.com/']],
+            ['https://domain.com/path?query=1', ['/path/?query=1', 'https://domain.com/']],
+            ['https://domain.com/path?query=1', ['/path/?query=1#fragment', 'https://domain.com/']],
 
             // Absolute
             ['https://domain.com', ['https://domain.com/', null]],
-            ['https://domain.com/path', ['https://domain.com/path/', null]],
-            ['https://domain.com/path', ['https://domain.com/path/#fragment', null]],
+            ['https://domain.com/path?query=1', ['https://domain.com/path/?query=1', null]],
+            ['https://domain.com/path?query=1', ['https://domain.com/path/?query=1#fragment', null]],
 
             // Invalid
             [null, ['://domain.com', null]],
