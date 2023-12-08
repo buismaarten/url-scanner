@@ -32,6 +32,7 @@ final class UrlScanner
         return new SymfonyDetector;
     }
 
+    // @todo
     /** @return UriInterface[] */
     public function scan(string $url): array
     {
@@ -47,5 +48,11 @@ final class UrlScanner
         }
 
         return array_values($normalizedUrls);
+    }
+
+    /** @return string[] */
+    public function getUrls(string $url): array
+    {
+        return array_map(fn (UriInterface $uri): string => $uri->toString(), $this->scan($url));
     }
 }

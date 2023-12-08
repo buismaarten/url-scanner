@@ -7,5 +7,5 @@ require_once __DIR__.'/vendor/autoload.php';
 
 $scanner = new UrlScanner;
 
-print_r($scanner->scan('https://letsbuildit.nl'));
+print_r($scanner->getUrls('https://letsbuildit.nl'));
 exit;
