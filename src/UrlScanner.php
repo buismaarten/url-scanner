@@ -32,7 +32,7 @@ final class UrlScanner
         return new SymfonyDetector;
     }
 
-    // @todo
+    // @todo: filter protocols
     /** @return UriInterface[] */
     public function scan(string $url): array
     {
