@@ -1,5 +1,12 @@
 Array
 (
+    [0] => letsbuildit.nl
+    [1] => www.instagram.com
+    [2] => www.linkedin.com
+    [3] => fonts.gstatic.com
+)
+Array
+(
     [0] => https://letsbuildit.nl
     [1] => https://letsbuildit.nl/strategie-en-ontwerp
     [2] => https://letsbuildit.nl/strategie-en-ontwerp/organisaties-verzekeringsbranche
