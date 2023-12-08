@@ -12,6 +12,13 @@ final class UrlScanner
 {
     private AbstractDetector $detector;
 
+    public function __construct(AbstractDetector $detector = null)
+    {
+        if ($detector !== null) {
+            $this->setDetector($detector);
+        }
+    }
+
     public function setDetector(AbstractDetector $detector): void
     {
         $this->detector = $detector;
