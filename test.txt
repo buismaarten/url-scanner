@@ -1,180 +1,1069 @@
 Array
 (
-    [0] => https://letsbuildit.nl
-    [1] => https://letsbuildit.nl/strategie-en-ontwerp
-    [2] => https://letsbuildit.nl
-    [3] => https://letsbuildit.nl/strategie-en-ontwerp/organisaties-verzekeringsbranche
-    [4] => https://letsbuildit.nl/strategie-en-ontwerp/organisaties
-    [5] => https://letsbuildit.nl/strategie-en-ontwerp/nieuwe-software-applicaties
-    [6] => https://letsbuildit.nl/strategie-en-ontwerp/bestaande-applicaties
-    [7] => https://letsbuildit.nl/strategie-en-ontwerp/werkwijze
-    [8] => https://letsbuildit.nl
-    [9] => https://letsbuildit.nl/projecten/vkg-extranet
-    [10] => https://letsbuildit.nl/projecten/vkg
-    [11] => https://letsbuildit.nl/projecten/bdo-planningstool
-    [12] => https://letsbuildit.nl/software-ontwikkeling
-    [13] => https://letsbuildit.nl
-    [14] => https://letsbuildit.nl/software-ontwikkeling/maatwerk-software
-    [15] => https://letsbuildit.nl/software-ontwikkeling/low-code-frameworks
-    [16] => https://letsbuildit.nl/software-ontwikkeling/devops-teams
-    [17] => https://letsbuildit.nl/software-ontwikkeling/technieken
-    [18] => https://letsbuildit.nl
-    [19] => https://letsbuildit.nl/projecten/garagepolissysteem
-    [20] => https://letsbuildit.nl/projecten/vkg-salesfunnels
-    [21] => https://letsbuildit.nl/projecten/gladwell-academy
-    [22] => https://letsbuildit.nl/websites-webshops
-    [23] => https://letsbuildit.nl
-    [24] => https://letsbuildit.nl/websites-webshops/websites-met-cms-wordpress
-    [25] => https://letsbuildit.nl/websites-webshops/webshops-woocommerce
-    [26] => https://letsbuildit.nl
-    [27] => https://letsbuildit.nl/projecten/de-groene-linde
-    [28] => https://letsbuildit.nl/projecten/prometheus
-    [29] => https://letsbuildit.nl/projecten/jacob-hooy-co
-    [30] => https://letsbuildit.nl/projecten/teka-kranen
-    [31] => https://letsbuildit.nl/projecten/vkg-website
-    [32] => https://letsbuildit.nl/onderhoud-beheer
-    [33] => https://letsbuildit.nl
-    [34] => https://letsbuildit.nl/onderhoud-beheer/managed-hosting-cloud
-    [35] => https://letsbuildit.nl/onderhoud-beheer/onderdhoud-beveiliging
-    [36] => https://letsbuildit.nl/over-ons
-    [37] => https://letsbuildit.nl
-    [38] => https://letsbuildit.nl/over-ons/over-lets-build-it
-    [39] => https://letsbuildit.nl/over-ons/missie-visie
-    [40] => https://letsbuildit.nl/over-ons/het-team
-    [41] => https://letsbuildit.nl/over-ons/partners
-    [42] => https://letsbuildit.nl/over-ons/werken-bij
-    [43] => https://letsbuildit.nl/contact
-    [44] => https://letsbuildit.nl/strategie-en-ontwerp
-    [45] => https://letsbuildit.nl
-    [46] => https://letsbuildit.nl/strategie-en-ontwerp/organisaties-verzekeringsbranche
-    [47] => https://letsbuildit.nl/strategie-en-ontwerp/organisaties
-    [48] => https://letsbuildit.nl/strategie-en-ontwerp/nieuwe-software-applicaties
-    [49] => https://letsbuildit.nl/strategie-en-ontwerp/bestaande-applicaties
-    [50] => https://letsbuildit.nl/strategie-en-ontwerp/werkwijze
-    [51] => https://letsbuildit.nl
-    [52] => https://letsbuildit.nl/projecten/vkg-extranet
-    [53] => https://letsbuildit.nl/projecten/vkg
-    [54] => https://letsbuildit.nl/projecten/bdo-planningstool
-    [55] => https://letsbuildit.nl/software-ontwikkeling
-    [56] => https://letsbuildit.nl
-    [57] => https://letsbuildit.nl/software-ontwikkeling/maatwerk-software
-    [58] => https://letsbuildit.nl/software-ontwikkeling/low-code-frameworks
-    [59] => https://letsbuildit.nl/software-ontwikkeling/devops-teams
-    [60] => https://letsbuildit.nl/software-ontwikkeling/technieken
-    [61] => https://letsbuildit.nl
-    [62] => https://letsbuildit.nl/projecten/garagepolissysteem
-    [63] => https://letsbuildit.nl/projecten/vkg-salesfunnels
-    [64] => https://letsbuildit.nl/projecten/gladwell-academy
-    [65] => https://letsbuildit.nl/websites-webshops
-    [66] => https://letsbuildit.nl
-    [67] => https://letsbuildit.nl/websites-webshops/websites-met-cms-wordpress
-    [68] => https://letsbuildit.nl/websites-webshops/webshops-woocommerce
-    [69] => https://letsbuildit.nl
-    [70] => https://letsbuildit.nl/projecten/de-groene-linde
-    [71] => https://letsbuildit.nl/projecten/prometheus
-    [72] => https://letsbuildit.nl/projecten/jacob-hooy-co
-    [73] => https://letsbuildit.nl/projecten/teka-kranen
-    [74] => https://letsbuildit.nl/projecten/vkg-website
-    [75] => https://letsbuildit.nl/onderhoud-beheer
-    [76] => https://letsbuildit.nl
-    [77] => https://letsbuildit.nl/onderhoud-beheer/managed-hosting-cloud
-    [78] => https://letsbuildit.nl/onderhoud-beheer/onderdhoud-beveiliging
-    [79] => https://letsbuildit.nl/over-ons
-    [80] => https://letsbuildit.nl
-    [81] => https://letsbuildit.nl/over-ons/over-lets-build-it
-    [82] => https://letsbuildit.nl/over-ons/missie-visie
-    [83] => https://letsbuildit.nl/over-ons/het-team
-    [84] => https://letsbuildit.nl/over-ons/partners
-    [85] => https://letsbuildit.nl/over-ons/werken-bij
-    [86] => https://letsbuildit.nl/contact
-    [87] => https://letsbuildit.nl/software-ontwikkeling
-    [88] => https://letsbuildit.nl/software-ontwikkeling/technieken
-    [89] => https://letsbuildit.nl/over-ons/missie-visie
-    [90] => https://letsbuildit.nl/software-ontwikkeling/maatwerk-software
-    [91] => https://letsbuildit.nl/software-ontwikkeling/low-code-frameworks
-    [92] => https://letsbuildit.nl/software-ontwikkeling/devops-teams
-    [93] => https://letsbuildit.nl/software-ontwikkeling/technieken
-    [94] => https://letsbuildit.nl/projecten/gladwell-academy
-    [95] => https://letsbuildit.nl/projecten/vkg-extranet
-    [96] => tel:0229%20-%2031%2031%2031
-    [97] => mailto:skrijnsen@letsbuildit.nl
-    [98] => mailto:info@letsbuildit.nl
-    [99] => tel:0229%20-%2031%2031%2031
-    [100] => https://letsbuildit.nl/strategie-en-ontwerp/organisaties-verzekeringsbranche
-    [101] => https://letsbuildit.nl/strategie-en-ontwerp/organisaties
-    [102] => https://letsbuildit.nl/strategie-en-ontwerp/nieuwe-software-applicaties
-    [103] => https://letsbuildit.nl/strategie-en-ontwerp/bestaande-applicaties
-    [104] => https://letsbuildit.nl/strategie-en-ontwerp/werkwijze
-    [105] => https://letsbuildit.nl/software-ontwikkeling/maatwerk-software
-    [106] => https://letsbuildit.nl/software-ontwikkeling/low-code-frameworks
-    [107] => https://letsbuildit.nl/software-ontwikkeling/devops-teams
-    [108] => https://letsbuildit.nl/software-ontwikkeling/technieken
-    [109] => https://letsbuildit.nl/algemene-voorwaarden
-    [110] => https://letsbuildit.nl/privacy-policy
-    [111] => https://www.instagram.com/letsbuilditnl
-    [112] => https://www.linkedin.com/company/let's-build-it
-    [113] => https://letsbuildit.nl/cookie-policy
-    [114] => https://letsbuildit.nl
-    [115] => data:image/svg+xml;charset=us-ascii,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E
-    [116] => https://letsbuildit.nl/app/uploads/2023/02/meeting-1536x662.jpg
-    [117] => data:image/svg+xml;charset=us-ascii,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E
-    [118] => https://letsbuildit.nl/app/uploads/2023/02/blur-1536x689.jpg
-    [119] => data:image/svg+xml;charset=us-ascii,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E
-    [120] => https://letsbuildit.nl/app/uploads/2023/03/working-1536x750.jpg
-    [121] => data:image/svg+xml;charset=us-ascii,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E
-    [122] => https://letsbuildit.nl/app/uploads/2023/02/microsoft-azure-300x50.webp
-    [123] => data:image/svg+xml;charset=us-ascii,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E
-    [124] => https://letsbuildit.nl/app/uploads/2023/02/logo-1-300x76.png
-    [125] => data:image/svg+xml;charset=us-ascii,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E
-    [126] => https://letsbuildit.nl/app/uploads/2023/02/logo-2-300x76.png
-    [127] => data:image/svg+xml;charset=us-ascii,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E
-    [128] => https://letsbuildit.nl/app/uploads/2023/02/laravel-300x171.png
-    [129] => data:image/svg+xml;charset=us-ascii,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E
-    [130] => https://letsbuildit.nl/app/uploads/2023/02/wordpress-300x99.png
-    [131] => data:image/svg+xml;charset=us-ascii,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E
-    [132] => https://letsbuildit.nl/app/uploads/2023/03/Woocommerce-300x74.png
-    [133] => data:image/svg+xml;charset=us-ascii,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E
-    [134] => https://letsbuildit.nl/app/uploads/2023/03/whiteboard-898x1024.jpg
-    [135] => data:image/svg+xml;charset=us-ascii,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E
-    [136] => https://letsbuildit.nl/app/uploads/2023/03/developer-1024x404.jpg
-    [137] => data:image/svg+xml;charset=us-ascii,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E
-    [138] => https://letsbuildit.nl/app/uploads/2023/03/GladwellAcademyLogo-1.png
-    [139] => data:image/svg+xml;charset=us-ascii,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E
-    [140] => https://letsbuildit.nl/app/uploads/2023/02/laravel-300x171.png
-    [141] => data:image/svg+xml;charset=us-ascii,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E
-    [142] => https://letsbuildit.nl/app/uploads/2023/02/logo-6-300x157.png
-    [143] => data:image/svg+xml;charset=us-ascii,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E
-    [144] => https://letsbuildit.nl/app/uploads/2023/02/image-6-1024x679.png
-    [145] => data:image/svg+xml;charset=us-ascii,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E
-    [146] => https://letsbuildit.nl/app/uploads/2023/02/logo-1-300x76.png
-    [147] => data:image/svg+xml;charset=us-ascii,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E
-    [148] => https://letsbuildit.nl/app/uploads/2023/02/logo-2-300x76.png
-    [149] => data:image/svg+xml;charset=us-ascii,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E
-    [150] => https://letsbuildit.nl/app/uploads/2023/03/dotnet-1024x379.jpg
-    [151] => data:image/svg+xml;charset=us-ascii,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E
-    [152] => https://letsbuildit.nl/app/uploads/2023/02/image-4-669x1024.jpg
-    [153] => https://letsbuildit.nl/app/themes/lbi-zakelijk-thema/apple-touch-icon.png
-    [154] => https://letsbuildit.nl/app/themes/lbi-zakelijk-thema/favicon-32x32.png
-    [155] => https://letsbuildit.nl/app/themes/lbi-zakelijk-thema/favicon-16x16.png
-    [156] => https://letsbuildit.nl/app/themes/lbi-zakelijk-thema/site.webmanifest
-    [157] => https://letsbuildit.nl/app/themes/lbi-zakelijk-thema/safari-pinned-tab.svg
-    [158] => https://fonts.gstatic.com
-    [159] => https://letsbuildit.nl/app/themes/lbi-zakelijk-thema/webfonts/fa-solid-900.woff2
-    [160] => https://letsbuildit.nl/app/themes/lbi-zakelijk-thema/webfonts/fa-brands-400.woff2
-    [161] => https://fonts.gstatic.com/s/titilliumweb/v15/NaPDcZTIAOhVxoMyOr9n_E7ffAzHGItzYw.woff2
-    [162] => https://fonts.gstatic.com/s/titilliumweb/v15/NaPDcZTIAOhVxoMyOr9n_E7ffGjEGItzYw.woff2
-    [163] => https://fonts.gstatic.com/s/titilliumweb/v15/NaPecZTIAOhVxoMyOr9n_E7fdMPmDQ.woff2
-    [164] => https://fonts.gstatic.com/s/titilliumweb/v15/NaPDcZTIAOhVxoMyOr9n_E7ffBzCGItzYw.woff2
-    [165] => https://fonts.gstatic.com/s/titilliumweb/v15/NaPDcZTIAOhVxoMyOr9n_E7ffHjDGItzYw.woff2
-    [166] => https://letsbuildit.nl
-    [167] => https://letsbuildit.nl/wp-json
-    [168] => https://letsbuildit.nl/wp-json/wp/v2/pages/299
-    [169] => https://letsbuildit.nl/wp/xmlrpc.php?rsd
-    [170] => https://letsbuildit.nl/wp/wp-includes/wlwmanifest.xml
-    [171] => https://letsbuildit.nl
-    [172] => https://letsbuildit.nl/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fletsbuildit.nl%2F
-    [173] => https://letsbuildit.nl/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fletsbuildit.nl%2F&format=xml
-    [174] => https://letsbuildit.nl
-    [175] => https://letsbuildit.nl/app/plugins/wp-rocket/assets/js/lazyload/17.5/lazyload.min.js
-    [176] => https://letsbuildit.nl/app/cache/min/1/4db5a31bad0e4d1f2daad6964444fc34.js
+    [0] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => https
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => letsbuildit.nl
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => letsbuildit.nl
+            [path:League\Uri\Uri:private] => 
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => https://letsbuildit.nl
+        )
+
+    [1] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => https
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => letsbuildit.nl
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => letsbuildit.nl
+            [path:League\Uri\Uri:private] => /strategie-en-ontwerp
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => https://letsbuildit.nl/strategie-en-ontwerp
+        )
+
+    [2] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => https
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => letsbuildit.nl
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => letsbuildit.nl
+            [path:League\Uri\Uri:private] => /strategie-en-ontwerp/organisaties-verzekeringsbranche
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => https://letsbuildit.nl/strategie-en-ontwerp/organisaties-verzekeringsbranche
+        )
+
+    [3] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => https
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => letsbuildit.nl
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => letsbuildit.nl
+            [path:League\Uri\Uri:private] => /strategie-en-ontwerp/organisaties
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => https://letsbuildit.nl/strategie-en-ontwerp/organisaties
+        )
+
+    [4] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => https
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => letsbuildit.nl
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => letsbuildit.nl
+            [path:League\Uri\Uri:private] => /strategie-en-ontwerp/nieuwe-software-applicaties
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => https://letsbuildit.nl/strategie-en-ontwerp/nieuwe-software-applicaties
+        )
+
+    [5] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => https
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => letsbuildit.nl
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => letsbuildit.nl
+            [path:League\Uri\Uri:private] => /strategie-en-ontwerp/bestaande-applicaties
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => https://letsbuildit.nl/strategie-en-ontwerp/bestaande-applicaties
+        )
+
+    [6] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => https
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => letsbuildit.nl
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => letsbuildit.nl
+            [path:League\Uri\Uri:private] => /strategie-en-ontwerp/werkwijze
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => https://letsbuildit.nl/strategie-en-ontwerp/werkwijze
+        )
+
+    [7] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => https
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => letsbuildit.nl
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => letsbuildit.nl
+            [path:League\Uri\Uri:private] => /projecten/vkg-extranet
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => https://letsbuildit.nl/projecten/vkg-extranet
+        )
+
+    [8] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => https
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => letsbuildit.nl
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => letsbuildit.nl
+            [path:League\Uri\Uri:private] => /projecten/vkg
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => https://letsbuildit.nl/projecten/vkg
+        )
+
+    [9] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => https
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => letsbuildit.nl
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => letsbuildit.nl
+            [path:League\Uri\Uri:private] => /projecten/bdo-planningstool
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => https://letsbuildit.nl/projecten/bdo-planningstool
+        )
+
+    [10] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => https
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => letsbuildit.nl
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => letsbuildit.nl
+            [path:League\Uri\Uri:private] => /software-ontwikkeling
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => https://letsbuildit.nl/software-ontwikkeling
+        )
+
+    [11] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => https
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => letsbuildit.nl
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => letsbuildit.nl
+            [path:League\Uri\Uri:private] => /software-ontwikkeling/maatwerk-software
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => https://letsbuildit.nl/software-ontwikkeling/maatwerk-software
+        )
+
+    [12] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => https
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => letsbuildit.nl
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => letsbuildit.nl
+            [path:League\Uri\Uri:private] => /software-ontwikkeling/low-code-frameworks
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => https://letsbuildit.nl/software-ontwikkeling/low-code-frameworks
+        )
+
+    [13] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => https
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => letsbuildit.nl
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => letsbuildit.nl
+            [path:League\Uri\Uri:private] => /software-ontwikkeling/devops-teams
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => https://letsbuildit.nl/software-ontwikkeling/devops-teams
+        )
+
+    [14] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => https
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => letsbuildit.nl
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => letsbuildit.nl
+            [path:League\Uri\Uri:private] => /software-ontwikkeling/technieken
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => https://letsbuildit.nl/software-ontwikkeling/technieken
+        )
+
+    [15] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => https
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => letsbuildit.nl
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => letsbuildit.nl
+            [path:League\Uri\Uri:private] => /projecten/garagepolissysteem
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => https://letsbuildit.nl/projecten/garagepolissysteem
+        )
+
+    [16] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => https
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => letsbuildit.nl
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => letsbuildit.nl
+            [path:League\Uri\Uri:private] => /projecten/vkg-salesfunnels
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => https://letsbuildit.nl/projecten/vkg-salesfunnels
+        )
+
+    [17] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => https
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => letsbuildit.nl
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => letsbuildit.nl
+            [path:League\Uri\Uri:private] => /projecten/gladwell-academy
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => https://letsbuildit.nl/projecten/gladwell-academy
+        )
+
+    [18] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => https
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => letsbuildit.nl
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => letsbuildit.nl
+            [path:League\Uri\Uri:private] => /websites-webshops
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => https://letsbuildit.nl/websites-webshops
+        )
+
+    [19] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => https
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => letsbuildit.nl
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => letsbuildit.nl
+            [path:League\Uri\Uri:private] => /websites-webshops/websites-met-cms-wordpress
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => https://letsbuildit.nl/websites-webshops/websites-met-cms-wordpress
+        )
+
+    [20] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => https
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => letsbuildit.nl
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => letsbuildit.nl
+            [path:League\Uri\Uri:private] => /websites-webshops/webshops-woocommerce
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => https://letsbuildit.nl/websites-webshops/webshops-woocommerce
+        )
+
+    [21] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => https
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => letsbuildit.nl
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => letsbuildit.nl
+            [path:League\Uri\Uri:private] => /projecten/de-groene-linde
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => https://letsbuildit.nl/projecten/de-groene-linde
+        )
+
+    [22] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => https
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => letsbuildit.nl
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => letsbuildit.nl
+            [path:League\Uri\Uri:private] => /projecten/prometheus
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => https://letsbuildit.nl/projecten/prometheus
+        )
+
+    [23] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => https
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => letsbuildit.nl
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => letsbuildit.nl
+            [path:League\Uri\Uri:private] => /projecten/jacob-hooy-co
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => https://letsbuildit.nl/projecten/jacob-hooy-co
+        )
+
+    [24] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => https
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => letsbuildit.nl
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => letsbuildit.nl
+            [path:League\Uri\Uri:private] => /projecten/teka-kranen
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => https://letsbuildit.nl/projecten/teka-kranen
+        )
+
+    [25] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => https
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => letsbuildit.nl
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => letsbuildit.nl
+            [path:League\Uri\Uri:private] => /projecten/vkg-website
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => https://letsbuildit.nl/projecten/vkg-website
+        )
+
+    [26] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => https
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => letsbuildit.nl
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => letsbuildit.nl
+            [path:League\Uri\Uri:private] => /onderhoud-beheer
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => https://letsbuildit.nl/onderhoud-beheer
+        )
+
+    [27] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => https
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => letsbuildit.nl
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => letsbuildit.nl
+            [path:League\Uri\Uri:private] => /onderhoud-beheer/managed-hosting-cloud
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => https://letsbuildit.nl/onderhoud-beheer/managed-hosting-cloud
+        )
+
+    [28] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => https
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => letsbuildit.nl
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => letsbuildit.nl
+            [path:League\Uri\Uri:private] => /onderhoud-beheer/onderdhoud-beveiliging
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => https://letsbuildit.nl/onderhoud-beheer/onderdhoud-beveiliging
+        )
+
+    [29] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => https
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => letsbuildit.nl
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => letsbuildit.nl
+            [path:League\Uri\Uri:private] => /over-ons
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => https://letsbuildit.nl/over-ons
+        )
+
+    [30] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => https
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => letsbuildit.nl
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => letsbuildit.nl
+            [path:League\Uri\Uri:private] => /over-ons/over-lets-build-it
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => https://letsbuildit.nl/over-ons/over-lets-build-it
+        )
+
+    [31] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => https
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => letsbuildit.nl
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => letsbuildit.nl
+            [path:League\Uri\Uri:private] => /over-ons/missie-visie
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => https://letsbuildit.nl/over-ons/missie-visie
+        )
+
+    [32] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => https
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => letsbuildit.nl
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => letsbuildit.nl
+            [path:League\Uri\Uri:private] => /over-ons/het-team
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => https://letsbuildit.nl/over-ons/het-team
+        )
+
+    [33] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => https
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => letsbuildit.nl
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => letsbuildit.nl
+            [path:League\Uri\Uri:private] => /over-ons/partners
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => https://letsbuildit.nl/over-ons/partners
+        )
+
+    [34] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => https
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => letsbuildit.nl
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => letsbuildit.nl
+            [path:League\Uri\Uri:private] => /over-ons/werken-bij
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => https://letsbuildit.nl/over-ons/werken-bij
+        )
+
+    [35] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => https
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => letsbuildit.nl
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => letsbuildit.nl
+            [path:League\Uri\Uri:private] => /contact
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => https://letsbuildit.nl/contact
+        )
+
+    [36] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => tel
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => 
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => 
+            [path:League\Uri\Uri:private] => 0229%20-%2031%2031%2031
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => tel:0229%20-%2031%2031%2031
+        )
+
+    [37] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => mailto
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => 
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => 
+            [path:League\Uri\Uri:private] => skrijnsen@letsbuildit.nl
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => mailto:skrijnsen@letsbuildit.nl
+        )
+
+    [38] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => mailto
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => 
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => 
+            [path:League\Uri\Uri:private] => info@letsbuildit.nl
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => mailto:info@letsbuildit.nl
+        )
+
+    [39] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => https
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => letsbuildit.nl
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => letsbuildit.nl
+            [path:League\Uri\Uri:private] => /algemene-voorwaarden
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => https://letsbuildit.nl/algemene-voorwaarden
+        )
+
+    [40] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => https
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => letsbuildit.nl
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => letsbuildit.nl
+            [path:League\Uri\Uri:private] => /privacy-policy
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => https://letsbuildit.nl/privacy-policy
+        )
+
+    [41] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => https
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => www.instagram.com
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => www.instagram.com
+            [path:League\Uri\Uri:private] => /letsbuilditnl
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => https://www.instagram.com/letsbuilditnl
+        )
+
+    [42] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => https
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => www.linkedin.com
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => www.linkedin.com
+            [path:League\Uri\Uri:private] => /company/let's-build-it
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => https://www.linkedin.com/company/let's-build-it
+        )
+
+    [43] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => https
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => letsbuildit.nl
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => letsbuildit.nl
+            [path:League\Uri\Uri:private] => /cookie-policy
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => https://letsbuildit.nl/cookie-policy
+        )
+
+    [44] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => data
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => 
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => 
+            [path:League\Uri\Uri:private] => image/svg+xml;charset=us-ascii,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => data:image/svg+xml;charset=us-ascii,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E
+        )
+
+    [45] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => https
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => letsbuildit.nl
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => letsbuildit.nl
+            [path:League\Uri\Uri:private] => /app/uploads/2023/02/meeting-1536x662.jpg
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => https://letsbuildit.nl/app/uploads/2023/02/meeting-1536x662.jpg
+        )
+
+    [46] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => https
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => letsbuildit.nl
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => letsbuildit.nl
+            [path:League\Uri\Uri:private] => /app/uploads/2023/02/blur-1536x689.jpg
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => https://letsbuildit.nl/app/uploads/2023/02/blur-1536x689.jpg
+        )
+
+    [47] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => https
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => letsbuildit.nl
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => letsbuildit.nl
+            [path:League\Uri\Uri:private] => /app/uploads/2023/03/working-1536x750.jpg
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => https://letsbuildit.nl/app/uploads/2023/03/working-1536x750.jpg
+        )
+
+    [48] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => https
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => letsbuildit.nl
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => letsbuildit.nl
+            [path:League\Uri\Uri:private] => /app/uploads/2023/02/microsoft-azure-300x50.webp
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => https://letsbuildit.nl/app/uploads/2023/02/microsoft-azure-300x50.webp
+        )
+
+    [49] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => https
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => letsbuildit.nl
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => letsbuildit.nl
+            [path:League\Uri\Uri:private] => /app/uploads/2023/02/logo-1-300x76.png
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => https://letsbuildit.nl/app/uploads/2023/02/logo-1-300x76.png
+        )
+
+    [50] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => https
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => letsbuildit.nl
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => letsbuildit.nl
+            [path:League\Uri\Uri:private] => /app/uploads/2023/02/logo-2-300x76.png
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => https://letsbuildit.nl/app/uploads/2023/02/logo-2-300x76.png
+        )
+
+    [51] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => https
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => letsbuildit.nl
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => letsbuildit.nl
+            [path:League\Uri\Uri:private] => /app/uploads/2023/02/laravel-300x171.png
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => https://letsbuildit.nl/app/uploads/2023/02/laravel-300x171.png
+        )
+
+    [52] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => https
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => letsbuildit.nl
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => letsbuildit.nl
+            [path:League\Uri\Uri:private] => /app/uploads/2023/02/wordpress-300x99.png
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => https://letsbuildit.nl/app/uploads/2023/02/wordpress-300x99.png
+        )
+
+    [53] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => https
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => letsbuildit.nl
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => letsbuildit.nl
+            [path:League\Uri\Uri:private] => /app/uploads/2023/03/Woocommerce-300x74.png
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => https://letsbuildit.nl/app/uploads/2023/03/Woocommerce-300x74.png
+        )
+
+    [54] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => https
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => letsbuildit.nl
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => letsbuildit.nl
+            [path:League\Uri\Uri:private] => /app/uploads/2023/03/whiteboard-898x1024.jpg
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => https://letsbuildit.nl/app/uploads/2023/03/whiteboard-898x1024.jpg
+        )
+
+    [55] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => https
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => letsbuildit.nl
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => letsbuildit.nl
+            [path:League\Uri\Uri:private] => /app/uploads/2023/03/developer-1024x404.jpg
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => https://letsbuildit.nl/app/uploads/2023/03/developer-1024x404.jpg
+        )
+
+    [56] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => https
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => letsbuildit.nl
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => letsbuildit.nl
+            [path:League\Uri\Uri:private] => /app/uploads/2023/03/GladwellAcademyLogo-1.png
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => https://letsbuildit.nl/app/uploads/2023/03/GladwellAcademyLogo-1.png
+        )
+
+    [57] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => https
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => letsbuildit.nl
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => letsbuildit.nl
+            [path:League\Uri\Uri:private] => /app/uploads/2023/02/logo-6-300x157.png
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => https://letsbuildit.nl/app/uploads/2023/02/logo-6-300x157.png
+        )
+
+    [58] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => https
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => letsbuildit.nl
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => letsbuildit.nl
+            [path:League\Uri\Uri:private] => /app/uploads/2023/02/image-6-1024x679.png
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => https://letsbuildit.nl/app/uploads/2023/02/image-6-1024x679.png
+        )
+
+    [59] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => https
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => letsbuildit.nl
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => letsbuildit.nl
+            [path:League\Uri\Uri:private] => /app/uploads/2023/03/dotnet-1024x379.jpg
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => https://letsbuildit.nl/app/uploads/2023/03/dotnet-1024x379.jpg
+        )
+
+    [60] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => https
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => letsbuildit.nl
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => letsbuildit.nl
+            [path:League\Uri\Uri:private] => /app/uploads/2023/02/image-4-669x1024.jpg
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => https://letsbuildit.nl/app/uploads/2023/02/image-4-669x1024.jpg
+        )
+
+    [61] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => https
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => letsbuildit.nl
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => letsbuildit.nl
+            [path:League\Uri\Uri:private] => /app/themes/lbi-zakelijk-thema/apple-touch-icon.png
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => https://letsbuildit.nl/app/themes/lbi-zakelijk-thema/apple-touch-icon.png
+        )
+
+    [62] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => https
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => letsbuildit.nl
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => letsbuildit.nl
+            [path:League\Uri\Uri:private] => /app/themes/lbi-zakelijk-thema/favicon-32x32.png
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => https://letsbuildit.nl/app/themes/lbi-zakelijk-thema/favicon-32x32.png
+        )
+
+    [63] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => https
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => letsbuildit.nl
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => letsbuildit.nl
+            [path:League\Uri\Uri:private] => /app/themes/lbi-zakelijk-thema/favicon-16x16.png
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => https://letsbuildit.nl/app/themes/lbi-zakelijk-thema/favicon-16x16.png
+        )
+
+    [64] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => https
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => letsbuildit.nl
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => letsbuildit.nl
+            [path:League\Uri\Uri:private] => /app/themes/lbi-zakelijk-thema/site.webmanifest
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => https://letsbuildit.nl/app/themes/lbi-zakelijk-thema/site.webmanifest
+        )
+
+    [65] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => https
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => letsbuildit.nl
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => letsbuildit.nl
+            [path:League\Uri\Uri:private] => /app/themes/lbi-zakelijk-thema/safari-pinned-tab.svg
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => https://letsbuildit.nl/app/themes/lbi-zakelijk-thema/safari-pinned-tab.svg
+        )
+
+    [66] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => https
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => fonts.gstatic.com
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => fonts.gstatic.com
+            [path:League\Uri\Uri:private] => 
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => https://fonts.gstatic.com
+        )
+
+    [67] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => https
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => letsbuildit.nl
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => letsbuildit.nl
+            [path:League\Uri\Uri:private] => /app/themes/lbi-zakelijk-thema/webfonts/fa-solid-900.woff2
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => https://letsbuildit.nl/app/themes/lbi-zakelijk-thema/webfonts/fa-solid-900.woff2
+        )
+
+    [68] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => https
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => letsbuildit.nl
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => letsbuildit.nl
+            [path:League\Uri\Uri:private] => /app/themes/lbi-zakelijk-thema/webfonts/fa-brands-400.woff2
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => https://letsbuildit.nl/app/themes/lbi-zakelijk-thema/webfonts/fa-brands-400.woff2
+        )
+
+    [69] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => https
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => fonts.gstatic.com
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => fonts.gstatic.com
+            [path:League\Uri\Uri:private] => /s/titilliumweb/v15/NaPDcZTIAOhVxoMyOr9n_E7ffAzHGItzYw.woff2
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => https://fonts.gstatic.com/s/titilliumweb/v15/NaPDcZTIAOhVxoMyOr9n_E7ffAzHGItzYw.woff2
+        )
+
+    [70] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => https
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => fonts.gstatic.com
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => fonts.gstatic.com
+            [path:League\Uri\Uri:private] => /s/titilliumweb/v15/NaPDcZTIAOhVxoMyOr9n_E7ffGjEGItzYw.woff2
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => https://fonts.gstatic.com/s/titilliumweb/v15/NaPDcZTIAOhVxoMyOr9n_E7ffGjEGItzYw.woff2
+        )
+
+    [71] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => https
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => fonts.gstatic.com
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => fonts.gstatic.com
+            [path:League\Uri\Uri:private] => /s/titilliumweb/v15/NaPecZTIAOhVxoMyOr9n_E7fdMPmDQ.woff2
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => https://fonts.gstatic.com/s/titilliumweb/v15/NaPecZTIAOhVxoMyOr9n_E7fdMPmDQ.woff2
+        )
+
+    [72] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => https
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => fonts.gstatic.com
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => fonts.gstatic.com
+            [path:League\Uri\Uri:private] => /s/titilliumweb/v15/NaPDcZTIAOhVxoMyOr9n_E7ffBzCGItzYw.woff2
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => https://fonts.gstatic.com/s/titilliumweb/v15/NaPDcZTIAOhVxoMyOr9n_E7ffBzCGItzYw.woff2
+        )
+
+    [73] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => https
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => fonts.gstatic.com
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => fonts.gstatic.com
+            [path:League\Uri\Uri:private] => /s/titilliumweb/v15/NaPDcZTIAOhVxoMyOr9n_E7ffHjDGItzYw.woff2
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => https://fonts.gstatic.com/s/titilliumweb/v15/NaPDcZTIAOhVxoMyOr9n_E7ffHjDGItzYw.woff2
+        )
+
+    [74] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => https
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => letsbuildit.nl
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => letsbuildit.nl
+            [path:League\Uri\Uri:private] => /wp-json
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => https://letsbuildit.nl/wp-json
+        )
+
+    [75] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => https
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => letsbuildit.nl
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => letsbuildit.nl
+            [path:League\Uri\Uri:private] => /wp-json/wp/v2/pages/299
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => https://letsbuildit.nl/wp-json/wp/v2/pages/299
+        )
+
+    [76] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => https
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => letsbuildit.nl
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => letsbuildit.nl
+            [path:League\Uri\Uri:private] => /wp/xmlrpc.php
+            [query:League\Uri\Uri:private] => rsd
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => https://letsbuildit.nl/wp/xmlrpc.php?rsd
+        )
+
+    [77] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => https
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => letsbuildit.nl
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => letsbuildit.nl
+            [path:League\Uri\Uri:private] => /wp/wp-includes/wlwmanifest.xml
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => https://letsbuildit.nl/wp/wp-includes/wlwmanifest.xml
+        )
+
+    [78] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => https
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => letsbuildit.nl
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => letsbuildit.nl
+            [path:League\Uri\Uri:private] => /wp-json/oembed/1.0/embed
+            [query:League\Uri\Uri:private] => url=https%3A%2F%2Fletsbuildit.nl%2F
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => https://letsbuildit.nl/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fletsbuildit.nl%2F
+        )
+
+    [79] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => https
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => letsbuildit.nl
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => letsbuildit.nl
+            [path:League\Uri\Uri:private] => /wp-json/oembed/1.0/embed
+            [query:League\Uri\Uri:private] => url=https%3A%2F%2Fletsbuildit.nl%2F&format=xml
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => https://letsbuildit.nl/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fletsbuildit.nl%2F&format=xml
+        )
+
+    [80] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => https
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => letsbuildit.nl
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => letsbuildit.nl
+            [path:League\Uri\Uri:private] => /app/plugins/wp-rocket/assets/js/lazyload/17.5/lazyload.min.js
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => https://letsbuildit.nl/app/plugins/wp-rocket/assets/js/lazyload/17.5/lazyload.min.js
+        )
+
+    [81] => League\Uri\Uri Object
+        (
+            [scheme:League\Uri\Uri:private] => https
+            [userInfo:League\Uri\Uri:private] => 
+            [host:League\Uri\Uri:private] => letsbuildit.nl
+            [port:League\Uri\Uri:private] => 
+            [authority:League\Uri\Uri:private] => letsbuildit.nl
+            [path:League\Uri\Uri:private] => /app/cache/min/1/4db5a31bad0e4d1f2daad6964444fc34.js
+            [query:League\Uri\Uri:private] => 
+            [fragment:League\Uri\Uri:private] => 
+            [uri:League\Uri\Uri:private] => https://letsbuildit.nl/app/cache/min/1/4db5a31bad0e4d1f2daad6964444fc34.js
+        )
+
 )
