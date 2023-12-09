@@ -27,4 +27,13 @@ final class Utils
             'query'  => $components['query'],
         ]);
     }
+
+    public static function normalizeHost(string $host): string
+    {
+        if (str_starts_with($host, 'www.')) {
+            $host = substr($host, strlen('www.'));
+        }
+
+        return $host;
+    }
 }

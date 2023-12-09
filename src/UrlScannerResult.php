@@ -18,12 +18,11 @@ final class UrlScannerResult
     {
         $hosts = [];
 
-        // @todo: normalize hostname
         foreach ($this->urls as $url) {
             $host = $url->getHost();
 
             if ($host !== null) {
-                $hosts[] = $host;
+                $hosts[] = Utils::normalizeHost($host);
             }
         }
 

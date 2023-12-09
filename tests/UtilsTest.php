@@ -32,4 +32,18 @@ final class UtilsTest extends TestCase
             [null, ['://localhost', null]],
         ];
     }
+
+    #[DataProvider('providerNormalizeHost')]
+    public function testNormalizeHost(string $expected, array $parameters): void
+    {
+        $this->assertSame($expected, Utils::normalizeHost($parameters[0]));
+    }
+
+    public static function providerNormalizeHost(): array
+    {
+        return [
+            ['localhost', ['localhost']],
+            ['localhost', ['www.localhost']],
+        ];
+    }
 }
