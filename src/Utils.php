@@ -28,6 +28,15 @@ final class Utils
         ]);
     }
 
+    public static function validateUrl(UriInterface $url): bool
+    {
+        if ($url->getScheme() === null || ! str_starts_with($url->getScheme(), 'http')) {
+            return false;
+        }
+
+        return true;
+    }
+
     public static function normalizeHost(string $host): string
     {
         if (str_starts_with($host, 'www.')) {

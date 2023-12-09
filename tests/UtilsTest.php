@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 use Buismaarten\UrlScanner\Utils;
+use League\Uri\Uri;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 
@@ -33,17 +34,37 @@ final class UtilsTest extends TestCase
         ];
     }
 
-    #[DataProvider('providerNormalizeHost')]
-    public function testNormalizeHost(string $expected, array $parameters): void
+    #[DataProvider('providerValidateUrl')]
+    public function testValidateUrl(bool $expected, string $url): void
     {
-        $this->assertSame($expected, Utils::normalizeHost($parameters[0]));
+        $this->assertSame($expected, Utils::validateUrl(Uri::new($url)));
+    }
+
+    public static function providerValidateUrl(): array
+    {
+        return [
+            // Valid
+            [true, 'http://localhost'],
+            [true, 'https://localhost'],
+
+            // Invalid
+            [false, 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmci'],
+            [false, 'mailto:root@localhost'],
+            [false, 'tel:1234567890'],
+        ];
+    }
+
+    #[DataProvider('providerNormalizeHost')]
+    public function testNormalizeHost(string $expected, string $host): void
+    {
+        $this->assertSame($expected, Utils::normalizeHost($host));
     }
 
     public static function providerNormalizeHost(): array
     {
         return [
-            ['localhost', ['localhost']],
-            ['localhost', ['www.localhost']],
+            ['localhost', 'localhost'],
+            ['localhost', 'www.localhost'],
         ];
     }
 }

@@ -38,7 +38,6 @@ final class UrlScanner
         return new SymfonyDetector;
     }
 
-    // @todo: filter protocols
     // @todo: respect robots.txt
     public function scan(string $url): UrlScannerResult
     {
@@ -48,7 +47,7 @@ final class UrlScanner
         foreach ($detectedUrls as $detectedUrl) {
             $normalizedUrl = Utils::normalizeUrl($detectedUrl, $url);
 
-            if ($normalizedUrl !== null) {
+            if ($normalizedUrl !== null && Utils::validateUrl($normalizedUrl)) {
                 $normalizedUrls[$normalizedUrl->toString()] = $normalizedUrl;
             }
         }
