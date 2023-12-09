@@ -39,6 +39,7 @@ final class UrlScanner
     }
 
     // @todo: filter protocols
+    // @todo: respect robots.txt
     public function scan(string $url): UrlScannerResult
     {
         $detectedUrls = $this->getDetector()->detect(Uri::fromBaseUri($url));
