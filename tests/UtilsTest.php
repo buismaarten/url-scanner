@@ -48,7 +48,7 @@ final class UtilsTest extends TestCase
             [true, 'https://localhost'],
 
             // Invalid
-            [false, 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmci'],
+            [false, 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPg=='],
             [false, 'mailto:root@localhost'],
             [false, 'tel:1234567890'],
         ];
