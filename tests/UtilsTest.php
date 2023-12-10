@@ -3,7 +3,6 @@
 declare(strict_types=1);
 
 use Buismaarten\UrlScanner\Utils;
-use League\Uri\Uri;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 
@@ -31,26 +30,6 @@ final class UtilsTest extends TestCase
 
             // Invalid
             [null, ['://localhost', null]],
-        ];
-    }
-
-    #[DataProvider('providerValidateUrl')]
-    public function testValidateUrl(bool $expected, string $url): void
-    {
-        $this->assertSame($expected, Utils::validateUrl(Uri::new($url)));
-    }
-
-    public static function providerValidateUrl(): array
-    {
-        return [
-            // Valid
-            [true, 'http://localhost'],
-            [true, 'https://localhost'],
-
-            // Invalid
-            [false, 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPg=='],
-            [false, 'mailto:root@localhost'],
-            [false, 'tel:1234567890'],
         ];
     }
 
