@@ -55,13 +55,6 @@ final class SymfonyDetector extends AbstractDetector
             '//track[@src]' => 'src',
             '//video[@poster]' => 'poster',
             '//video[@src]' => 'src',
-
-            // '//form[not(@method) or @method=""][@action]' => 'action',
-            // '//form[not(@method) or @method=""]//button[@formaction]' => 'formaction',
-            // '//form[not(@method) or @method=""]//input[@formaction]' => 'formaction',
-            // '//form[translate(@method,"abcdefghijklmnopqrstuvwxyz","ABCDEFGHIJKLMNOPQRSTUVWXYZ")="GET"][@action]' => 'action',
-            // '//form[translate(@method,"abcdefghijklmnopqrstuvwxyz","ABCDEFGHIJKLMNOPQRSTUVWXYZ")="GET"]//button[@formaction]' => 'formaction',
-            // '//form[translate(@method,"abcdefghijklmnopqrstuvwxyz","ABCDEFGHIJKLMNOPQRSTUVWXYZ")="GET"]//input[@formaction]' => 'formaction',
         ];
     }
 }
