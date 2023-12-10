@@ -8,9 +8,13 @@ use League\Uri\Contracts\UriInterface;
 
 final class UrlScannerResult
 {
+    /** @var UriInterface[] $urls */
+    private array $urls = [];
+
     /** @param UriInterface[] $urls */
-    public function __construct(private array $urls)
+    public function __construct(array $urls)
     {
+        $this->urls = $urls;
     }
 
     /** @return string[] */
