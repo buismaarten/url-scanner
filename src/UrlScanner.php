@@ -5,47 +5,16 @@ declare(strict_types=1);
 namespace Buismaarten\UrlScanner;
 
 use Buismaarten\UrlScanner\Detectors\AbstractDetector;
-use Buismaarten\UrlScanner\Detectors\SymfonyDetector;
-use League\Uri\Uri;
 
 final class UrlScanner
 {
-    private AbstractDetector $detector;
-
-    public function __construct(AbstractDetector $detector = null)
+    public function scan(AbstractDetector $detector): UrlScannerResult
     {
-        if ($detector !== null) {
-            $this->setDetector($detector);
-        }
-    }
-
-    public function setDetector(AbstractDetector $detector): void
-    {
-        $this->detector = $detector;
-    }
-
-    public function getDetector(): AbstractDetector
-    {
-        if (! isset($this->detector)) {
-            $this->setDetector(static::getDefaultDetector());
-        }
-
-        return $this->detector;
-    }
-
-    private static function getDefaultDetector(): AbstractDetector
-    {
-        return new SymfonyDetector;
-    }
-
-    // @todo: respect robots.txt
-    public function scan(string $url): UrlScannerResult
-    {
-        $detectedUrls = $this->getDetector()->detect(Uri::fromBaseUri($url));
+        $detectedUrls = $detector->detect();
         $normalizedUrls = [];
 
         foreach ($detectedUrls as $detectedUrl) {
-            $normalizedUrl = Utils::normalizeUrl($detectedUrl, $url);
+            $normalizedUrl = Utils::normalizeUrl($detectedUrl, $detector->getUrl());
 
             if ($normalizedUrl !== null && Utils::validateUrl($normalizedUrl)) {
                 $normalizedUrls[$normalizedUrl->toString()] = $normalizedUrl;

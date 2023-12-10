@@ -4,45 +4,20 @@ declare(strict_types=1);
 
 namespace Buismaarten\UrlScanner\Detectors;
 
-use GuzzleHttp\Client;
-use GuzzleHttp\RequestOptions;
-use League\Uri\Contracts\UriInterface;
-
 abstract class AbstractDetector
 {
-    private Client $client;
+    private string $url;
 
-    public function __construct(Client $client = null)
+    public function __construct(string $url)
     {
-        if ($client !== null) {
-            $this->setClient($client);
-        }
+        $this->url = $url;
     }
 
-    public function setClient(Client $client): void
+    public function getUrl(): string
     {
-        $this->client = $client;
-    }
-
-    public function getClient(): Client
-    {
-        if (! isset($this->client)) {
-            $this->setClient(static::getDefaultClient());
-        }
-
-        return $this->client;
-    }
-
-    protected static function getDefaultClient(): Client
-    {
-        return new Client([
-            RequestOptions::ALLOW_REDIRECTS => true,
-            RequestOptions::CONNECT_TIMEOUT => 30,
-            RequestOptions::HTTP_ERRORS => false,
-            RequestOptions::TIMEOUT => 30,
-        ]);
+        return $this->url;
     }
 
     /** @return iterable<string> */
-    abstract public function detect(UriInterface $url): iterable;
+    abstract public function detect(): iterable;
 }
