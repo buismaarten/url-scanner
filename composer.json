@@ -1,4 +1,7 @@
 {
+    "name": "buismaarten/url-scanner",
+    "type": "library",
+    "license": "MIT",
     "require": {
         "php": "^8.2",
         "league/uri": "^7.3",
