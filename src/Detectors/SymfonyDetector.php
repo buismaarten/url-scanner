@@ -34,14 +34,11 @@ final class SymfonyDetector extends AbstractDetector
             '//a[@href]' => 'href',
             '//audio[@src]' => 'src',
             '//base[@href]' => 'href',
-            '//form[not(@method) or @method=""][@action]' => 'action',
-            '//form[not(@method) or @method=""]//button[@formaction]' => 'formaction',
-            '//form[not(@method) or @method=""]//input[@formaction]' => 'formaction',
-            '//form[translate(@method,"abcdefghijklmnopqrstuvwxyz","ABCDEFGHIJKLMNOPQRSTUVWXYZ")="GET"][@action]' => 'action',
-            '//form[translate(@method,"abcdefghijklmnopqrstuvwxyz","ABCDEFGHIJKLMNOPQRSTUVWXYZ")="GET"]//button[@formaction]' => 'formaction',
-            '//form[translate(@method,"abcdefghijklmnopqrstuvwxyz","ABCDEFGHIJKLMNOPQRSTUVWXYZ")="GET"]//input[@formaction]' => 'formaction',
+            '//button[@formaction]' => 'formaction',
+            '//form[@action]' => 'action',
             '//iframe[@src]' => 'src',
             '//img[@src]' => 'src',
+            '//input[@formaction]' => 'formaction',
             '//input[@src]' => 'src',
             '//link[@href]' => 'href',
             '//meta[@name="msapplication-TileImage"][@content]' => 'content',
@@ -58,6 +55,13 @@ final class SymfonyDetector extends AbstractDetector
             '//track[@src]' => 'src',
             '//video[@poster]' => 'poster',
             '//video[@src]' => 'src',
+
+            // '//form[not(@method) or @method=""][@action]' => 'action',
+            // '//form[not(@method) or @method=""]//button[@formaction]' => 'formaction',
+            // '//form[not(@method) or @method=""]//input[@formaction]' => 'formaction',
+            // '//form[translate(@method,"abcdefghijklmnopqrstuvwxyz","ABCDEFGHIJKLMNOPQRSTUVWXYZ")="GET"][@action]' => 'action',
+            // '//form[translate(@method,"abcdefghijklmnopqrstuvwxyz","ABCDEFGHIJKLMNOPQRSTUVWXYZ")="GET"]//button[@formaction]' => 'formaction',
+            // '//form[translate(@method,"abcdefghijklmnopqrstuvwxyz","ABCDEFGHIJKLMNOPQRSTUVWXYZ")="GET"]//input[@formaction]' => 'formaction',
         ];
     }
 }
