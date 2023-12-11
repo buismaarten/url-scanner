@@ -67,9 +67,60 @@ final class SymfonyDetectorTest extends TestCase
                     '/path/to/stylesheet.css',
                 ],
             ],
-
-            // @todo: add tests for meta tags
-
+            [
+                'content' => '<meta name="msapplication-TileImage" content="/path/to/image.jpg">',
+                'expected' => [
+                    '/path/to/image.jpg',
+                ],
+            ],
+            [
+                'content' => '<meta name="twitter:image" content="/path/to/image.jpg">',
+                'expected' => [
+                    '/path/to/image.jpg',
+                ],
+            ],
+            [
+                'content' => '<meta property="og:audio:secure_url" content="/path/to/audio.mp3">',
+                'expected' => [
+                    '/path/to/audio.mp3',
+                ],
+            ],
+            [
+                'content' => '<meta property="og:audio" content="/path/to/audio.mp3">',
+                'expected' => [
+                    '/path/to/audio.mp3',
+                ],
+            ],
+            [
+                'content' => '<meta property="og:image:secure_url" content="/path/to/image.jpg">',
+                'expected' => [
+                    '/path/to/image.jpg',
+                ],
+            ],
+            [
+                'content' => '<meta property="og:image" content="/path/to/image.jpg">',
+                'expected' => [
+                    '/path/to/image.jpg',
+                ],
+            ],
+            [
+                'content' => '<meta property="og:url" content="/page">',
+                'expected' => [
+                    '/page',
+                ],
+            ],
+            [
+                'content' => '<meta property="og:video:secure_url" content="/path/to/video.mp4">',
+                'expected' => [
+                    '/path/to/video.mp4',
+                ],
+            ],
+            [
+                'content' => '<meta property="og:video" content="/path/to/video.mp4">',
+                'expected' => [
+                    '/path/to/video.mp4',
+                ],
+            ],
             [
                 'content' => '<script src="/path/to/script.js"></script>',
                 'expected' => [
