@@ -40,9 +40,45 @@ final class SymfonyDetectorTest extends TestCase
                     'https://localhost/path',
                 ],
             ],
-
-            // @todo: add tests for forms
-
+            [
+                'content' => '<form action="https://localhost/path"></form><form action="https://localhost/path" method=""></form>',
+                'expected' => [
+                    'https://localhost/path',
+                    'https://localhost/path',
+                ],
+            ],
+            [
+                'content' => '<form><button formaction="https://localhost/path"></button></form><form method=""><button formaction="https://localhost/path"></button></form>',
+                'expected' => [
+                    'https://localhost/path',
+                    'https://localhost/path',
+                ],
+            ],
+            [
+                'content' => '<form><input formaction="https://localhost/path"></form><form method=""><input formaction="https://localhost/path"></form>',
+                'expected' => [
+                    'https://localhost/path',
+                    'https://localhost/path',
+                ],
+            ],
+            [
+                'content' => '<form action="https://localhost/path" method="get"></form><form action="https://localhost/path" method="post"></form>',
+                'expected' => [
+                    'https://localhost/path',
+                ],
+            ],
+            [
+                'content' => '<form method="get"><button formaction="https://localhost/path"></button></form><form method="post"><button formaction="https://localhost/path"></button></form>',
+                'expected' => [
+                    'https://localhost/path',
+                ],
+            ],
+            [
+                'content' => '<form method="get"><input formaction="https://localhost/path"></form><form method="post"><input formaction="https://localhost/path"></form>',
+                'expected' => [
+                    'https://localhost/path',
+                ],
+            ],
             [
                 'content' => '<iframe src="https://localhost/path"></iframe>',
                 'expected' => [
