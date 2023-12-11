@@ -9,16 +9,24 @@ use League\Uri\Contracts\UriInterface;
 
 final class UrlScanner
 {
-    public function scan(AbstractDetector $detector): UrlScannerResult
+    /** @param AbstractDetector[]|AbstractDetector $detectors */
+    public function scan(array|AbstractDetector $detectors): UrlScannerResult
     {
-        $detectedUrls = $detector->detect();
         $normalizedUrls = [];
 
-        foreach ($detectedUrls as $detectedUrl) {
-            $normalizedUrl = Utils::normalizeUrl($detectedUrl, $detector->getUrl());
+        if (! is_iterable($detectors)) {
+            $detectors = [$detectors];
+        }
 
-            if ($normalizedUrl !== null && static::validateUrl($normalizedUrl)) {
-                $normalizedUrls[$normalizedUrl->toString()] = $normalizedUrl;
+        foreach ($detectors as $detector) {
+            $detectedUrls = $detector->detect();
+
+            foreach ($detectedUrls as $detectedUrl) {
+                $normalizedUrl = Utils::normalizeUrl($detectedUrl, $detector->getUrl());
+
+                if ($normalizedUrl !== null && static::validateUrl($normalizedUrl)) {
+                    $normalizedUrls[$normalizedUrl->toString()] = $normalizedUrl;
+                }
             }
         }
 
