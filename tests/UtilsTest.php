@@ -11,7 +11,10 @@ final class UtilsTest extends TestCase
     #[DataProvider('providerNormalizeUrl')]
     public function testNormalizeUrl(?string $expected, array $parameters): void
     {
-        $this->assertSame($expected, Utils::normalizeUrl($parameters[0], $parameters[1])?->toString());
+        $this->assertSame(
+            expected: $expected,
+            actual: Utils::normalizeUrl($parameters[0], $parameters[1])?->toString(),
+        );
     }
 
     public static function providerNormalizeUrl(): array
@@ -36,7 +39,10 @@ final class UtilsTest extends TestCase
     #[DataProvider('providerNormalizeHost')]
     public function testNormalizeHost(string $expected, string $host): void
     {
-        $this->assertSame($expected, Utils::normalizeHost($host));
+        $this->assertSame(
+            expected: $expected,
+            actual: Utils::normalizeHost($host),
+        );
     }
 
     public static function providerNormalizeHost(): array
