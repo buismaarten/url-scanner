@@ -10,7 +10,7 @@ use League\Uri\Contracts\UriInterface;
 final class UrlScanner
 {
     /** @param AbstractDetector[]|AbstractDetector $detectors */
-    public function scan(array|AbstractDetector $detectors): UrlScannerResult
+    public function scan(iterable|AbstractDetector $detectors): UrlScannerResult
     {
         $normalizedUrls = [];
 
