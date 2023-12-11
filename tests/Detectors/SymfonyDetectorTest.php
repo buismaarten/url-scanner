@@ -23,84 +23,84 @@ final class SymfonyDetectorTest extends TestCase
     {
         return [
             [
-                'content' => '<a href="/path">Link</a>',
+                'content' => '<a href="https://localhost/path">Link</a>',
                 'expected' => [
-                    '/path',
+                    'https://localhost/path',
                 ],
             ],
             [
-                'content' => '<audio src="/path/to/audio.mp3"></audio>',
+                'content' => '<audio src="https://localhost/path/to/audio.mp3"></audio>',
                 'expected' => [
-                    '/path/to/audio.mp3',
+                    'https://localhost/path/to/audio.mp3',
                 ],
             ],
             [
-                'content' => '<base href="/path"></base>',
+                'content' => '<base href="https://localhost/path"></base>',
                 'expected' => [
-                    '/path',
+                    'https://localhost/path',
                 ],
             ],
 
             // @todo: add tests for forms
 
             [
-                'content' => '<iframe src="/path"></iframe>',
+                'content' => '<iframe src="https://localhost/path"></iframe>',
                 'expected' => [
-                    '/path',
+                    'https://localhost/path',
                 ],
             ],
             [
-                'content' => '<img src="/path/to/image.jpg">',
+                'content' => '<img src="https://localhost/path/to/image.jpg">',
                 'expected' => [
-                    '/path/to/image.jpg',
+                    'https://localhost/path/to/image.jpg',
                 ],
             ],
             [
-                'content' => '<input src="/path/to/image.jpg">',
+                'content' => '<input src="https://localhost/path/to/image.jpg">',
                 'expected' => [
-                    '/path/to/image.jpg',
+                    'https://localhost/path/to/image.jpg',
                 ],
             ],
             [
-                'content' => '<link rel="stylesheet" href="/path/to/stylesheet.css">',
+                'content' => '<link rel="stylesheet" href="https://localhost/path/to/stylesheet.css">',
                 'expected' => [
-                    '/path/to/stylesheet.css',
+                    'https://localhost/path/to/stylesheet.css',
                 ],
             ],
             [
-                'content' => '<meta name="msapplication-TileImage" content="/path/to/image.jpg">',
+                'content' => '<meta name="msapplication-TileImage" content="https://localhost/path/to/image.jpg">',
                 'expected' => [
-                    '/path/to/image.jpg',
+                    'https://localhost/path/to/image.jpg',
                 ],
             ],
             [
-                'content' => '<meta name="twitter:image" content="/path/to/image.jpg">',
+                'content' => '<meta name="twitter:image" content="https://localhost/path/to/image.jpg">',
                 'expected' => [
-                    '/path/to/image.jpg',
+                    'https://localhost/path/to/image.jpg',
                 ],
             ],
             [
-                'content' => '<meta property="og:audio:secure_url" content="/path/to/audio.mp3">',
+                'content' => '<meta property="og:audio:secure_url" content="https://localhost/path/to/audio.mp3">',
                 'expected' => [
-                    '/path/to/audio.mp3',
+                    'https://localhost/path/to/audio.mp3',
                 ],
             ],
             [
-                'content' => '<meta property="og:audio" content="/path/to/audio.mp3">',
+                'content' => '<meta property="og:audio" content="https://localhost/path/to/audio.mp3">',
                 'expected' => [
-                    '/path/to/audio.mp3',
+                    'https://localhost/path/to/audio.mp3',
                 ],
             ],
             [
-                'content' => '<meta property="og:image:secure_url" content="/path/to/image.jpg">',
+                'content' => '<meta property="og:image:secure_url" content="https://localhost/path/to/image.jpg">',
                 'expected' => [
-                    '/path/to/image.jpg',
+                    'https://localhost/path/to/image.jpg',
                 ],
             ],
             [
-                'content' => '<meta property="og:image" content="/path/to/image.jpg">',
+                'content' => '<meta property="og:image" content="https://localhost/path/to/image.jpg">',
                 'expected' => [
-                    '/path/to/image.jpg',
+                    'https://localhost/path/to/image.jpg',
                 ],
             ],
             [
@@ -110,45 +110,45 @@ final class SymfonyDetectorTest extends TestCase
                 ],
             ],
             [
-                'content' => '<meta property="og:video:secure_url" content="/path/to/video.mp4">',
+                'content' => '<meta property="og:video:secure_url" content="https://localhost/path/to/video.mp4">',
                 'expected' => [
-                    '/path/to/video.mp4',
+                    'https://localhost/path/to/video.mp4',
                 ],
             ],
             [
-                'content' => '<meta property="og:video" content="/path/to/video.mp4">',
+                'content' => '<meta property="og:video" content="https://localhost/path/to/video.mp4">',
                 'expected' => [
-                    '/path/to/video.mp4',
+                    'https://localhost/path/to/video.mp4',
                 ],
             ],
             [
-                'content' => '<script src="/path/to/script.js"></script>',
+                'content' => '<script src="https://localhost/path/to/script.js"></script>',
                 'expected' => [
-                    '/path/to/script.js',
+                    'https://localhost/path/to/script.js',
                 ],
             ],
             [
-                'content' => '<source src="/path/to/video.mp4">',
+                'content' => '<source src="https://localhost/path/to/video.mp4">',
                 'expected' => [
-                    '/path/to/video.mp4',
+                    'https://localhost/path/to/video.mp4',
                 ],
             ],
             [
-                'content' => '<track src="/path/to/track.vtt">',
+                'content' => '<track src="https://localhost/path/to/track.vtt">',
                 'expected' => [
-                    '/path/to/track.vtt',
+                    'https://localhost/path/to/track.vtt',
                 ],
             ],
             [
-                'content' => '<video poster="/path/to/poster.jpg"></video>',
+                'content' => '<video poster="https://localhost/path/to/poster.jpg"></video>',
                 'expected' => [
-                    '/path/to/poster.jpg',
+                    'https://localhost/path/to/poster.jpg',
                 ],
             ],
             [
-                'content' => '<video src="/path/to/video.mp4"></video>',
+                'content' => '<video src="https://localhost/path/to/video.mp4"></video>',
                 'expected' => [
-                    '/path/to/video.mp4',
+                    'https://localhost/path/to/video.mp4',
                 ],
             ],
         ];
