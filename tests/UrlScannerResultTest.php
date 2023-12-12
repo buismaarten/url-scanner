@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 use Buismaarten\UrlScanner\UrlScannerResult;
 use Buismaarten\UrlScanner\Utils;
-use League\Uri\Uri;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 
