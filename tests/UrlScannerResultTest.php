@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 use Buismaarten\UrlScanner\UrlScannerResult;
+use Buismaarten\UrlScanner\Utils;
 use League\Uri\Uri;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
@@ -28,8 +29,8 @@ final class UrlScannerResultTest extends TestCase
                     'localhost',
                 ],
                 'urls' => [
-                    'https://localhost' => Uri::new('https://localhost'),
-                    'https://localhost' => Uri::new('https://localhost'),
+                    'https://localhost' => Utils::normalizeUrl('https://localhost', null),
+                    'https://localhost' => Utils::normalizeUrl('https://localhost', null),
                 ],
             ],
         ];
@@ -54,8 +55,8 @@ final class UrlScannerResultTest extends TestCase
                     'https://localhost',
                 ],
                 'urls' => [
-                    'https://localhost' => Uri::new('https://localhost'),
-                    'https://localhost' => Uri::new('https://localhost'),
+                    'https://localhost' => Utils::normalizeUrl('https://localhost', null),
+                    'https://localhost' => Utils::normalizeUrl('https://localhost', null),
                 ],
             ],
         ];
