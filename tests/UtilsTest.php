@@ -8,7 +8,9 @@ use PHPUnit\Framework\TestCase;
 
 final class UtilsTest extends TestCase
 {
-    #[DataProvider('normalizeUrlProvider')]
+    #[DataProvider('normalizeUrlRelativeProvider')]
+    #[DataProvider('normalizeUrlAbsoluteProvider')]
+    #[DataProvider('normalizeUrlInvalidProvider')]
     public function testNormalizeUrl(?string $expected, array $url): void
     {
         $this->assertSame(
@@ -17,10 +19,9 @@ final class UtilsTest extends TestCase
         );
     }
 
-    public static function normalizeUrlProvider(): array
+    public static function normalizeUrlRelativeProvider(): array
     {
         return [
-            // Relative
             [
                 'expected' => 'https://localhost',
                 'url' => ['/', 'https://localhost/'],
@@ -37,8 +38,12 @@ final class UtilsTest extends TestCase
                 'expected' => 'https://localhost/path?query=1',
                 'url' => ['/path/?query=1#fragment', 'https://localhost/'],
             ],
+        ];
+    }
 
-            // Absolute
+    public static function normalizeUrlAbsoluteProvider(): array
+    {
+        return [
             [
                 'expected' => 'https://localhost',
                 'url' => ['https://localhost/', null],
@@ -51,8 +56,12 @@ final class UtilsTest extends TestCase
                 'expected' => 'https://localhost/path?query=1',
                 'url' => ['https://localhost/path/?query=1#fragment', null],
             ],
+        ];
+    }
 
-            // Invalid
+    public static function normalizeUrlInvalidProvider(): array
+    {
+        return [
             [
                 'expected' => null,
                 'url' => ['://localhost', null],
