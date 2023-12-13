@@ -18,13 +18,7 @@ final class RegexDetector extends AbstractDetector
     /** @return iterable<string> */
     public function detect(): iterable
     {
-        if (preg_match_all('/"(https?:[^"]+)"/', $this->content, $matches, PREG_SET_ORDER)) {
-            foreach ($matches as $match) {
-                yield stripslashes($match[1]);
-            }
-        }
-
-        if (preg_match_all('/\'(https?:[^\']+)\'/', $this->content, $matches, PREG_SET_ORDER)) {
+        if (preg_match_all('/"(https?:\\\\\/\\\\\/[^"]+)"/', $this->content, $matches, PREG_SET_ORDER)) {
             foreach ($matches as $match) {
                 yield stripslashes($match[1]);
             }

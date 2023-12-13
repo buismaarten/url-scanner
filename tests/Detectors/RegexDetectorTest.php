@@ -26,13 +26,7 @@ final class RegexDetectorTest extends TestCase
                 'expected' => [
                     'https://localhost/path',
                 ],
-                'content' => '"https:\/\/localhost\/path"',
-            ],
-            [
-                'expected' => [
-                    'https://localhost/path',
-                ],
-                'content' => "'https:\/\/localhost\/path'",
+                'content' => '<script type="application/javascript">{"url":"https:\/\/localhost\/path"}</script>',
             ],
         ];
     }
