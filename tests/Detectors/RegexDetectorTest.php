@@ -26,8 +26,9 @@ final class RegexDetectorTest extends TestCase
             [
                 'expected' => [
                     'https://localhost/path',
+                    'http://localhost/path',
                 ],
-                'content' => '<script type="application/json">{"url":"https:\/\/localhost\/path"}</script>',
+                'content' => '<script type="application/json">{"url1":"https:\/\/localhost\/path","url2":"http:\/\/localhost\/path"}</script>',
             ],
         ];
     }
@@ -38,20 +39,23 @@ final class RegexDetectorTest extends TestCase
             [
                 'expected' => [
                     'https://localhost/path/to/image.jpg',
+                    'http://localhost/path/to/image.jpg',
                 ],
-                'content' => '<div style="background: url(https://localhost/path/to/image.jpg);"></div>',
+                'content' => '<div style="background:url(https://localhost/path/to/image.jpg);"></div><div style="background:url(http://localhost/path/to/image.jpg);"></div>',
             ],
             [
                 'expected' => [
                     'https://localhost/path/to/image.jpg',
+                    'http://localhost/path/to/image.jpg',
                 ],
-                'content' => '<div style="background: url(\'https://localhost/path/to/image.jpg\');"></div>',
+                'content' => '<div style="background:url(\'https://localhost/path/to/image.jpg\');"></div><div style="background:url(\'http://localhost/path/to/image.jpg\');"></div>',
             ],
             [
                 'expected' => [
                     'https://localhost/path/to/image.jpg',
+                    'http://localhost/path/to/image.jpg',
                 ],
-                'content' => "<div style='background: url(\"https://localhost/path/to/image.jpg\");'></div>",
+                'content' => "<div style='background:url(\"https://localhost/path/to/image.jpg\");'></div><div style='background:url(\"http://localhost/path/to/image.jpg\");'></div>",
             ],
         ];
     }

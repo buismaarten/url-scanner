@@ -30,6 +30,8 @@ final class UrlScannerResultTest extends TestCase
                 'urls' => [
                     'https://localhost' => Utils::normalizeUrl('https://localhost', null),
                     'https://localhost' => Utils::normalizeUrl('https://localhost', null),
+                    'http://localhost' => Utils::normalizeUrl('http://localhost', null),
+                    'http://localhost' => Utils::normalizeUrl('http://localhost', null),
                 ],
             ],
         ];
@@ -52,10 +54,13 @@ final class UrlScannerResultTest extends TestCase
             [
                 'expected' => [
                     'https://localhost',
+                    'http://localhost',
                 ],
                 'urls' => [
                     'https://localhost' => Utils::normalizeUrl('https://localhost', null),
                     'https://localhost' => Utils::normalizeUrl('https://localhost', null),
+                    'http://localhost' => Utils::normalizeUrl('http://localhost', null),
+                    'http://localhost' => Utils::normalizeUrl('http://localhost', null),
                 ],
             ],
         ];
