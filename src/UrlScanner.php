@@ -25,7 +25,11 @@ final class UrlScanner
                 $normalizedUrl = Utils::normalizeUrl($detectedUrl, $detector->getUrl());
 
                 if ($normalizedUrl !== null && static::validateUrl($normalizedUrl)) {
-                    $normalizedUrls[$normalizedUrl->toString()] = $normalizedUrl;
+                    $normalizedUrlString = $normalizedUrl->toString();
+
+                    if ($normalizedUrlString !== $detector->getUrl()) {
+                        $normalizedUrls[$normalizedUrlString] = $normalizedUrl;
+                    }
                 }
             }
         }
