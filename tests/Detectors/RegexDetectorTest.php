@@ -8,7 +8,8 @@ use PHPUnit\Framework\TestCase;
 
 final class RegexDetectorTest extends TestCase
 {
-    #[DataProvider('detectProvider')]
+    #[DataProvider('detectEscapedUrlProvider')]
+    #[DataProvider('detectCssUrlProvider')]
     public function testDetect(array $expected, string $content): void
     {
         $detector = new RegexDetector('https://localhost', $content);
@@ -19,7 +20,7 @@ final class RegexDetectorTest extends TestCase
         );
     }
 
-    public static function detectProvider(): array
+    public static function detectEscapedUrlProvider(): array
     {
         return [
             [
@@ -27,6 +28,30 @@ final class RegexDetectorTest extends TestCase
                     'https://localhost/path',
                 ],
                 'content' => '<script type="application/json">{"url":"https:\/\/localhost\/path"}</script>',
+            ],
+        ];
+    }
+
+    public static function detectCssUrlProvider(): array
+    {
+        return [
+            [
+                'expected' => [
+                    'https://localhost/path/to/image.jpg',
+                ],
+                'content' => '<div style="background: url(https://localhost/path/to/image.jpg);"></div>',
+            ],
+            [
+                'expected' => [
+                    'https://localhost/path/to/image.jpg',
+                ],
+                'content' => '<div style="background: url(\'https://localhost/path/to/image.jpg\');"></div>',
+            ],
+            [
+                'expected' => [
+                    'https://localhost/path/to/image.jpg',
+                ],
+                'content' => "<div style='background: url(\"https://localhost/path/to/image.jpg\");'></div>",
             ],
         ];
     }

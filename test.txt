@@ -1,9 +1,25 @@
 Array
 (
     [0] => letsbuildit.nl
+    [1] => fonts.gstatic.com
 )
 Array
 (
     [0] => https://letsbuildit.nl/wp/wp-admin/admin-ajax.php
     [1] => https://letsbuildit.nl/app/plugins/formidable/images
+    [2] => https://letsbuildit.nl/app/themes/lbi-zakelijk-thema/webfonts/fa-solid-900.woff2
+    [3] => https://letsbuildit.nl/app/themes/lbi-zakelijk-thema/webfonts/fa-solid-900.ttf
+    [4] => https://letsbuildit.nl/app/themes/lbi-zakelijk-thema/webfonts/fa-brands-400.woff2
+    [5] => https://letsbuildit.nl/app/themes/lbi-zakelijk-thema/webfonts/fa-brands-400.ttf
+    [6] => https://letsbuildit.nl/app/themes/lbi-zakelijk-thema/images/image-8-500px.jpg
+    [7] => https://letsbuildit.nl/app/themes/lbi-zakelijk-thema/images/lightbulb-off.svg
+    [8] => https://letsbuildit.nl/app/themes/lbi-zakelijk-thema/images/lightbulb-off-hover.svg
+    [9] => https://letsbuildit.nl/app/themes/lbi-zakelijk-thema/images/lightbulb-on.svg
+    [10] => https://letsbuildit.nl/app/themes/lbi-zakelijk-thema/images/lightbulb-on-hover.svg
+    [11] => https://fonts.gstatic.com/s/titilliumweb/v15/NaPDcZTIAOhVxoMyOr9n_E7ffAzHGItzYw.woff2
+    [12] => https://fonts.gstatic.com/s/titilliumweb/v15/NaPDcZTIAOhVxoMyOr9n_E7ffGjEGItzYw.woff2
+    [13] => https://fonts.gstatic.com/s/titilliumweb/v15/NaPecZTIAOhVxoMyOr9n_E7fdMPmDQ.woff2
+    [14] => https://fonts.gstatic.com/s/titilliumweb/v15/NaPDcZTIAOhVxoMyOr9n_E7ffBzCGItzYw.woff2
+    [15] => https://fonts.gstatic.com/s/titilliumweb/v15/NaPDcZTIAOhVxoMyOr9n_E7ffHjDGItzYw.woff2
+    [16] => https://letsbuildit.nl
 )
