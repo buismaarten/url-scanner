@@ -23,7 +23,7 @@ final class RegexDetector extends AbstractDetector
                 $value = stripslashes($match[1]);
 
                 if (is_string($value) && ! empty($value)) {
-                    yield $value;
+                    yield trim($value);
                 }
             }
         }
@@ -33,7 +33,7 @@ final class RegexDetector extends AbstractDetector
                 $value = preg_replace('/^[\'"]+|[\'"]+$/', '', $match[1]);
 
                 if (is_string($value) && ! empty($value)) {
-                    yield $value;
+                    yield trim($value);
                 }
             }
         }
