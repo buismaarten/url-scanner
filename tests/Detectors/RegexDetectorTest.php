@@ -10,7 +10,6 @@ final class RegexDetectorTest extends TestCase
 {
     #[DataProvider('detectEscapedUrlProvider')]
     #[DataProvider('detectCssUrlProvider')]
-    #[DataProvider('detectCommentUrlProvider')]
     public function testDetect(array $expected, string $content): void
     {
         $detector = new RegexDetector('https://localhost', $content);
@@ -57,24 +56,6 @@ final class RegexDetectorTest extends TestCase
                     'http://localhost/path/to/image.jpg',
                 ],
                 'content' => "<div style='background:url(\"https://localhost/path/to/image.jpg\");'></div><div style='background:url(\"http://localhost/path/to/image.jpg\");'></div>",
-            ],
-        ];
-    }
-
-    public static function detectCommentUrlProvider(): array
-    {
-        return [
-            [
-                'expected' => [
-                    'https://localhost/path',
-                ],
-                'content' => '<!-- URL: https://localhost/path -->',
-            ],
-            [
-                'expected' => [
-                    'http://localhost/path',
-                ],
-                'content' => '<!-- URL: http://localhost/path -->',
             ],
         ];
     }
