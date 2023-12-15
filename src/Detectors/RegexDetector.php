@@ -40,7 +40,7 @@ final class RegexDetector extends AbstractDetector
 
         if (preg_match_all('/@import\s+(?:\'|")(https?:\/\/[^\'"]+)(?:\'|")/', $this->content, $matches, PREG_SET_ORDER)) {
             foreach ($matches as $match) {
-                $value = $match[1];
+                $value = preg_replace('/^[\'"]+|[\'"]+$/', '', $match[1]);
 
                 if (is_string($value) && ! empty($value)) {
                     yield trim($value);
