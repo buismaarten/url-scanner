@@ -56,7 +56,6 @@ final class XPathDetector extends AbstractDetector
             '//meta[@property="og:video"][@content]' => 'content',
             '//script[@src]' => 'src',
             '//source[@src]' => 'src',
-            '//svg//image[@src]' => 'src',
             '//svg//image[attribute::*[contains(local-name(), "xlink:href")]]' => 'xlink:href',
             '//track[@src]' => 'src',
             '//video[@poster]' => 'poster',
