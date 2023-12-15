@@ -33,6 +33,24 @@ final class RegexDetectorTest extends TestCase
         ];
     }
 
+    public static function detectCssImportProvider(): array
+    {
+        return [
+            [
+                'expected' => [
+                    'https://localhost/path/to/stylesheet.css',
+                ],
+                'content' => '@import "https://localhost/path/to/stylesheet.css"',
+            ],
+            [
+                'expected' => [
+                    'https://localhost/path/to/stylesheet.css',
+                ],
+                'content' => "@import 'https://localhost/path/to/stylesheet.css'",
+            ],
+        ];
+    }
+
     public static function detectCssUrlProvider(): array
     {
         return [
