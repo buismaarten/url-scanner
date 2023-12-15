@@ -1,16 +1,18 @@
 <?php
 
 use Buismaarten\UrlScanner\Detectors\RegexDetector;
+use Buismaarten\UrlScanner\Detectors\XPathDetector;
 use Buismaarten\UrlScanner\UrlScanner;
 
 require_once __DIR__.'/vendor/autoload.php';
 
 
 $url = 'https://letsbuildit.nl';
+$content = file_get_contents($url);
 
 $scanner = new UrlScanner;
-$result = $scanner->scan(new RegexDetector($url, file_get_contents($url)));
+$scannerResult = $scanner->scan([new RegexDetector($url, $content), new XPathDetector($url, $content)]);
 
-print_r($result->getHosts());
-print_r($result->getUrls());
+print_r($scannerResult->getHosts());
+print_r($scannerResult->getUrls());
 exit;
