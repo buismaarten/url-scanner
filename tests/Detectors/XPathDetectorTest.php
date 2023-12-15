@@ -179,6 +179,12 @@ final class XPathDetectorTest extends TestCase
                 'expected' => [
                     'https://localhost/path/to/image.jpg',
                 ],
+                'content' => '<svg><image href="https://localhost/path/to/image.jpg" /></svg>',
+            ],
+            [
+                'expected' => [
+                    'https://localhost/path/to/image.jpg',
+                ],
                 'content' => '<svg><image xlink:href="https://localhost/path/to/image.jpg" /></svg>',
             ],
             [
