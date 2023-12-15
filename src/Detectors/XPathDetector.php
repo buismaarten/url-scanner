@@ -32,6 +32,7 @@ final class XPathDetector extends AbstractDetector
     {
         return [
             '//a[@href]' => 'href',
+            '//a[@ping]' => 'ping',
             '//audio[@src]' => 'src',
             '//base[@href]' => 'href',
             '//form[not(@method) or @method=""][@action]' => 'action',

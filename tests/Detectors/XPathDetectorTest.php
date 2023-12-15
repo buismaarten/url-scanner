@@ -30,6 +30,12 @@ final class XPathDetectorTest extends TestCase
             ],
             [
                 'expected' => [
+                    'https://localhost/path',
+                ],
+                'content' => '<a href="#" ping="https://localhost/path">Link</a>',
+            ],
+            [
+                'expected' => [
                     'https://localhost/path/to/audio.mp3',
                 ],
                 'content' => '<audio src="https://localhost/path/to/audio.mp3"></audio>',
