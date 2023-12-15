@@ -10,6 +10,7 @@ final class RegexDetectorTest extends TestCase
 {
     #[DataProvider('detectEscapedUrlProvider')]
     #[DataProvider('detectCssUrlProvider')]
+    #[DataProvider('detectCssImportProvider')]
     public function testDetect(array $expected, string $content): void
     {
         $detector = new RegexDetector('https://localhost', $content);
@@ -29,24 +30,6 @@ final class RegexDetectorTest extends TestCase
                     'http://localhost/path',
                 ],
                 'content' => '<script type="application/json">{"url1":"https:\/\/localhost\/path","url2":"http:\/\/localhost\/path"}</script>',
-            ],
-        ];
-    }
-
-    public static function detectCssImportProvider(): array
-    {
-        return [
-            [
-                'expected' => [
-                    'https://localhost/path/to/stylesheet.css',
-                ],
-                'content' => '@import "https://localhost/path/to/stylesheet.css"',
-            ],
-            [
-                'expected' => [
-                    'https://localhost/path/to/stylesheet.css',
-                ],
-                'content' => "@import 'https://localhost/path/to/stylesheet.css'",
             ],
         ];
     }
@@ -74,6 +57,24 @@ final class RegexDetectorTest extends TestCase
                     'http://localhost/path/to/image.jpg',
                 ],
                 'content' => "<div style='background:url(\"https://localhost/path/to/image.jpg\");'></div><div style='background:url(\"http://localhost/path/to/image.jpg\");'></div>",
+            ],
+        ];
+    }
+
+    public static function detectCssImportProvider(): array
+    {
+        return [
+            [
+                'expected' => [
+                    'https://localhost/path/to/stylesheet.css',
+                ],
+                'content' => '@import "https://localhost/path/to/stylesheet.css"',
+            ],
+            [
+                'expected' => [
+                    'https://localhost/path/to/stylesheet.css',
+                ],
+                'content' => "@import 'https://localhost/path/to/stylesheet.css'",
             ],
         ];
     }
