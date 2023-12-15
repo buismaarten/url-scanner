@@ -6,7 +6,7 @@ namespace Buismaarten\UrlScanner\Detectors;
 
 use Symfony\Component\DomCrawler\Crawler;
 
-final class SymfonyDetector extends AbstractDetector
+final class XPathDetector extends AbstractDetector
 {
     private string $content;
 

@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-use Buismaarten\UrlScanner\Detectors\SymfonyDetector;
+use Buismaarten\UrlScanner\Detectors\XPathDetector;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 
-final class SymfonyDetectorTest extends TestCase
+final class XPathDetectorTest extends TestCase
 {
     #[DataProvider('detectProvider')]
     public function testDetect(array $expected, string $content): void
     {
-        $detector = new SymfonyDetector('https://localhost', $content);
+        $detector = new XPathDetector('https://localhost', $content);
 
         $this->assertSame(
             expected: $expected,
