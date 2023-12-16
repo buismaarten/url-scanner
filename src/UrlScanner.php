@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Buismaarten\UrlScanner;
 
-use Buismaarten\UrlScanner\Detectors\AbstractDetector;
+use Buismaarten\UrlScanner\Interfaces\DetectorInterface;
 use League\Uri\Contracts\UriInterface;
 
 final class UrlScanner
@@ -12,7 +12,7 @@ final class UrlScanner
     private string $url;
     private string $content;
 
-    /** @var AbstractDetector[] */
+    /** @var DetectorInterface[] */
     private array $detectors = [];
 
     public function __construct(string $url, string $content = '')
@@ -21,7 +21,7 @@ final class UrlScanner
         $this->content = $content;
     }
 
-    public function addDetector(AbstractDetector $detector): void
+    public function addDetector(DetectorInterface $detector): void
     {
         $this->detectors[] = $detector;
     }

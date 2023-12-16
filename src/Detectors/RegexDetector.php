@@ -4,7 +4,9 @@ declare(strict_types=1);
 
 namespace Buismaarten\UrlScanner\Detectors;
 
-final class RegexDetector extends AbstractDetector
+use Buismaarten\UrlScanner\Interfaces\DetectorInterface;
+
+final class RegexDetector implements DetectorInterface
 {
     /** @return iterable<string> */
     public function detect(string $url, string $content): iterable
