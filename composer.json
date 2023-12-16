@@ -2,6 +2,15 @@
     "name": "buismaarten/url-scanner",
     "type": "library",
     "license": "MIT",
+    "support": {
+        "issues": "https://github.com/buismaarten/url-scanner/issues",
+        "source": "https://github.com/buismaarten/url-scanner"
+    },
+    "authors": [
+        {
+            "name": "Maarten Buis"
+        }
+    ],
     "require": {
         "php": "^8.2",
         "league/uri": "^7.3",
