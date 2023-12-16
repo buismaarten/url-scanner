@@ -1,4 +1,4 @@
-name: analyse
+name: static-analysis
 
 on:
   workflow_dispatch:
