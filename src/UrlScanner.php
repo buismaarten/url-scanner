@@ -30,6 +30,10 @@ final class UrlScanner
     {
         $normalizedUrls = [];
 
+        if ($this->detectors === []) {
+            $this->detectors = self::getDefaultDetectors();
+        }
+
         foreach ($this->detectors as $detector) {
             $detectedUrls = $detector->detect($this->url, $this->content);
 
@@ -52,5 +56,14 @@ final class UrlScanner
         }
 
         return true;
+    }
+
+    /** @return DetectorInterface[] */
+    private static function getDefaultDetectors(): array
+    {
+        return [
+            new Detectors\RegexDetector,
+            new Detectors\XPathDetector,
+        ];
     }
 }
