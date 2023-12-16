@@ -3,7 +3,7 @@ name: tests
 on:
   workflow_dispatch:
   schedule:
-    - cron:  '23 0 * * *'
+    - cron:  '23 3 * * *'
 
 jobs:
   test:
@@ -24,10 +24,13 @@ jobs:
         with:
           php-version: ${{ matrix.php }}
           # extensions: mbstring, zip
-          coverage: none
+          # coverage: none
 
-      - name: Install dependencies
-        run: composer install --prefer-dist --no-interaction --no-suggest
+      - name: composer install --prefer-dist --no-interaction
+        run: composer install --prefer-dist --no-interaction
 
-      - name: Execute tests
+      - name: composer analyse
+        run: composer analyse
+
+      - name: composer test
         run: composer test
