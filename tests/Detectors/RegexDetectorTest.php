@@ -13,11 +13,11 @@ final class RegexDetectorTest extends TestCase
     #[DataProvider('detectCssImportProvider')]
     public function testDetect(array $expected, string $content): void
     {
-        $detector = new RegexDetector('https://localhost', $content);
+        $detector = new RegexDetector;
 
         $this->assertSame(
             expected: $expected,
-            actual: iterator_to_array($detector->detect()),
+            actual: iterator_to_array($detector->detect('https://localhost', $content)),
         );
     }
 

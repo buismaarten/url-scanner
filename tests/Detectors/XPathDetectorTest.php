@@ -11,11 +11,11 @@ final class XPathDetectorTest extends TestCase
     #[DataProvider('detectProvider')]
     public function testDetect(array $expected, string $content): void
     {
-        $detector = new XPathDetector('https://localhost', $content);
+        $detector = new XPathDetector;
 
         $this->assertSame(
             expected: $expected,
-            actual: iterator_to_array($detector->detect()),
+            actual: iterator_to_array($detector->detect('https://localhost', $content)),
         );
     }
 
