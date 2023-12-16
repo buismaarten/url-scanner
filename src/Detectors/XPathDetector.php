@@ -8,27 +8,18 @@ use Symfony\Component\DomCrawler\Crawler;
 
 final class XPathDetector extends AbstractDetector
 {
-    private string $content;
-
-    public function __construct(string $url, string $content)
-    {
-        parent::__construct($url);
-
-        $this->content = $content;
-    }
-
     /** @return iterable<string> */
-    public function detect(): iterable
+    public function detect(string $url, string $content): iterable
     {
-        $crawler = new Crawler($this->content, $this->getUrl());
+        $crawler = new Crawler($content, $url);
 
-        foreach (self::getFilters() as $query => $attribute) {
+        foreach (self::getExpressions() as $query => $attribute) {
             yield from $crawler->filterXPath($query)->each(fn (Crawler $node) => ($node->attr($attribute) ?? ''));
         }
     }
 
     /** @return array<string, string> */
-    private static function getFilters(): array
+    private static function getExpressions(): array
     {
         return [
             '//a[@href]' => 'href',

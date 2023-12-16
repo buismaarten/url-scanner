@@ -9,27 +9,35 @@ use League\Uri\Contracts\UriInterface;
 
 final class UrlScanner
 {
-    /** @param AbstractDetector[]|AbstractDetector $detectors */
-    public function scan(iterable|AbstractDetector $detectors): UrlScannerResult
+    private string $url;
+    private string $content;
+
+    /** @var AbstractDetector[] */
+    private array $detectors = [];
+
+    public function __construct(string $url, string $content = '')
+    {
+        $this->url = $url;
+        $this->content = $content;
+    }
+
+    public function addDetector(AbstractDetector $detector): void
+    {
+        $this->detectors[] = $detector;
+    }
+
+    public function scan(): UrlScannerResult
     {
         $normalizedUrls = [];
 
-        if (! is_iterable($detectors)) {
-            $detectors = [$detectors];
-        }
-
-        foreach ($detectors as $detector) {
-            $detectedUrls = $detector->detect();
+        foreach ($this->detectors as $detector) {
+            $detectedUrls = $detector->detect($this->url, $this->content);
 
             foreach ($detectedUrls as $detectedUrl) {
-                $normalizedUrl = Utils::normalizeUrl($detectedUrl, $detector->getUrl());
+                $normalizedUrl = Utils::normalizeUrl($detectedUrl, $this->url);
 
                 if ($normalizedUrl !== null && static::validateUrl($normalizedUrl)) {
-                    $normalizedUrlString = $normalizedUrl->toString();
-
-                    if ($normalizedUrlString !== $detector->getUrl()) {
-                        $normalizedUrls[$normalizedUrlString] = $normalizedUrl;
-                    }
+                    $normalizedUrls[$normalizedUrl->toString()] = $normalizedUrl;
                 }
             }
         }

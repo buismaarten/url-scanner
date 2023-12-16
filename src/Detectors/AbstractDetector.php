@@ -6,18 +6,6 @@ namespace Buismaarten\UrlScanner\Detectors;
 
 abstract class AbstractDetector
 {
-    private string $url;
-
-    public function __construct(string $url)
-    {
-        $this->url = $url;
-    }
-
-    public function getUrl(): string
-    {
-        return $this->url;
-    }
-
     /** @return iterable<string> */
-    abstract public function detect(): iterable;
+    abstract public function detect(string $url, string $content): iterable;
 }

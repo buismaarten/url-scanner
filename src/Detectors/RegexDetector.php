@@ -6,19 +6,10 @@ namespace Buismaarten\UrlScanner\Detectors;
 
 final class RegexDetector extends AbstractDetector
 {
-    private string $content;
-
-    public function __construct(string $url, string $content)
-    {
-        parent::__construct($url);
-
-        $this->content = $content;
-    }
-
     /** @return iterable<string> */
-    public function detect(): iterable
+    public function detect(string $url, string $content): iterable
     {
-        if (preg_match_all('/"(https?:\\\\\/\\\\\/[^"]+)"/', $this->content, $matches, PREG_SET_ORDER)) {
+        if (preg_match_all('/"(https?:\\\\\/\\\\\/[^"]+)"/', $content, $matches, PREG_SET_ORDER)) {
             foreach ($matches as $match) {
                 $value = $match[1];
                 $value = stripslashes($value);
@@ -29,7 +20,7 @@ final class RegexDetector extends AbstractDetector
             }
         }
 
-        if (preg_match_all('/url\(([^)]+)\)/', $this->content, $matches, PREG_SET_ORDER)) {
+        if (preg_match_all('/url\(([^)]+)\)/', $content, $matches, PREG_SET_ORDER)) {
             foreach ($matches as $match) {
                 $value = $match[1];
                 $value = preg_replace('/^[\'"]+|[\'"]+$/', '', $value);
@@ -40,7 +31,7 @@ final class RegexDetector extends AbstractDetector
             }
         }
 
-        if (preg_match_all('/@import\s+(?:\'|")(https?:\/\/[^\'"]+)(?:\'|")/', $this->content, $matches, PREG_SET_ORDER)) {
+        if (preg_match_all('/@import\s+(?:\'|")(https?:\/\/[^\'"]+)(?:\'|")/', $content, $matches, PREG_SET_ORDER)) {
             foreach ($matches as $match) {
                 $value = $match[1];
 
