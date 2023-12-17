@@ -15,7 +15,7 @@ final class XPathDetector implements DetectorInterface
         $crawler = new Crawler($content, $url);
 
         foreach (self::getExpressions() as $query => $attribute) {
-            yield from $crawler->filterXPath($query)->each(fn (Crawler $node) => ($node->attr($attribute) ?? ''));
+            yield from $crawler->filterXPath($query)->each(fn (Crawler $node) => trim($node->attr($attribute) ?? ''));
         }
     }
 
