@@ -6,9 +6,11 @@ require_once __DIR__.'/vendor/autoload.php';
 
 
 $url = 'https://letsbuildit.nl';
-$scanner = new UrlScanner($url, file_get_contents($url));
+
+$scanner = new UrlScanner;
+$scannerResult = $scanner->scan($url, file_get_contents($url));
 
 var_dump(
-    $scanner->scan()->getHosts(),
-    $scanner->scan()->getUrls(),
+    $scannerResult->getHosts(),
+    $scannerResult->getUrls(),
 );

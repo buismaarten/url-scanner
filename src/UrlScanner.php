@@ -9,24 +9,15 @@ use League\Uri\Contracts\UriInterface;
 
 final class UrlScanner
 {
-    private string $url;
-    private string $content;
-
     /** @var DetectorInterface[] */
     private array $detectors = [];
-
-    public function __construct(string $url, string $content = '')
-    {
-        $this->url = $url;
-        $this->content = $content;
-    }
 
     public function addDetector(DetectorInterface $detector): void
     {
         $this->detectors[] = $detector;
     }
 
-    public function scan(): UrlScannerResult
+    public function scan(string $url, string $content = ''): UrlScannerResult
     {
         $normalizedUrls = [];
 
@@ -35,10 +26,10 @@ final class UrlScanner
         }
 
         foreach ($this->detectors as $detector) {
-            $detectedUrls = $detector->detect($this->url, $this->content);
+            $detectedUrls = $detector->detect($url, $content);
 
             foreach ($detectedUrls as $detectedUrl) {
-                $normalizedUrl = Utils::normalizeUrl($detectedUrl, $this->url);
+                $normalizedUrl = Utils::normalizeUrl($detectedUrl, $url);
 
                 if ($normalizedUrl !== null && static::validateUrl($normalizedUrl)) {
                     $normalizedUrls[$normalizedUrl->toString()] = $normalizedUrl;
