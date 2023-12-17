@@ -11,7 +11,7 @@ final class RegexDetector implements DetectorInterface
     /** @return iterable<string> */
     public function detect(string $url, string $content): iterable
     {
-        if (preg_match_all('/"(https?:\\\\\/\\\\\/[^"]+)"/', $content, $matches, PREG_SET_ORDER)) {
+        if (preg_match_all('/"(https?:\\\\\/\\\\\/[^"]+)"/i', $content, $matches, PREG_SET_ORDER)) {
             foreach ($matches as $match) {
                 $value = $match[1];
                 $value = stripslashes($value);
@@ -22,10 +22,10 @@ final class RegexDetector implements DetectorInterface
             }
         }
 
-        if (preg_match_all('/url\(([^)]+)\)/', $content, $matches, PREG_SET_ORDER)) {
+        if (preg_match_all('/url\(([^)]+)\)/i', $content, $matches, PREG_SET_ORDER)) {
             foreach ($matches as $match) {
                 $value = $match[1];
-                $value = preg_replace('/^[\'"]+|[\'"]+$/', '', $value);
+                $value = preg_replace('/^[\'"]+|[\'"]+$/i', '', $value);
 
                 if (is_string($value) && ! empty($value)) {
                     yield trim($value);
@@ -33,7 +33,7 @@ final class RegexDetector implements DetectorInterface
             }
         }
 
-        if (preg_match_all('/@import\s+(?:\'|")(https?:\/\/[^\'"]+)(?:\'|")/', $content, $matches, PREG_SET_ORDER)) {
+        if (preg_match_all('/@import\s+(?:\'|")(https?:\/\/[^\'"]+)(?:\'|")/i', $content, $matches, PREG_SET_ORDER)) {
             foreach ($matches as $match) {
                 $value = $match[1];
 
