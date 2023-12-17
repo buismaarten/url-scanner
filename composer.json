@@ -1,7 +1,8 @@
 {
     "name": "buismaarten/url-scanner",
-    "type": "library",
+    "description": "",
     "license": "MIT",
+    "type": "library",
     "support": {
         "issues": "https://github.com/buismaarten/url-scanner/issues",
         "source": "https://github.com/buismaarten/url-scanner"

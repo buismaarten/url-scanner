@@ -1,4 +1,4 @@
-name: static-analysis
+name: ci
 
 on:
   workflow_dispatch:
@@ -24,8 +24,14 @@ jobs:
         with:
           php-version: ${{ matrix.php }}
 
-      - name: Install dependencies
+      - name: Composer validate
+        run: composer validate --strict
+
+      - name: Composer install
         run: composer install --prefer-dist --no-interaction
 
       - name: Execute static analysis
         run: composer analyse
+
+      - name: Execute tests
+        run: composer test
