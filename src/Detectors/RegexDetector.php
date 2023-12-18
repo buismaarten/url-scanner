@@ -32,27 +32,27 @@ final class RegexDetector implements DetectorInterface
             }
         }
 
-        if (preg_match_all('/"(https?:\\\\\/\\\\\/[^"]+)"/i', $content, $matches, PREG_SET_ORDER)) {
-            foreach ($matches as $match) {
-                $value = $match[1];
-                $value = stripslashes($value);
-
-                if (is_string($value) && ! empty($value)) {
-                    yield trim($value);
-                }
-            }
-        }
-
-        if (preg_match_all('/<script.*type="application\/ld\+json".*>([^<]*)<\/script>/i', $content, $matches, PREG_SET_ORDER)) {
+        if (preg_match_all('/<script\b[^>]*>(.*?)<\/script>/is', $content, $matches, PREG_SET_ORDER)) {
             $code = '';
 
             foreach ($matches as $match) {
-                $code .= stripslashes($match[1]);
+                $code .= $match[1];
             }
 
-            if (preg_match_all('/"(https?:\/\/(?!.*schema\.org)[^\s"]+)"/i', $code, $matches, PREG_SET_ORDER)) {
+            if (preg_match_all('/"(https?:\/\/[^"]+)"/i', $code, $matches, PREG_SET_ORDER)) {
                 foreach ($matches as $match) {
                     $value = $match[1];
+
+                    if (is_string($value) && ! empty($value)) {
+                        yield trim($value);
+                    }
+                }
+            }
+
+            if (preg_match_all('/"(https?:\\\\\/\\\\\/[^"]+)"/i', $code, $matches, PREG_SET_ORDER)) {
+                foreach ($matches as $match) {
+                    $value = $match[1];
+                    $value = stripslashes($value);
 
                     if (is_string($value) && ! empty($value)) {
                         yield trim($value);

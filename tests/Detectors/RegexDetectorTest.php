@@ -10,8 +10,8 @@ final class RegexDetectorTest extends TestCase
 {
     #[DataProvider('detectCssUrlProvider')]
     #[DataProvider('detectCssImportProvider')]
-    #[DataProvider('detectEscapedUrlProvider')]
-    #[DataProvider('detectLinkedDataProvider')]
+    #[DataProvider('detectScriptNormalUrlProvider')]
+    #[DataProvider('detectScriptEscapedUrlProvider')]
     public function testDetect(array $expected, string $content): void
     {
         $detector = new RegexDetector;
@@ -67,7 +67,28 @@ final class RegexDetectorTest extends TestCase
         ];
     }
 
-    public static function detectEscapedUrlProvider(): array
+    public static function detectScriptNormalUrlProvider(): array
+    {
+        return [
+            [
+                'expected' => [
+                    'https://localhost/path',
+                    'http://localhost/path',
+                ],
+                'content' => '<script type="text/javascript">const a = {"url1":"https://localhost/path","url2":"http://localhost/path"};</script>',
+            ],
+            [
+                'expected' => [
+                    'https://schema.org',
+                    'https://localhost/path',
+                    'http://localhost/path',
+                ],
+                'content' => '<script type="application/ld+json">{"@context":"https://schema.org","url1":"https://localhost/path","url2":"http://localhost/path"}</script>',
+            ],
+        ];
+    }
+
+    public static function detectScriptEscapedUrlProvider(): array
     {
         return [
             [
@@ -77,18 +98,13 @@ final class RegexDetectorTest extends TestCase
                 ],
                 'content' => '<script type="text/javascript">const a = {"url1":"https:\/\/localhost\/path","url2":"http:\/\/localhost\/path"};</script>',
             ],
-        ];
-    }
-
-    public static function detectLinkedDataProvider(): array
-    {
-        return [
             [
                 'expected' => [
+                    'https://schema.org',
                     'https://localhost/path',
                     'http://localhost/path',
                 ],
-                'content' => '<script type="application/ld+json" id="ld-json">{"@context":"https://schema.org","url1":"https://localhost/path","url2":"http://localhost/path"}</script>',
+                'content' => '<script type="application/ld+json">{"@context":"https:\/\/schema.org","url1":"https:\/\/localhost\/path","url2":"http:\/\/localhost\/path"}</script>',
             ],
         ];
     }
