@@ -49,6 +49,10 @@ final class UtilsTest extends TestCase
                 'url' => ['https://localhost/', null],
             ],
             [
+                'expected' => 'https://localhost/path',
+                'url' => ['https://localhost/path/', null],
+            ],
+            [
                 'expected' => 'https://localhost/path?query=1',
                 'url' => ['https://localhost/path/?query=1', null],
             ],
