@@ -13,7 +13,7 @@ final class Utils
     public static function normalizeUrl(string $url, ?string $baseUrl): ?UriInterface
     {
         try {
-            $components = Uri::fromBaseUri($url, $baseUrl)->getComponents();
+            $components = Uri::fromBaseUri($url, $baseUrl)->withUserInfo(null)->getComponents();
             $components['path'] = rtrim($components['path'], '/');
         } catch (SyntaxError) {
             return null;

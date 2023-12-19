@@ -38,6 +38,12 @@ final class UtilsTest extends TestCase
                 'expected' => 'https://localhost/path?query=1',
                 'url' => ['/path/?query=1#fragment', 'https://localhost/'],
             ],
+
+            // @todo
+            [
+                'expected' => 'https://localhost',
+                'url' => ['/', 'https://user@localhost/'],
+            ],
         ];
     }
 
@@ -59,6 +65,12 @@ final class UtilsTest extends TestCase
             [
                 'expected' => 'https://localhost/path?query=1',
                 'url' => ['https://localhost/path/?query=1#fragment', null],
+            ],
+
+            // @todo
+            [
+                'expected' => 'https://localhost',
+                'url' => ['https://user@localhost/', null],
             ],
         ];
     }
