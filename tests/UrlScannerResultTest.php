@@ -29,9 +29,9 @@ final class UrlScannerResultTest extends TestCase
                 ],
                 'urls' => [
                     'https://localhost' => Utils::normalizeUrl('https://localhost', null),
-                    'http://localhost' => Utils::normalizeUrl('http://localhost', null),
+                    'http://127.0.0.1' => Utils::normalizeUrl('http://127.0.0.1', null),
                     'https://localhost' => Utils::normalizeUrl('https://localhost', null),
-                    'http://localhost' => Utils::normalizeUrl('http://localhost', null),
+                    'http://127.0.0.1' => Utils::normalizeUrl('http://127.0.0.1', null),
                 ],
             ],
         ];
@@ -54,13 +54,13 @@ final class UrlScannerResultTest extends TestCase
             [
                 'expected' => [
                     'https://localhost',
-                    'http://localhost',
+                    'http://127.0.0.1',
                 ],
                 'urls' => [
                     'https://localhost' => Utils::normalizeUrl('https://localhost', null),
-                    'http://localhost' => Utils::normalizeUrl('http://localhost', null),
+                    'http://127.0.0.1' => Utils::normalizeUrl('http://127.0.0.1', null),
                     'https://localhost/#fragment' => Utils::normalizeUrl('https://localhost/#fragment', null),
-                    'http://localhost/#fragment' => Utils::normalizeUrl('http://localhost/#fragment', null),
+                    'http://127.0.0.1/#fragment' => Utils::normalizeUrl('http://127.0.0.1/#fragment', null),
                 ],
             ],
         ];
