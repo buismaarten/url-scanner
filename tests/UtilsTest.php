@@ -32,6 +32,14 @@ final class UtilsTest extends TestCase
             ],
             [
                 'expected' => false,
+                'url' => Uri::new('mailto:root@localhost'),
+            ],
+            [
+                'expected' => false,
+                'url' => Uri::new('tel:+31612345678'),
+            ],
+            [
+                'expected' => false,
                 'url' => Uri::new('data:text/plain;base64,SGVsbG8sIFdvcmxkIQ=='),
             ],
         ];
