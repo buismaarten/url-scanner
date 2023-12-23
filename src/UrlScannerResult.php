@@ -25,8 +25,7 @@ final class UrlScannerResult
         foreach ($this->urls as $url) {
             $host = $url->getHost();
 
-            // @todo
-            if ($host !== null && filter_var($host, FILTER_VALIDATE_IP) === false) {
+            if ($host !== null && Utils::validateHost($host)) {
                 $hosts[] = Utils::normalizeHost($host);
             }
         }

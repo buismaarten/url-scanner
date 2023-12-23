@@ -31,22 +31,13 @@ final class UrlScanner
             foreach ($detectedUrls as $detectedUrl) {
                 $normalizedUrl = Utils::normalizeUrl($detectedUrl, $url);
 
-                if ($normalizedUrl !== null && static::validateUrl($normalizedUrl)) {
+                if ($normalizedUrl !== null && Utils::validateUrl($normalizedUrl)) {
                     $normalizedUrls[$normalizedUrl->toString()] = $normalizedUrl;
                 }
             }
         }
 
         return new UrlScannerResult($normalizedUrls);
-    }
-
-    private static function validateUrl(UriInterface $url): bool
-    {
-        if ($url->getScheme() === null || ! str_starts_with($url->getScheme(), 'http')) {
-            return false;
-        }
-
-        return true;
     }
 
     /** @return DetectorInterface[] */

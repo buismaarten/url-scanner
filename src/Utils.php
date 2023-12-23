@@ -10,6 +10,15 @@ use League\Uri\Uri;
 
 final class Utils
 {
+    public static function validateUrl(UriInterface $url): bool
+    {
+        if ($url->getScheme() === null || ! str_starts_with($url->getScheme(), 'http')) {
+            return false;
+        }
+
+        return true;
+    }
+
     public static function normalizeUrl(string $url, ?string $baseUrl): ?UriInterface
     {
         try {
@@ -26,6 +35,15 @@ final class Utils
             'path'   => $components['path'],
             'query'  => $components['query'],
         ]);
+    }
+
+    public static function validateHost(string $host): bool
+    {
+        if (filter_var($host, FILTER_VALIDATE_IP) !== false) {
+            return false;
+        }
+
+        return true;
     }
 
     public static function normalizeHost(string $host): string
