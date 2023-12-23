@@ -30,11 +30,7 @@ final class UrlScannerResult
             }
         }
 
-        // @todo
-        $hosts = array_unique($hosts);
-        $hosts = array_values($hosts);
-
-        return $hosts;
+        return static::normalizeArray($hosts);
     }
 
     /** @return string[] */
@@ -46,10 +42,18 @@ final class UrlScannerResult
             $urls[] = $url->toString();
         }
 
-        // @todo
-        $urls = array_unique($urls);
-        $urls = array_values($urls);
+        return static::normalizeArray($urls);
+    }
 
-        return $urls;
+    /**
+     * @param string[] $array
+     * @return string[]
+     */
+    private static function normalizeArray(array $array): array
+    {
+        $array = array_unique($array);
+        $array = array_values($array);
+
+        return $array;
     }
 }
