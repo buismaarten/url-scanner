@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Buismaarten\UrlScanner;
 
 use Buismaarten\UrlScanner\Interfaces\DetectorInterface;
-use League\Uri\Contracts\UriInterface;
 
 final class UrlScanner
 {

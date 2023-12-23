@@ -3,11 +3,40 @@
 declare(strict_types=1);
 
 use Buismaarten\UrlScanner\Utils;
+use League\Uri\Contracts\UriInterface;
+use League\Uri\Uri;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 
 final class UtilsTest extends TestCase
 {
+    #[DataProvider('validateUrlProvider')]
+    public function testValidateUrl(bool $expected, UriInterface $url): void
+    {
+        $this->assertSame(
+            expected: $expected,
+            actual: Utils::validateUrl($url),
+        );
+    }
+
+    public static function validateUrlProvider(): array
+    {
+        return [
+            [
+                'expected' => true,
+                'url' => Uri::new('https://localhost'),
+            ],
+            [
+                'expected' => true,
+                'url' => Uri::new('http://localhost'),
+            ],
+            [
+                'expected' => false,
+                'url' => Uri::new('data:text/plain;base64,SGVsbG8sIFdvcmxkIQ=='),
+            ],
+        ];
+    }
+
     #[DataProvider('normalizeUrlRelativeProvider')]
     #[DataProvider('normalizeUrlAbsoluteProvider')]
     #[DataProvider('normalizeUrlInvalidCredentialsProvider')]
@@ -80,6 +109,33 @@ final class UtilsTest extends TestCase
             [
                 'expected' => null,
                 'url' => ['://localhost', null],
+            ],
+        ];
+    }
+
+    #[DataProvider('validateHostProvider')]
+    public function testValidateHost(bool $expected, string $host): void
+    {
+        $this->assertSame(
+            expected: $expected,
+            actual: Utils::validateHost($host),
+        );
+    }
+
+    public static function validateHostProvider(): array
+    {
+        return [
+            [
+                'expected' => true,
+                'url' => 'localhost',
+            ],
+            [
+                'expected' => true,
+                'url' => 'www.localhost',
+            ],
+            [
+                'expected' => false,
+                'url' => '127.0.0.1',
             ],
         ];
     }
