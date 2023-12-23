@@ -96,8 +96,14 @@ final class UtilsTest extends TestCase
     public static function normalizeHostProvider(): array
     {
         return [
-            ['localhost', 'localhost'],
-            ['localhost', 'www.localhost'],
+            [
+                'expected' => 'localhost',
+                'url' => 'localhost',
+            ],
+            [
+                'expected' => 'localhost',
+                'url' => 'www.localhost',
+            ],
         ];
     }
 }
