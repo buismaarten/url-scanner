@@ -49,7 +49,7 @@ final class XPathDetector implements DetectorInterface
             '//script[@src]' => 'src',
             '//source[@src]' => 'src',
             '//svg//*[@href]' => 'href',
-            '//svg//*[attribute::*[contains(local-name(), "xlink:href")]]' => 'xlink:href',
+            '//svg//*[attribute::*[contains(local-name(),"xlink:href")]]' => 'xlink:href',
             '//track[@src]' => 'src',
             '//video[@poster]' => 'poster',
             '//video[@src]' => 'src',
