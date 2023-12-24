@@ -27,14 +27,14 @@ final class XPathDetectorTest extends TestCase
                     'https://localhost/path',
                     'https://localhost/path',
                 ],
-                'content' => '<a href="https://localhost/path">Link</a><a href="https://localhost/path" rel="">Link</a><a href="https://localhost/path" rel="nofollow">Link</a>',
+                'content' => '<a href="https://localhost/path">Link</a><a href="https://localhost/path" rel="">Link</a><a href="https://localhost/path" rel="external nofollow">Link</a>',
             ],
             [
                 'expected' => [
                     'https://localhost/path',
                     'https://localhost/path',
                 ],
-                'content' => '<a href="#" ping="https://localhost/path">Link</a><a href="#" ping="https://localhost/path" rel="">Link</a><a href="#" ping="https://localhost/path" rel="nofollow">Link</a>',
+                'content' => '<a href="#" ping="https://localhost/path">Link</a><a href="#" ping="https://localhost/path" rel="">Link</a><a href="#" ping="https://localhost/path" rel="external nofollow">Link</a>',
             ],
             [
                 'expected' => [
