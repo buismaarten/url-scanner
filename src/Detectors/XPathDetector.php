@@ -23,8 +23,10 @@ final class XPathDetector implements DetectorInterface
     private static function getExpressions(): array
     {
         return [
-            '//a[@href]' => 'href',
-            '//a[@ping]' => 'ping',
+            '//a[not(@rel) or @rel=""][@href]' => 'href',
+            '//a[not(@rel) or @rel=""][@ping]' => 'ping',
+            '//a[not(contains(@rel,"nofollow"))][@href]' => 'href',
+            '//a[not(contains(@rel,"nofollow"))][@ping]' => 'ping',
             '//audio[@src]' => 'src',
             '//base[@href]' => 'href',
             '//form[not(@method) or @method=""][@action]' => 'action',
