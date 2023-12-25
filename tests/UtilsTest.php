@@ -3,50 +3,27 @@
 declare(strict_types=1);
 
 use Buismaarten\UrlScanner\Utils;
-use League\Uri\Contracts\UriInterface;
 use League\Uri\Uri;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 
 final class UtilsTest extends TestCase
 {
-    #[DataProvider('validateUrlUsingObjectProvider')]
-    #[DataProvider('validateUrlUsingStringProvider')]
-    public function testValidateUrl(bool $expected, UriInterface|string $url): void
+    #[DataProvider('validateUrlProvider')]
+    public function testValidateUrl(bool $expected, string $url): void
     {
         $this->assertSame(
             expected: $expected,
             actual: Utils::validateUrl($url),
         );
+
+        $this->assertSame(
+            expected: $expected,
+            actual: Utils::validateUrl(Uri::new($url)),
+        );
     }
 
-    public static function validateUrlUsingObjectProvider(): array
-    {
-        return [
-            [
-                'expected' => true,
-                'url' => Uri::new('https://localhost'),
-            ],
-            [
-                'expected' => true,
-                'url' => Uri::new('http://localhost'),
-            ],
-            [
-                'expected' => false,
-                'url' => Uri::new('mailto:root@localhost'),
-            ],
-            [
-                'expected' => false,
-                'url' => Uri::new('tel:+31612345678'),
-            ],
-            [
-                'expected' => false,
-                'url' => Uri::new('data:text/plain;base64,SGVsbG8sIFdvcmxkIQ=='),
-            ],
-        ];
-    }
-
-    public static function validateUrlUsingStringProvider(): array
+    public static function validateUrlProvider(): array
     {
         return [
             [
