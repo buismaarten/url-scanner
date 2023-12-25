@@ -47,7 +47,7 @@ final class UrlScanner
         return new UrlScannerResult($normalizedUrls);
     }
 
-    public function getDownloader(): DownloaderInterface
+    private function getDownloader(): DownloaderInterface
     {
         if (! isset($this->downloader)) {
             $this->downloader = self::getDefaultDownloader();
@@ -62,7 +62,7 @@ final class UrlScanner
     }
 
     /** @return DetectorInterface[] */
-    public function getDetectors(): array
+    private function getDetectors(): array
     {
         if (! isset($this->detectors)) {
             $this->detectors = self::getDefaultDetectors();
