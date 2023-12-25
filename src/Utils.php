@@ -10,8 +10,12 @@ use League\Uri\Uri;
 
 final class Utils
 {
-    public static function validateUrl(UriInterface $url): bool
+    public static function validateUrl(UriInterface|string $url): bool
     {
+        if (is_string($url)) {
+            $url = Uri::new($url);
+        }
+
         if ($url->getScheme() === null || ! str_starts_with($url->getScheme(), 'http')) {
             return false;
         }

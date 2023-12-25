@@ -10,8 +10,9 @@ use PHPUnit\Framework\TestCase;
 
 final class UtilsTest extends TestCase
 {
-    #[DataProvider('validateUrlProvider')]
-    public function testValidateUrl(bool $expected, UriInterface $url): void
+    #[DataProvider('validateUrlUsingObjectProvider')]
+    #[DataProvider('validateUrlUsingStringProvider')]
+    public function testValidateUrl(bool $expected, UriInterface|string $url): void
     {
         $this->assertSame(
             expected: $expected,
@@ -19,7 +20,7 @@ final class UtilsTest extends TestCase
         );
     }
 
-    public static function validateUrlProvider(): array
+    public static function validateUrlUsingObjectProvider(): array
     {
         return [
             [
@@ -41,6 +42,32 @@ final class UtilsTest extends TestCase
             [
                 'expected' => false,
                 'url' => Uri::new('data:text/plain;base64,SGVsbG8sIFdvcmxkIQ=='),
+            ],
+        ];
+    }
+
+    public static function validateUrlUsingStringProvider(): array
+    {
+        return [
+            [
+                'expected' => true,
+                'url' => 'https://localhost',
+            ],
+            [
+                'expected' => true,
+                'url' => 'http://localhost',
+            ],
+            [
+                'expected' => false,
+                'url' => 'mailto:root@localhost',
+            ],
+            [
+                'expected' => false,
+                'url' => 'tel:+31612345678',
+            ],
+            [
+                'expected' => false,
+                'url' => 'data:text/plain;base64,SGVsbG8sIFdvcmxkIQ==',
             ],
         ];
     }
