@@ -6,7 +6,7 @@ namespace Buismaarten\UrlScanner\Downloaders;
 
 use Buismaarten\UrlScanner\Interfaces\DownloaderInterface;
 
-class NativeDownloader implements DownloaderInterface
+final class NativeDownloader implements DownloaderInterface
 {
     public function download(string $url): string
     {
