@@ -28,19 +28,11 @@ final class UrlScanner
     {
         $normalizedUrls = [];
 
-        if (! isset($this->detectors)) {
-            $this->detectors = self::getDefaultDetectors();
-        }
-
-        if (! isset($this->downloader)) {
-            $this->downloader = self::getDefaultDownloader();
-        }
-
         if ($content === '') {
-            $content = $this->downloader->download($url);
+            $content = $this->getDownloader()->download($url);
         }
 
-        foreach ($this->detectors as $detector) {
+        foreach ($this->getDetectors() as $detector) {
             $detectedUrls = $detector->detect($url, $content);
 
             foreach ($detectedUrls as $detectedUrl) {
@@ -56,12 +48,31 @@ final class UrlScanner
     }
 
     /** @return DetectorInterface[] */
+    public function getDetectors(): array
+    {
+        if (! isset($this->detectors)) {
+            $this->detectors = self::getDefaultDetectors();
+        }
+
+        return $this->detectors;
+    }
+
+    /** @return DetectorInterface[] */
     private static function getDefaultDetectors(): array
     {
         return [
             new Detectors\RegexDetector,
             new Detectors\XPathDetector,
         ];
+    }
+
+    public function getDownloader(): DownloaderInterface
+    {
+        if (! isset($this->downloader)) {
+            $this->downloader = self::getDefaultDownloader();
+        }
+
+        return $this->downloader;
     }
 
     private static function getDefaultDownloader(): DownloaderInterface
