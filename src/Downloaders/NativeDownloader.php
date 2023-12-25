@@ -13,6 +13,7 @@ final class NativeDownloader implements DownloaderInterface
     {
         $body = false;
 
+        // @todo
         if (Utils::validateUrl($url)) {
             $body = file_get_contents($url, length: (2 * 1024 * 1024));
         }
