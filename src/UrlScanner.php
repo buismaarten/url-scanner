@@ -5,23 +5,39 @@ declare(strict_types=1);
 namespace Buismaarten\UrlScanner;
 
 use Buismaarten\UrlScanner\Interfaces\DetectorInterface;
+use Buismaarten\UrlScanner\Interfaces\DownloaderInterface;
 
 final class UrlScanner
 {
     /** @var DetectorInterface[] */
-    private array $detectors = [];
+    private array $detectors;
+
+    private DownloaderInterface $downloader;
 
     public function addDetector(DetectorInterface $detector): void
     {
         $this->detectors[] = $detector;
     }
 
+    public function setDownloader(DownloaderInterface $downloader): void
+    {
+        $this->downloader = $downloader;
+    }
+
     public function scan(string $url, string $content = ''): UrlScannerResult
     {
         $normalizedUrls = [];
 
-        if ($this->detectors === []) {
+        if (! isset($this->detectors)) {
             $this->detectors = self::getDefaultDetectors();
+        }
+
+        if (! isset($this->downloader)) {
+            $this->downloader = self::getDefaultDownloader();
+        }
+
+        if ($content === '') {
+            $content = $this->downloader->download($url);
         }
 
         foreach ($this->detectors as $detector) {
@@ -46,5 +62,10 @@ final class UrlScanner
             new Detectors\RegexDetector,
             new Detectors\XPathDetector,
         ];
+    }
+
+    private static function getDefaultDownloader(): DownloaderInterface
+    {
+        return new Downloaders\NativeDownloader;
     }
 }
