@@ -24,11 +24,11 @@ final class UrlScanner
         $this->detectors[] = $detector;
     }
 
-    public function scan(string $url, string $content = ''): UrlScannerResult
+    public function scan(string $url, ?string $content = null): UrlScannerResult
     {
         $normalizedUrls = [];
 
-        if ($content === '') {
+        if ($content === null) {
             $content = $this->getDownloader()->download($url);
         }
 
