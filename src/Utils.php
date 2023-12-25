@@ -10,7 +10,7 @@ use League\Uri\Uri;
 
 final class Utils
 {
-    public static function validateUrl(UriInterface|string $url): bool
+    public static function validateUrl(string|UriInterface $url): bool
     {
         if (is_string($url)) {
             $url = Uri::new($url);
