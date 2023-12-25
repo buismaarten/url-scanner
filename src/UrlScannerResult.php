@@ -30,7 +30,7 @@ final class UrlScannerResult
             }
         }
 
-        return static::normalizeArray($hosts);
+        return self::normalizeArray($hosts);
     }
 
     /** @return string[] */
@@ -42,7 +42,7 @@ final class UrlScannerResult
             $urls[] = $url->toString();
         }
 
-        return static::normalizeArray($urls);
+        return self::normalizeArray($urls);
     }
 
     /**
