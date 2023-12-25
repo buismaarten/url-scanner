@@ -4,10 +4,9 @@ declare(strict_types=1);
 
 namespace Buismaarten\UrlScanner\Downloaders;
 
-use Buismaarten\UrlScanner\Interfaces\DownloaderInterface;
 use Buismaarten\UrlScanner\Utils;
 
-final class NativeDownloader implements DownloaderInterface
+final class NativeDownloader extends AbstractDownloader
 {
     public function download(string $url): string
     {
