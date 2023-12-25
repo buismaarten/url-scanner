@@ -12,9 +12,8 @@ final class NativeDownloader extends AbstractDownloader
     {
         $body = false;
 
-        // @todo
         if (Utils::validateUrl($url)) {
-            $body = file_get_contents($url, length: (2 * 1024 * 1024));
+            $body = file_get_contents($url, length: $this->getLength());
         }
 
         if ($body === false) {

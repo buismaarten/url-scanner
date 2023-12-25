@@ -19,9 +19,10 @@ final class UrlScanner
         $this->downloader = $downloader;
     }
 
-    public function addDetector(DetectorInterface $detector): void
+    /** @param DetectorInterface[] $detectors */
+    public function setDetectors(array $detectors): void
     {
-        $this->detectors[] = $detector;
+        $this->detectors = $detectors;
     }
 
     public function scan(string $url, ?string $content = null): UrlScannerResult
@@ -49,26 +50,18 @@ final class UrlScanner
 
     private function getDownloader(): DownloaderInterface
     {
-        if (! isset($this->downloader)) {
-            $this->downloader = self::getDefaultDownloader();
-        }
-
-        return $this->downloader;
-    }
-
-    private static function getDefaultDownloader(): DownloaderInterface
-    {
-        return new Downloaders\NativeDownloader;
+        return ($this->downloader ??= self::getDefaultDownloader());
     }
 
     /** @return DetectorInterface[] */
     private function getDetectors(): array
     {
-        if (! isset($this->detectors)) {
-            $this->detectors = self::getDefaultDetectors();
-        }
+        return ($this->detectors ??= self::getDefaultDetectors());
+    }
 
-        return $this->detectors;
+    private static function getDefaultDownloader(): DownloaderInterface
+    {
+        return new Downloaders\NativeDownloader;
     }
 
     /** @return DetectorInterface[] */
