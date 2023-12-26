@@ -8,26 +8,17 @@ use Buismaarten\UrlScanner\Utils;
 
 final class NativeDownloader extends AbstractDownloader
 {
+    private array $options;
+
     public function download(string $url): string
     {
         $body = false;
 
         // @todo
         if (Utils::validateUrl($url)) {
-            $context = stream_context_create([
-                'http' => [
-                    'method' => 'GET',
-                    'ignore_errors' => true,
-                    'header' => [
-                        "User-Agent: {$this->getUserAgent()}",
-                    ],
-                ],
-            ]);
-
-            $body = file_get_contents(
-                filename: $url,
-                context:  $context,
-                length:   $this->getLength(),
+            $body = file_get_contents($url,
+                context: stream_context_create($this->getOptions()),
+                length: $this->getLength(),
             );
         }
 
@@ -36,5 +27,35 @@ final class NativeDownloader extends AbstractDownloader
         }
 
         return $body;
+    }
+
+    public function setOptions(array $options): void
+    {
+        $this->options = $options;
+    }
+
+    private function getOptions(): array
+    {
+        $options = ($this->options ??= self::getDefaultOptions());
+
+        if ($this->getUserAgent() !== '') {
+            $options['http']['header'][] = "User-Agent: {$this->getUserAgent()}";
+        }
+
+        return $options;
+    }
+
+    private static function getDefaultOptions(): array
+    {
+        return [
+            'http' => [
+                'method' => 'GET',
+                'ignore_errors' => true,
+                'header' => [
+                    'Accept: text/html',
+                    'Cache-Control: no-cache',
+                ],
+            ],
+        ];
     }
 }
