@@ -8,6 +8,7 @@ use Buismaarten\UrlScanner\Utils;
 
 final class NativeDownloader extends AbstractDownloader
 {
+    /** @phpstan-ignore-next-line */
     private array $options;
 
     public function download(string $url): string
@@ -29,11 +30,13 @@ final class NativeDownloader extends AbstractDownloader
         return $body;
     }
 
+    /** @phpstan-ignore-next-line */
     public function setOptions(array $options): void
     {
         $this->options = $options;
     }
 
+    /** @phpstan-ignore-next-line */
     private function getOptions(): array
     {
         $options = ($this->options ??= self::getDefaultOptions());
@@ -45,6 +48,7 @@ final class NativeDownloader extends AbstractDownloader
         return $options;
     }
 
+    /** @phpstan-ignore-next-line */
     private static function getDefaultOptions(): array
     {
         return [
