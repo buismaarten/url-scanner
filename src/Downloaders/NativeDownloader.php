@@ -54,9 +54,6 @@ final class NativeDownloader extends AbstractDownloader
             'http' => [
                 'method' => 'GET',
                 'ignore_errors' => true,
-                'header' => [
-                    'Accept: text/html',
-                ],
             ],
         ];
     }
