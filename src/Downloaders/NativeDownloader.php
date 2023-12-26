@@ -17,6 +17,7 @@ final class NativeDownloader extends AbstractDownloader
             $context = stream_context_create([
                 'http' => [
                     'method' => 'GET',
+                    'ignore_errors' => true,
                     'header' => [
                         "User-Agent: {$this->getUserAgent()}",
                     ],
