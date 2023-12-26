@@ -15,7 +15,6 @@ final class NativeDownloader extends AbstractDownloader
     {
         $body = false;
 
-        // @todo
         if (Utils::validateUrl($url)) {
             $body = file_get_contents($url,
                 context: stream_context_create($this->getOptions()),
@@ -57,7 +56,6 @@ final class NativeDownloader extends AbstractDownloader
                 'ignore_errors' => true,
                 'header' => [
                     'Accept: text/html',
-                    'Cache-Control: no-cache',
                 ],
             ],
         ];
