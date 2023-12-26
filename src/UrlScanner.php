@@ -14,17 +14,6 @@ final class UrlScanner
     /** @var DetectorInterface[] */
     private array $detectors;
 
-    public function setDownloader(DownloaderInterface $downloader): void
-    {
-        $this->downloader = $downloader;
-    }
-
-    /** @param DetectorInterface[] $detectors */
-    public function setDetectors(array $detectors): void
-    {
-        $this->detectors = $detectors;
-    }
-
     public function scan(string $url, ?string $content = null): UrlScannerResult
     {
         $normalizedUrls = [];
@@ -46,6 +35,17 @@ final class UrlScanner
         }
 
         return new UrlScannerResult($normalizedUrls);
+    }
+
+    public function setDownloader(DownloaderInterface $downloader): void
+    {
+        $this->downloader = $downloader;
+    }
+
+    /** @param DetectorInterface[] $detectors */
+    public function setDetectors(array $detectors): void
+    {
+        $this->detectors = $detectors;
     }
 
     private function getDownloader(): DownloaderInterface
