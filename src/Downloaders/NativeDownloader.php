@@ -16,10 +16,10 @@ final class NativeDownloader extends AbstractDownloader
         $body = false;
 
         if (Utils::validateUrl($url)) {
-            $body = file_get_contents($url,
-                context: stream_context_create($this->getOptions()),
-                length: $this->getLength(),
-            );
+            $body = file_get_contents(filename: $url,
+                                      use_include_path: false,
+                                      context: stream_context_create($this->getOptions()),
+                                      length: $this->getLength());
         }
 
         if ($body === false) {
