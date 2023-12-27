@@ -38,23 +38,30 @@ final class NativeDownloader extends AbstractDownloader
     /** @phpstan-ignore-next-line */
     private function getOptions(): array
     {
-        $options = ($this->options ??= self::getDefaultOptions());
-
-        if ($this->getUserAgent() !== '') {
-            $options['http']['header'][] = "User-Agent: {$this->getUserAgent()}";
-        }
-
-        return $options;
+        return ($this->options ??= $this->getDefaultOptions());
     }
 
     /** @phpstan-ignore-next-line */
-    private static function getDefaultOptions(): array
+    private function getDefaultOptions(): array
     {
         return [
             'http' => [
                 'method' => 'GET',
                 'ignore_errors' => true,
+                'header' => $this->getHeaders(),
             ],
         ];
+    }
+
+    /** @return string[] */
+    protected function getHeaders(): array
+    {
+        $headers = [];
+
+        foreach (parent::getHeaders() as $key => $value) {
+            $headers[] = sprintf('%s: %s', $key, $value);
+        }
+
+        return $headers;
     }
 }

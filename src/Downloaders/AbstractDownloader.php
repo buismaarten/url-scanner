@@ -14,6 +14,9 @@ abstract class AbstractDownloader implements DownloaderInterface
     private int $length;
     private string $userAgent;
 
+    /** @var array<string, string> */
+    private array $headers;
+
     public function setLength(int $length): void
     {
         $this->length = $length;
@@ -22,6 +25,12 @@ abstract class AbstractDownloader implements DownloaderInterface
     public function setUserAgent(string $userAgent): void
     {
         $this->userAgent = $userAgent;
+    }
+
+    /** @param array<string, string> $headers */
+    public function setHeaders(array $headers): void
+    {
+        $this->headers = $headers;
     }
 
     /** @return int<0, max> */
@@ -33,5 +42,19 @@ abstract class AbstractDownloader implements DownloaderInterface
     protected function getUserAgent(): string
     {
         return ($this->userAgent ??= self::DEFAULT_USER_AGENT);
+    }
+
+    /** @return array<string, string> */
+    protected function getHeaders(): array
+    {
+        return ($this->headers ??= $this->getDefaultHeaders());
+    }
+
+    /** @return array<string, string> */
+    private function getDefaultHeaders(): array
+    {
+        return [
+            'User-Agent' => $this->getUserAgent(),
+        ];
     }
 }
