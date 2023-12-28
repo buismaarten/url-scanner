@@ -14,6 +14,7 @@
     ],
     "require": {
         "php": "^8.2",
+        "guzzlehttp/guzzle": "^7.8",
         "league/uri": "^7.4",
         "league/uri-interfaces": "^7.4",
         "symfony/dom-crawler": "^7.0"
