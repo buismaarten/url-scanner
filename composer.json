@@ -14,8 +14,8 @@
     ],
     "require": {
         "php": "^8.2",
-        "league/uri": "^7.3",
-        "league/uri-interfaces": "^7.3",
+        "league/uri": "^7.4",
+        "league/uri-interfaces": "^7.4",
         "symfony/dom-crawler": "^7.0"
     },
     "require-dev": {
