@@ -6,7 +6,7 @@ namespace Buismaarten\UrlScanner\Downloaders;
 
 use Buismaarten\UrlScanner\Utils;
 
-final class NativeDownloader extends AbstractDownloader
+class NativeDownloader extends AbstractDownloader
 {
     /** @phpstan-ignore-next-line */
     private array $options;

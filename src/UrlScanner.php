@@ -7,7 +7,7 @@ namespace Buismaarten\UrlScanner;
 use Buismaarten\UrlScanner\Interfaces\DetectorInterface;
 use Buismaarten\UrlScanner\Interfaces\DownloaderInterface;
 
-final class UrlScanner
+class UrlScanner
 {
     private DownloaderInterface $downloader;
 

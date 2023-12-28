@@ -6,7 +6,7 @@ namespace Buismaarten\UrlScanner\Detectors;
 
 use Buismaarten\UrlScanner\Interfaces\DetectorInterface;
 
-final class RegexDetector implements DetectorInterface
+class RegexDetector implements DetectorInterface
 {
     /** @return iterable<string> */
     public function detect(string $url, string $content): iterable

@@ -6,7 +6,7 @@ use Buismaarten\UrlScanner\Detectors\RegexDetector;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 
-final class RegexDetectorTest extends TestCase
+class RegexDetectorTest extends TestCase
 {
     #[DataProvider('detectCssUrlProvider')]
     #[DataProvider('detectCssImportProvider')]

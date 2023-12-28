@@ -7,7 +7,7 @@ use Buismaarten\UrlScanner\Utils;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 
-final class UrlScannerResultTest extends TestCase
+class UrlScannerResultTest extends TestCase
 {
     #[DataProvider('getHostsProvider')]
     public function testGetHosts(array $expected, array $urls): void

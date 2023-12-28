@@ -7,7 +7,7 @@ use League\Uri\Uri;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 
-final class UtilsTest extends TestCase
+class UtilsTest extends TestCase
 {
     #[DataProvider('validateUrlProvider')]
     public function testValidateUrl(bool $expected, string $url): void

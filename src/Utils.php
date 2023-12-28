@@ -8,7 +8,7 @@ use League\Uri\Contracts\UriInterface;
 use League\Uri\Exceptions\SyntaxError;
 use League\Uri\Uri;
 
-final class Utils
+class Utils
 {
     public static function validateUrl(string|UriInterface $url): bool
     {

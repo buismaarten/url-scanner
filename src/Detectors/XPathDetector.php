@@ -7,7 +7,7 @@ namespace Buismaarten\UrlScanner\Detectors;
 use Buismaarten\UrlScanner\Interfaces\DetectorInterface;
 use Symfony\Component\DomCrawler\Crawler;
 
-final class XPathDetector implements DetectorInterface
+class XPathDetector implements DetectorInterface
 {
     /** @return iterable<string> */
     public function detect(string $url, string $content): iterable

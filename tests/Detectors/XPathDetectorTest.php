@@ -6,7 +6,7 @@ use Buismaarten\UrlScanner\Detectors\XPathDetector;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 
-final class XPathDetectorTest extends TestCase
+class XPathDetectorTest extends TestCase
 {
     #[DataProvider('detectProvider')]
     public function testDetect(array $expected, string $content): void
