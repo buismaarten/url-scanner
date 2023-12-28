@@ -61,7 +61,7 @@ class UrlScanner
 
     private static function getDefaultDownloader(): DownloaderInterface
     {
-        return new Downloaders\NativeDownloader;
+        return new Downloaders\FileGetContentsDownloader;
     }
 
     /** @return DetectorInterface[] */
