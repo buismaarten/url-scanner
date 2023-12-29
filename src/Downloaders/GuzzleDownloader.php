@@ -11,20 +11,13 @@ use GuzzleHttp\Psr7\Request;
 class GuzzleDownloader extends AbstractDownloader
 {
     /** @phpstan-ignore-next-line */
-    private array $config;
+    private array $options;
 
-    // @todo
     public function download(string $url): string
     {
-        $client = new Client($this->getConfig());
-
         try {
-            $response = $client->send(
-                request: new Request('GET', $url),
-                options: [
-                    'headers' => $this->getHeaders(),
-                ],
-            );
+            $client = new Client;
+            $response = $client->send(new Request('GET', $url), $this->getOptions());
         } catch (TransferException) {
             return '';
         }
@@ -33,20 +26,22 @@ class GuzzleDownloader extends AbstractDownloader
     }
 
     /** @phpstan-ignore-next-line */
-    public function setConfig(array $config): void
+    public function setOptions(array $options): void
     {
-        $this->config = $config;
+        $this->options = $options;
     }
 
     /** @phpstan-ignore-next-line */
-    private function getConfig(): array
+    private function getOptions(): array
     {
-        return ($this->config ??= $this->getDefaultConfig());
+        return ($this->options ??= $this->getDefaultOptions());
     }
 
     /** @phpstan-ignore-next-line */
-    private function getDefaultConfig(): array
+    private function getDefaultOptions(): array
     {
-        return [];
+        return [
+            'headers' => $this->getHeaders(),
+        ];
     }
 }
