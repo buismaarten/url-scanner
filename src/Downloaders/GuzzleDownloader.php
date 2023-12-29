@@ -13,11 +13,18 @@ class GuzzleDownloader extends AbstractDownloader
     /** @phpstan-ignore-next-line */
     private array $config;
 
+    // @todo
     public function download(string $url): string
     {
+        $client = new Client($this->getConfig());
+
         try {
-            $client = new Client($this->getConfig());
-            $response = $client->send(new Request('GET', $url));
+            $response = $client->send(
+                request: new Request('GET', $url),
+                options: [
+                    'headers' => $this->getHeaders(),
+                ],
+            );
         } catch (TransferException) {
             return '';
         }
@@ -40,7 +47,6 @@ class GuzzleDownloader extends AbstractDownloader
     /** @phpstan-ignore-next-line */
     private function getDefaultConfig(): array
     {
-        // @todo
         return [];
     }
 }
