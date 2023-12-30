@@ -7,17 +7,25 @@ namespace Buismaarten\UrlScanner\Downloaders;
 use Symfony\Component\HttpClient\HttpClient;
 use Symfony\Component\HttpClient\Response\StreamWrapper;
 use Symfony\Contracts\HttpClient\Exception\TransportExceptionInterface;
+use Symfony\Contracts\HttpClient\HttpClientInterface;
 
 class SymfonyDownloader extends AbstractDownloader
 {
-    /** @phpstan-ignore-next-line */
-    private array $options;
+    private HttpClientInterface $client;
+
+    public function __construct(HttpClientInterface $client = null)
+    {
+        if ($client === null) {
+            $client = HttpClient::create();
+        }
+
+        $this->client = $client;
+    }
 
     public function download(string $url): string
     {
         try {
-            $client = HttpClient::create();
-            $response = $client->request('GET', $url, $this->getOptions());
+            $response = $this->client->request('GET', $url);
         } catch (TransportExceptionInterface) {
             return '';
         }
@@ -37,25 +45,5 @@ class SymfonyDownloader extends AbstractDownloader
         }
 
         return $content;
-    }
-
-    /** @phpstan-ignore-next-line */
-    public function setOptions(array $options): void
-    {
-        $this->options = $options;
-    }
-
-    /** @phpstan-ignore-next-line */
-    private function getOptions(): array
-    {
-        return ($this->options ??= $this->getDefaultOptions());
-    }
-
-    /** @phpstan-ignore-next-line */
-    private function getDefaultOptions(): array
-    {
-        return [
-            'headers' => $this->getHeaders(),
-        ];
     }
 }

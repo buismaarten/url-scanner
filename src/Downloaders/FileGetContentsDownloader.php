@@ -11,16 +11,22 @@ class FileGetContentsDownloader extends AbstractDownloader
     /** @phpstan-ignore-next-line */
     private array $options;
 
+    /** @phpstan-ignore-next-line */
+    public function __construct(array $options = [])
+    {
+        $this->options = $options;
+    }
+
     public function download(string $url): string
     {
-        $body = false;
-
-        if (Utils::validateUrl($url)) {
-            $body = file_get_contents(filename: $url,
-                                      use_include_path: false,
-                                      context: stream_context_create($this->getOptions()),
-                                      length: $this->getLength());
+        if (! Utils::validateUrl($url)) {
+            return '';
         }
+
+        $body = file_get_contents(filename: $url,
+                                  use_include_path: false,
+                                  context: stream_context_create($this->getOptions()),
+                                  length: $this->getLength());
 
         if ($body === false) {
             return '';
@@ -30,38 +36,11 @@ class FileGetContentsDownloader extends AbstractDownloader
     }
 
     /** @phpstan-ignore-next-line */
-    public function setOptions(array $options): void
-    {
-        $this->options = $options;
-    }
-
-    /** @phpstan-ignore-next-line */
     private function getOptions(): array
     {
-        return ($this->options ??= $this->getDefaultOptions());
-    }
+        $this->options['http']['ignore_errors'] ??= true;
+        $this->options['http']['method'] ??= 'GET';
 
-    /** @phpstan-ignore-next-line */
-    private function getDefaultOptions(): array
-    {
-        return [
-            'http' => [
-                'method' => 'GET',
-                'ignore_errors' => true,
-                'header' => $this->getHeaders(),
-            ],
-        ];
-    }
-
-    /** @return string[] */
-    protected function getHeaders(): array
-    {
-        $headers = [];
-
-        foreach (parent::getHeaders() as $key => $value) {
-            $headers[] = sprintf('%s: %s', $key, $value);
-        }
-
-        return $headers;
+        return $this->options;
     }
 }
