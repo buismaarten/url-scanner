@@ -59,10 +59,9 @@ class UrlScanner
         return ($this->detectors ??= self::getDefaultDetectors());
     }
 
-    // @todo
     private static function getDefaultDownloader(): DownloaderInterface
     {
-        return new Downloaders\SymfonyDownloader;
+        return new Downloaders\FileGetContentsDownloader;
     }
 
     /** @return DetectorInterface[] */
