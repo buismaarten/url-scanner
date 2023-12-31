@@ -12,17 +12,24 @@ class UrlScanner
     private DownloaderInterface $downloader;
 
     /** @var DetectorInterface[] */
-    private array $detectors;
+    private array $detectors = [];
+
+    /** @param DetectorInterface[] $detectors */
+    public function __construct(DownloaderInterface $downloader = null, array $detectors = [])
+    {
+        $this->setDownloader($downloader);
+        $this->setDetectors($detectors);
+    }
 
     public function scan(string $url, ?string $content = null): UrlScannerResult
     {
         $normalizedUrls = [];
 
         if ($content === null) {
-            $content = $this->getDownloader()->download($url);
+            $content = $this->downloader->download($url);
         }
 
-        foreach ($this->getDetectors() as $detector) {
+        foreach ($this->detectors as $detector) {
             $detectedUrls = $detector->detect($url, $content);
 
             foreach ($detectedUrls as $detectedUrl) {
@@ -37,26 +44,23 @@ class UrlScanner
         return new UrlScannerResult($normalizedUrls);
     }
 
-    public function setDownloader(DownloaderInterface $downloader): void
+    public function setDownloader(?DownloaderInterface $downloader): void
     {
+        if ($downloader === null) {
+            $downloader = self::getDefaultDownloader();
+        }
+
         $this->downloader = $downloader;
     }
 
     /** @param DetectorInterface[] $detectors */
     public function setDetectors(array $detectors): void
     {
+        if ($detectors === []) {
+            $detectors = self::getDefaultDetectors();
+        }
+
         $this->detectors = $detectors;
-    }
-
-    private function getDownloader(): DownloaderInterface
-    {
-        return ($this->downloader ??= self::getDefaultDownloader());
-    }
-
-    /** @return DetectorInterface[] */
-    private function getDetectors(): array
-    {
-        return ($this->detectors ??= self::getDefaultDetectors());
     }
 
     private static function getDefaultDownloader(): DownloaderInterface
