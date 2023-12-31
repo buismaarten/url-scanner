@@ -15,11 +15,7 @@ class GuzzleDownloader extends AbstractDownloader
 
     public function __construct(ClientInterface $client = null)
     {
-        if ($client === null) {
-            $client = new Client;
-        }
-
-        $this->client = $client;
+        $this->setClient($client);
     }
 
     public function download(string $url): string
@@ -31,5 +27,14 @@ class GuzzleDownloader extends AbstractDownloader
         }
 
         return $response->getBody()->read($this->getLength());
+    }
+
+    public function setClient(?ClientInterface $client): void
+    {
+        if ($client === null) {
+            $client = new Client;
+        }
+
+        $this->client = $client;
     }
 }

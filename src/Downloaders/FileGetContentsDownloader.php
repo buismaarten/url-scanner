@@ -14,7 +14,7 @@ class FileGetContentsDownloader extends AbstractDownloader
     /** @phpstan-ignore-next-line */
     public function __construct(array $options = [])
     {
-        $this->options = $options;
+        $this->setOptions($options);
     }
 
     public function download(string $url): string
@@ -25,7 +25,7 @@ class FileGetContentsDownloader extends AbstractDownloader
 
         $body = file_get_contents(filename: $url,
                                   use_include_path: false,
-                                  context: stream_context_create($this->getOptions()),
+                                  context: stream_context_create($this->options),
                                   length: $this->getLength());
 
         if ($body === false) {
@@ -36,11 +36,11 @@ class FileGetContentsDownloader extends AbstractDownloader
     }
 
     /** @phpstan-ignore-next-line */
-    private function getOptions(): array
+    private function setOptions(array $options): void
     {
-        $this->options['http']['ignore_errors'] ??= true;
-        $this->options['http']['method'] ??= 'GET';
+        $options['http']['ignore_errors'] ??= true;
+        $options['http']['method'] ??= 'GET';
 
-        return $this->options;
+        $this->options = $options;
     }
 }

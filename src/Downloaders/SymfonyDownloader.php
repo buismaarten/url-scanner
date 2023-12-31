@@ -15,11 +15,7 @@ class SymfonyDownloader extends AbstractDownloader
 
     public function __construct(HttpClientInterface $client = null)
     {
-        if ($client === null) {
-            $client = HttpClient::create();
-        }
-
-        $this->client = $client;
+        $this->setClient($client);
     }
 
     public function download(string $url): string
@@ -45,5 +41,14 @@ class SymfonyDownloader extends AbstractDownloader
         }
 
         return $content;
+    }
+
+    public function setClient(?HttpClientInterface $client): void
+    {
+        if ($client === null) {
+            $client = HttpClient::create();
+        }
+
+        $this->client = $client;
     }
 }

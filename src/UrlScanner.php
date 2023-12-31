@@ -47,7 +47,7 @@ class UrlScanner
     public function setDownloader(?DownloaderInterface $downloader): void
     {
         if ($downloader === null) {
-            $downloader = self::getDefaultDownloader();
+            $downloader = new Downloaders\FileGetContentsDownloader;
         }
 
         $this->downloader = $downloader;
@@ -57,23 +57,10 @@ class UrlScanner
     public function setDetectors(array $detectors): void
     {
         if ($detectors === []) {
-            $detectors = self::getDefaultDetectors();
+            $detectors[] = new Detectors\RegexDetector;
+            $detectors[] = new Detectors\XPathDetector;
         }
 
         $this->detectors = $detectors;
-    }
-
-    private static function getDefaultDownloader(): DownloaderInterface
-    {
-        return new Downloaders\FileGetContentsDownloader;
-    }
-
-    /** @return DetectorInterface[] */
-    private static function getDefaultDetectors(): array
-    {
-        return [
-            new Detectors\RegexDetector,
-            new Detectors\XPathDetector,
-        ];
     }
 }
