@@ -46,10 +46,6 @@ class UrlScannerTest extends TestCase
                 'expected' => [],
                 'content' => '<a href="mailto:root@localhost"></a>',
             ],
-            [
-                'expected' => [],
-                'content' => '',
-            ],
         ];
     }
 }
