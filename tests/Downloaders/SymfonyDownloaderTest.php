@@ -10,23 +10,6 @@ use Symfony\Component\HttpClient\Response\MockResponse;
 
 class SymfonyDownloaderTest extends TestCase
 {
-    // @todo
-    public function testResponse(): void
-    {
-        $expected = 'Hello World!';
-
-        $client = new MockHttpClient;
-        $client->setResponseFactory(new MockResponse($expected));
-
-        $downloader = new SymfonyDownloader;
-        $downloader->setClient($client);
-
-        $this->assertSame(
-            expected: $expected,
-            actual: $downloader->download('https://localhost'),
-        );
-    }
-
     #[DataProvider('responseLengthProvider')]
     public function testResponseLength(string $expected, string $input, int $length): void
     {
