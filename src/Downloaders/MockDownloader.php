@@ -10,7 +10,7 @@ class MockDownloader extends AbstractDownloader
     private array $collection;
 
     /** @phpstan-ignore-next-line */
-    public function __construct(array $collection)
+    public function __construct(array $collection = [])
     {
         $this->collection = $collection;
     }
