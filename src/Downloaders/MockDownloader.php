@@ -17,9 +17,6 @@ class MockDownloader extends AbstractDownloader
 
     public function download(string $url): string
     {
-        $body = ($this->collection[$url] ?? '');
-        $body = substr($body, 0, $this->getLength());
-
-        return $body;
+        return substr($this->collection[$url], 0, $this->getLength());
     }
 }
