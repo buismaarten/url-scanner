@@ -10,26 +10,26 @@ use PHPUnit\Framework\TestCase;
 class UrlScannerTest extends TestCase
 {
     #[DataProvider('scanProvider')]
-    public function testScanUsingDownloader(array $expected, string $content): void
+    public function testScanUsingDownloader(array $expected, string $url, string $content): void
     {
         $scanner = new UrlScanner;
-        $scanner->setDownloader(new MockDownloader(['https://localhost' => $content]));
+        $scanner->setDownloader(new MockDownloader([$url => $content]));
 
         $this->assertSame(
             expected: $expected,
-            actual: $scanner->scan('https://localhost', null)->getUrls(),
+            actual: $scanner->scan($url, null)->getUrls(),
         );
     }
 
     #[DataProvider('scanProvider')]
-    public function testScanUsingContent(array $expected, string $content): void
+    public function testScanUsingContent(array $expected, string $url, string $content): void
     {
         $scanner = new UrlScanner;
         $scanner->setDownloader(new MockDownloader);
 
         $this->assertSame(
             expected: $expected,
-            actual: $scanner->scan('https://localhost', $content)->getUrls(),
+            actual: $scanner->scan($url, $content)->getUrls(),
         );
     }
 
@@ -40,17 +40,20 @@ class UrlScannerTest extends TestCase
                 'expected' => [
                     'https://localhost',
                 ],
-                'content' => '<a href="https://localhost">Link</a>',
+                'url' => 'https://localhost',
+                'content' => '<a href="/">Link</a>',
             ],
             [
                 'expected' => [
                     'https://localhost',
                 ],
-                'content' => '<a href="/">Link</a>',
+                'url' => 'https://localhost',
+                'content' => '<a href="https://localhost">Link</a>',
             ],
             [
                 'expected' => [],
-                'content' => '<a href="mailto:root@localhost">Link</a>',
+                'url' => 'https://localhost',
+                'content' => '<a href="://localhost">Link</a>',
             ],
         ];
     }
