@@ -40,19 +40,19 @@ class UrlScannerTest extends TestCase
                 'expected' => [
                     'https://localhost',
                 ],
-                'content' => '<a href="https://localhost">Link 1</a><a href="https://localhost/">Link 2</a>',
+                'content' => '<a href="https://localhost"></a><a href="https://localhost/"></a>',
             ],
             [
                 'expected' => [
                     'https://localhost',
                 ],
-                'content' => '<a href="">Link 1</a><a href="/">Link 2</a>',
+                'content' => '<a href=""></a><a href="/"></a>',
             ],
             [
                 'expected' => [
                     'https://localhost',
                 ],
-                'content' => '<a href="#">Link 1</a>',
+                'content' => '<a href="#"></a>',
             ],
             [
                 'expected' => [],
