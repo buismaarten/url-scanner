@@ -51,8 +51,7 @@ class UtilsTest extends TestCase
 
     #[DataProvider('normalizeUrlRelativeProvider')]
     #[DataProvider('normalizeUrlAbsoluteProvider')]
-    #[DataProvider('normalizeUrlInvalidCredentialsProvider')]
-    #[DataProvider('normalizeUrlInvalidSchemeProvider')]
+    #[DataProvider('normalizeUrlInvalidProvider')]
     public function testNormalizeUrl(?string $expected, array $url): void
     {
         $this->assertSame(
@@ -105,19 +104,13 @@ class UtilsTest extends TestCase
         ];
     }
 
-    public static function normalizeUrlInvalidCredentialsProvider(): array
+    public static function normalizeUrlInvalidProvider(): array
     {
         return [
             [
                 'expected' => 'https://localhost',
                 'url' => ['https://user@localhost', null],
             ],
-        ];
-    }
-
-    public static function normalizeUrlInvalidSchemeProvider(): array
-    {
-        return [
             [
                 'expected' => null,
                 'url' => ['://localhost', null],

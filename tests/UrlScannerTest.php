@@ -9,7 +9,9 @@ use PHPUnit\Framework\TestCase;
 
 class UrlScannerTest extends TestCase
 {
-    #[DataProvider('scanProvider')]
+    #[DataProvider('scanRelativeProvider')]
+    #[DataProvider('scanAbsoluteProvider')]
+    #[DataProvider('scanInvalidProvider')]
     public function testScanUsingDownloader(array $expected, string $url, string $content): void
     {
         $scanner = new UrlScanner;
@@ -21,7 +23,9 @@ class UrlScannerTest extends TestCase
         );
     }
 
-    #[DataProvider('scanProvider')]
+    #[DataProvider('scanRelativeProvider')]
+    #[DataProvider('scanAbsoluteProvider')]
+    #[DataProvider('scanInvalidProvider')]
     public function testScanUsingContent(array $expected, string $url, string $content): void
     {
         $scanner = new UrlScanner;
@@ -33,7 +37,7 @@ class UrlScannerTest extends TestCase
         );
     }
 
-    public static function scanProvider(): array
+    public static function scanRelativeProvider(): array
     {
         return [
             [
@@ -43,6 +47,12 @@ class UrlScannerTest extends TestCase
                 'url' => 'https://localhost',
                 'content' => '<a href="/">Link</a>',
             ],
+        ];
+    }
+
+    public static function scanAbsoluteProvider(): array
+    {
+        return [
             [
                 'expected' => [
                     'https://localhost',
@@ -50,8 +60,16 @@ class UrlScannerTest extends TestCase
                 'url' => 'https://localhost',
                 'content' => '<a href="https://localhost">Link</a>',
             ],
+        ];
+    }
+
+    public static function scanInvalidProvider(): array
+    {
+        return [
             [
-                'expected' => [],
+                'expected' => [
+                    //
+                ],
                 'url' => 'https://localhost',
                 'content' => '<a href="://localhost">Link</a>',
             ],
