@@ -18,6 +18,16 @@ class MockDownloaderTest extends TestCase
             expected: $expected,
             actual: $downloader->download('https://localhost'),
         );
+
+        $this->assertSame(
+            expected: $length,
+            actual: strlen($expected),
+        );
+
+        $this->assertStringStartsWith(
+            prefix: $expected,
+            string: $input,
+        );
     }
 
     public static function responseLengthProvider(): array
