@@ -19,17 +19,15 @@ class FileGetContentsWrapper
         $this->params = $params;
     }
 
-    /** @param resource $context */
-    public function file_get_contents(string $filename, bool $use_include_path = false, mixed $context = null, int $offset = 0, ?int $length = null): string|false
+    public function file_get_contents(string $filename, ?int $length = null): string|false
     {
-        if (! is_resource($context)) {
-            $context = stream_context_create($this->options, $this->params);
-        }
-
         if ($length < 0) {
             $length = null;
         }
 
-        return file_get_contents($filename, $use_include_path, $context, $offset, $length);
+        return file_get_contents(filename: $filename,
+                                 use_include_path: false,
+                                 context: stream_context_create($this->options, $this->params),
+                                 length: $length);
     }
 }

@@ -22,7 +22,7 @@ class FileGetContentsDownloader extends AbstractDownloader
             return '';
         }
 
-        $body = $this->wrapper->file_get_contents($url, false, length: $this->getLength());
+        $body = $this->wrapper->file_get_contents($url, $this->getLength());
         if ($body === false) {
             return '';
         }
