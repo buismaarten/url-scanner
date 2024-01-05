@@ -5,16 +5,15 @@ declare(strict_types=1);
 namespace Buismaarten\UrlScanner\Downloaders;
 
 use Buismaarten\UrlScanner\Utils;
+use Buismaarten\UrlScanner\Wrappers\FileGetContentsWrapper;
 
 class FileGetContentsDownloader extends AbstractDownloader
 {
-    /** @phpstan-ignore-next-line */
-    private array $options;
+    private FileGetContentsWrapper $wrapper;
 
-    /** @phpstan-ignore-next-line */
-    public function __construct(array $options = [])
+    public function __construct(FileGetContentsWrapper $wrapper = null)
     {
-        $this->setOptions($options);
+        $this->setWrapper($wrapper);
     }
 
     public function download(string $url): string
@@ -23,11 +22,7 @@ class FileGetContentsDownloader extends AbstractDownloader
             return '';
         }
 
-        $body = file_get_contents(filename: $url,
-                                  use_include_path: false,
-                                  context: stream_context_create($this->options),
-                                  length: $this->getLength());
-
+        $body = $this->wrapper->file_get_contents($url, false, length: $this->getLength());
         if ($body === false) {
             return '';
         }
@@ -35,12 +30,17 @@ class FileGetContentsDownloader extends AbstractDownloader
         return $body;
     }
 
-    /** @phpstan-ignore-next-line */
-    private function setOptions(array $options): void
+    public function setWrapper(?FileGetContentsWrapper $wrapper): void
     {
-        $options['http']['ignore_errors'] ??= true;
-        $options['http']['method'] ??= 'GET';
+        if ($wrapper === null) {
+            $wrapper = new FileGetContentsWrapper([
+                'http' => [
+                    'ignore_errors' => true,
+                    'method' => 'GET',
+                ],
+            ]);
+        }
 
-        $this->options = $options;
+        $this->wrapper = $wrapper;
     }
 }
