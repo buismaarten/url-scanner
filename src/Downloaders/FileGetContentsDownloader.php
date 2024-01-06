@@ -33,12 +33,10 @@ class FileGetContentsDownloader extends AbstractDownloader
     public function setWrapper(?FileGetContentsWrapper $wrapper): void
     {
         if ($wrapper === null) {
-            $wrapper = new FileGetContentsWrapper([
-                'http' => [
-                    'ignore_errors' => true,
-                    'method' => 'GET',
-                ],
-            ]);
+            $options['http']['ignore_errors'] = true;
+            $options['http']['method'] = 'GET';
+
+            $wrapper = new FileGetContentsWrapper($options);
         }
 
         $this->wrapper = $wrapper;
