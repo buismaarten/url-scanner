@@ -21,14 +21,10 @@ class FileGetContentsWrapper
 
     public function fileGetContents(string $filename, ?int $length = null): string|false
     {
-        if ($length < 0) {
-            $length = null;
-        }
-
         return file_get_contents(filename: $filename,
                                  use_include_path: false,
                                  context: stream_context_create($this->options, $this->params),
-                                 length: $length);
+                                 length: max(0, $length));
     }
 
     /** @phpstan-ignore-next-line */
