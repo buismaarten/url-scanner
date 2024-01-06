@@ -3,6 +3,7 @@
 
 # Directories
 /.github export-ignore
+/examples export-ignore
 /tests export-ignore
 
 # Files
