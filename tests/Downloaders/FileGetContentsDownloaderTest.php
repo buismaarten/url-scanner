@@ -21,4 +21,18 @@ class FileGetContentsDownloaderTest extends TestCase
             actual: $downloader->download('https://localhost'),
         );
     }
+
+    public function testInvalidResponse(): void
+    {
+        $wrapper = $this->createMock(FileGetContentsWrapper::class);
+        $wrapper->method('fileGetContents')->willReturn(false);
+
+        $downloader = new FileGetContentsDownloader;
+        $downloader->setWrapper($wrapper);
+
+        $this->assertSame(
+            expected: '',
+            actual: $downloader->download('https://localhost'),
+        );
+    }
 }

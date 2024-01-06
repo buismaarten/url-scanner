@@ -21,9 +21,10 @@ class FileGetContentsWrapper
 
     public function fileGetContents(string $filename, ?int $length = null): string|false
     {
-        return file_get_contents(filename: $filename,
-                                 context: stream_context_create($this->options, $this->params),
-                                 length: max(0, $length));
+        $context = stream_context_create($this->options, $this->params);
+        $length = max(0, $length);
+
+        return file_get_contents($filename, context: $context, length: $length);
     }
 
     /** @phpstan-ignore-next-line */
