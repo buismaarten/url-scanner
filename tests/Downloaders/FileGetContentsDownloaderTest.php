@@ -13,7 +13,7 @@ class FileGetContentsDownloaderTest extends TestCase
     public function testResponseLength(string $expected, string $input, int $length): void
     {
         $wrapper = $this->createMock(FileGetContentsWrapper::class);
-        $wrapper->method('file_get_contents')->willReturn($expected);
+        $wrapper->method('fileGetContents')->willReturn($expected);
 
         $downloader = new FileGetContentsDownloader;
         $downloader->setWrapper($wrapper);

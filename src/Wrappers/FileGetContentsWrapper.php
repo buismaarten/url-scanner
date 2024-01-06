@@ -19,7 +19,7 @@ class FileGetContentsWrapper
         $this->setParams($params);
     }
 
-    public function file_get_contents(string $filename, ?int $length = null): string|false
+    public function fileGetContents(string $filename, ?int $length = null): string|false
     {
         if ($length < 0) {
             $length = null;
