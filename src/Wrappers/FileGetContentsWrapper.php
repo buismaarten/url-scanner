@@ -22,7 +22,6 @@ class FileGetContentsWrapper
     public function fileGetContents(string $filename, ?int $length = null): string|false
     {
         return file_get_contents(filename: $filename,
-                                 use_include_path: false,
                                  context: stream_context_create($this->options, $this->params),
                                  length: max(0, $length));
     }
