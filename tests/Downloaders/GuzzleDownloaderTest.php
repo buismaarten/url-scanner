@@ -11,6 +11,24 @@ use PHPUnit\Framework\TestCase;
 
 class GuzzleDownloaderTest extends TestCase
 {
+    public function testResponse(): void
+    {
+        $handler = new MockHandler;
+        $handler->append(new Response(body: 'Hello World!'));
+
+        $client = new Client([
+            'handler' => $handler,
+        ]);
+
+        $downloader = new GuzzleDownloader;
+        $downloader->setClient($client);
+
+        $this->assertSame(
+            expected: 'Hello World!',
+            actual: $downloader->download('https://localhost'),
+        );
+    }
+
     #[DataProvider('responseLengthProvider')]
     public function testResponseLength(string $expected, string $input, int $length): void
     {
@@ -28,16 +46,6 @@ class GuzzleDownloaderTest extends TestCase
         $this->assertSame(
             expected: $expected,
             actual: $downloader->download('https://localhost'),
-        );
-
-        $this->assertSame(
-            expected: $length,
-            actual: strlen($expected),
-        );
-
-        $this->assertStringStartsWith(
-            prefix: $expected,
-            string: $input,
         );
     }
 
