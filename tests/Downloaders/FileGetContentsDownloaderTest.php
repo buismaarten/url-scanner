@@ -22,6 +22,7 @@ class FileGetContentsDownloaderTest extends TestCase
         );
     }
 
+    // @todo: move to data provider
     public function testInvalidResponse(): void
     {
         $wrapper = $this->createMock(FileGetContentsWrapper::class);
