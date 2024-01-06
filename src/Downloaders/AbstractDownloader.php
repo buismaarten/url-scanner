@@ -16,10 +16,8 @@ abstract class AbstractDownloader implements DownloaderInterface
         $this->length = $length;
     }
 
-    // /** @return int<0, max> */
     protected function getLength(): int
     {
         return ($this->length ??= self::DEFAULT_LENGTH);
-        // return max(0, ($this->length ??= self::DEFAULT_LENGTH));
     }
 }
