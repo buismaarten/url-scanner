@@ -6,7 +6,7 @@ namespace Buismaarten\UrlScanner;
 
 use League\Uri\Contracts\UriInterface;
 
-class UrlScannerResult
+class ScannerResult
 {
     /** @var UriInterface[] $urls */
     private array $urls = [];

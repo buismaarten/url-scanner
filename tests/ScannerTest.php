@@ -3,18 +3,18 @@
 declare(strict_types=1);
 
 use Buismaarten\UrlScanner\Downloaders\MockDownloader;
-use Buismaarten\UrlScanner\UrlScanner;
+use Buismaarten\UrlScanner\Scanner;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 
-class UrlScannerTest extends TestCase
+class ScannerTest extends TestCase
 {
     #[DataProvider('scanRelativeProvider')]
     #[DataProvider('scanAbsoluteProvider')]
     #[DataProvider('scanInvalidProvider')]
     public function testScanUsingDownloader(array $expected, string $url, string $content): void
     {
-        $scanner = new UrlScanner;
+        $scanner = new Scanner;
         $scanner->setDownloader(new MockDownloader([$url => $content]));
 
         $this->assertSame(
@@ -28,7 +28,7 @@ class UrlScannerTest extends TestCase
     #[DataProvider('scanInvalidProvider')]
     public function testScanUsingContent(array $expected, string $url, string $content): void
     {
-        $scanner = new UrlScanner;
+        $scanner = new Scanner;
         $scanner->setDownloader(new MockDownloader);
 
         $this->assertSame(

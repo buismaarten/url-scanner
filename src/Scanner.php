@@ -7,7 +7,7 @@ namespace Buismaarten\UrlScanner;
 use Buismaarten\UrlScanner\Interfaces\DetectorInterface;
 use Buismaarten\UrlScanner\Interfaces\DownloaderInterface;
 
-class UrlScanner
+class Scanner
 {
     private DownloaderInterface $downloader;
 
@@ -21,7 +21,7 @@ class UrlScanner
         $this->setDetectors($detectors);
     }
 
-    public function scan(string $url, ?string $content = null): UrlScannerResult
+    public function scan(string $url, ?string $content = null): ScannerResult
     {
         $normalizedUrls = [];
 
@@ -41,7 +41,7 @@ class UrlScanner
             }
         }
 
-        return new UrlScannerResult($normalizedUrls);
+        return new ScannerResult($normalizedUrls);
     }
 
     public function setDownloader(?DownloaderInterface $downloader): void

@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-use Buismaarten\UrlScanner\UrlScannerResult;
+use Buismaarten\UrlScanner\ScannerResult;
 use Buismaarten\UrlScanner\Utils;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 
-class UrlScannerResultTest extends TestCase
+class ScannerResultTest extends TestCase
 {
     #[DataProvider('getHostsProvider')]
     public function testGetHosts(array $expected, array $urls): void
     {
-        $result = new UrlScannerResult($urls);
+        $result = new ScannerResult($urls);
 
         $this->assertSame(
             expected: $expected,
@@ -40,7 +40,7 @@ class UrlScannerResultTest extends TestCase
     #[DataProvider('getUrlsProvider')]
     public function testGetUrls(array $expected, array $urls): void
     {
-        $result = new UrlScannerResult($urls);
+        $result = new ScannerResult($urls);
 
         $this->assertSame(
             expected: $expected,
