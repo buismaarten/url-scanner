@@ -15,8 +15,8 @@ class FileGetContentsWrapper
     /** @phpstan-ignore-next-line */
     public function __construct(array $options = null, array $params = null)
     {
-        $this->options = $options;
-        $this->params = $params;
+        $this->setOptions($options);
+        $this->setParams($params);
     }
 
     public function file_get_contents(string $filename, ?int $length = null): string|false
@@ -29,5 +29,17 @@ class FileGetContentsWrapper
                                  use_include_path: false,
                                  context: stream_context_create($this->options, $this->params),
                                  length: $length);
+    }
+
+    /** @phpstan-ignore-next-line */
+    public function setOptions(?array $options): void
+    {
+        $this->options = $options;
+    }
+
+    /** @phpstan-ignore-next-line */
+    public function setParams(?array $params): void
+    {
+        $this->params = $params;
     }
 }
