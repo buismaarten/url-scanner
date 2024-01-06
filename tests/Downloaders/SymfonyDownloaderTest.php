@@ -10,18 +10,33 @@ use Symfony\Component\HttpClient\Response\MockResponse;
 
 class SymfonyDownloaderTest extends TestCase
 {
-    public function testResponse(): void
+    #[DataProvider('responseProvider')]
+    public function testResponse(string $expected, mixed $value): void
     {
         $client = new MockHttpClient;
-        $client->setResponseFactory(new MockResponse('Hello World!'));
+        $client->setResponseFactory(new MockResponse($value));
 
         $downloader = new SymfonyDownloader;
         $downloader->setClient($client);
 
         $this->assertSame(
-            expected: 'Hello World!',
+            expected: $expected,
             actual: $downloader->download('https://localhost'),
         );
+    }
+
+    public static function responseProvider(): array
+    {
+        return [
+            [
+                'expected' => 'Hello World!',
+                'return' => 'Hello World!',
+            ],
+            [
+                'expected' => '',
+                'return' => '',
+            ],
+        ];
     }
 
     #[DataProvider('responseLengthProvider')]

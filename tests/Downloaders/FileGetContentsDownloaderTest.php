@@ -4,36 +4,41 @@ declare(strict_types=1);
 
 use Buismaarten\UrlScanner\Downloaders\FileGetContentsDownloader;
 use Buismaarten\UrlScanner\Wrappers\FileGetContentsWrapper;
+use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 
 class FileGetContentsDownloaderTest extends TestCase
 {
-    public function testResponse(): void
+    #[DataProvider('responseProvider')]
+    public function testResponse(string $expected, mixed $value): void
     {
         $wrapper = $this->createMock(FileGetContentsWrapper::class);
-        $wrapper->method('fileGetContents')->willReturn('Hello World!');
+        $wrapper->method('fileGetContents')->willReturn($value);
 
         $downloader = new FileGetContentsDownloader;
         $downloader->setWrapper($wrapper);
 
         $this->assertSame(
-            expected: 'Hello World!',
+            expected: $expected,
             actual: $downloader->download('https://localhost'),
         );
     }
 
-    // @todo: move to data provider
-    public function testInvalidResponse(): void
+    public static function responseProvider(): array
     {
-        $wrapper = $this->createMock(FileGetContentsWrapper::class);
-        $wrapper->method('fileGetContents')->willReturn(false);
-
-        $downloader = new FileGetContentsDownloader;
-        $downloader->setWrapper($wrapper);
-
-        $this->assertSame(
-            expected: '',
-            actual: $downloader->download('https://localhost'),
-        );
+        return [
+            [
+                'expected' => 'Hello World!',
+                'return' => 'Hello World!',
+            ],
+            [
+                'expected' => '',
+                'return' => '',
+            ],
+            [
+                'expected' => '',
+                'return' => false,
+            ],
+        ];
     }
 }

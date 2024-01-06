@@ -11,10 +11,11 @@ use PHPUnit\Framework\TestCase;
 
 class GuzzleDownloaderTest extends TestCase
 {
-    public function testResponse(): void
+    #[DataProvider('responseProvider')]
+    public function testResponse(string $expected, mixed $value): void
     {
         $handler = new MockHandler;
-        $handler->append(new Response(body: 'Hello World!'));
+        $handler->append(new Response(body: $value));
 
         $client = new Client([
             'handler' => $handler,
@@ -24,9 +25,23 @@ class GuzzleDownloaderTest extends TestCase
         $downloader->setClient($client);
 
         $this->assertSame(
-            expected: 'Hello World!',
+            expected: $expected,
             actual: $downloader->download('https://localhost'),
         );
+    }
+
+    public static function responseProvider(): array
+    {
+        return [
+            [
+                'expected' => 'Hello World!',
+                'return' => 'Hello World!',
+            ],
+            [
+                'expected' => '',
+                'return' => '',
+            ],
+        ];
     }
 
     #[DataProvider('responseLengthProvider')]

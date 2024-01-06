@@ -8,14 +8,29 @@ use PHPUnit\Framework\TestCase;
 
 class MockDownloaderTest extends TestCase
 {
-    public function testResponse(): void
+    #[DataProvider('responseProvider')]
+    public function testResponse(string $expected, mixed $value): void
     {
-        $downloader = new MockDownloader(['https://localhost' => 'Hello World!']);
+        $downloader = new MockDownloader(['https://localhost' => $value]);
 
         $this->assertSame(
-            expected: 'Hello World!',
+            expected: $expected,
             actual: $downloader->download('https://localhost'),
         );
+    }
+
+    public static function responseProvider(): array
+    {
+        return [
+            [
+                'expected' => 'Hello World!',
+                'return' => 'Hello World!',
+            ],
+            [
+                'expected' => '',
+                'return' => '',
+            ],
+        ];
     }
 
     #[DataProvider('responseLengthProvider')]
