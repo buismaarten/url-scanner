@@ -18,11 +18,8 @@ class ScannerTest extends TestCase
         $wrapper = $this->createMock(FileGetContentsWrapper::class);
         $wrapper->method('fileGetContents')->willReturn($content);
 
-        $downloader = new FileGetContentsDownloader;
-        $downloader->setWrapper($wrapper);
-
         $scanner = new Scanner;
-        $scanner->setDownloader($downloader);
+        $scanner->setDownloader(new FileGetContentsDownloader($wrapper));
 
         $this->assertSame(
             expected: $expected,
@@ -38,11 +35,8 @@ class ScannerTest extends TestCase
         $wrapper = $this->createMock(FileGetContentsWrapper::class);
         $wrapper->method('fileGetContents')->willReturn($content);
 
-        $downloader = new FileGetContentsDownloader;
-        $downloader->setWrapper($wrapper);
-
         $scanner = new Scanner;
-        $scanner->setDownloader($downloader);
+        $scanner->setDownloader(new FileGetContentsDownloader($wrapper));
 
         $this->assertSame(
             expected: $expected,
