@@ -2,8 +2,9 @@
 
 declare(strict_types=1);
 
-use Buismaarten\UrlScanner\Downloaders\MockDownloader;
+use Buismaarten\UrlScanner\Downloaders\FileGetContentsDownloader;
 use Buismaarten\UrlScanner\Scanner;
+use Buismaarten\UrlScanner\Wrappers\FileGetContentsWrapper;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 
@@ -14,8 +15,14 @@ class ScannerTest extends TestCase
     #[DataProvider('scanInvalidProvider')]
     public function testScanUsingDownloader(array $expected, string $url, string $content): void
     {
+        $wrapper = $this->createMock(FileGetContentsWrapper::class);
+        $wrapper->method('fileGetContents')->willReturn($content);
+
+        $downloader = new FileGetContentsDownloader;
+        $downloader->setWrapper($wrapper);
+
         $scanner = new Scanner;
-        $scanner->setDownloader(new MockDownloader([$url => $content]));
+        $scanner->setDownloader($downloader);
 
         $this->assertSame(
             expected: $expected,
@@ -28,8 +35,14 @@ class ScannerTest extends TestCase
     #[DataProvider('scanInvalidProvider')]
     public function testScanUsingContent(array $expected, string $url, string $content): void
     {
+        $wrapper = $this->createMock(FileGetContentsWrapper::class);
+        $wrapper->method('fileGetContents')->willReturn($content);
+
+        $downloader = new FileGetContentsDownloader;
+        $downloader->setWrapper($wrapper);
+
         $scanner = new Scanner;
-        $scanner->setDownloader(new MockDownloader);
+        $scanner->setDownloader($downloader);
 
         $this->assertSame(
             expected: $expected,
