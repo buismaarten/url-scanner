@@ -13,7 +13,7 @@ class ScannerTest extends TestCase
     #[DataProvider('scanRelativeProvider')]
     #[DataProvider('scanAbsoluteProvider')]
     #[DataProvider('scanInvalidProvider')]
-    public function testScanUsingDownloader(array $expected, string $url, string $content): void
+    public function testScanUrlsUsingDownloader(array $expected, string $url, string $content): void
     {
         $wrapper = $this->createMock(FileGetContentsWrapper::class);
         $wrapper->method('fileGetContents')->willReturn($content);
@@ -30,7 +30,7 @@ class ScannerTest extends TestCase
     #[DataProvider('scanRelativeProvider')]
     #[DataProvider('scanAbsoluteProvider')]
     #[DataProvider('scanInvalidProvider')]
-    public function testScanUsingContent(array $expected, string $url, string $content): void
+    public function testScanUrlsUsingContent(array $expected, string $url, string $content): void
     {
         $wrapper = $this->createMock(FileGetContentsWrapper::class);
         $wrapper->method('fileGetContents')->willReturn($content);
@@ -73,6 +73,11 @@ class ScannerTest extends TestCase
     public static function scanInvalidProvider(): array
     {
         return [
+            [
+                'expected' => [],
+                'url' => 'https://localhost',
+                'content' => '<a href="data:text/plain;base64,SGVsbG8sIFdvcmxkIQ==">Link</a>',
+            ],
             [
                 'expected' => [],
                 'url' => 'https://localhost',
