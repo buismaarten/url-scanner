@@ -35,11 +35,11 @@ class GuzzleDownloaderTest extends TestCase
         return [
             [
                 'expected' => 'Hello World!',
-                'return' => 'Hello World!',
+                'value' => 'Hello World!',
             ],
             [
                 'expected' => '',
-                'return' => '',
+                'value' => '',
             ],
         ];
     }

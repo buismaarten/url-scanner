@@ -29,15 +29,15 @@ class FileGetContentsDownloaderTest extends TestCase
         return [
             [
                 'expected' => 'Hello World!',
-                'return' => 'Hello World!',
+                'value' => 'Hello World!',
             ],
             [
                 'expected' => '',
-                'return' => '',
+                'value' => '',
             ],
             [
                 'expected' => '',
-                'return' => false,
+                'value' => false,
             ],
         ];
     }
