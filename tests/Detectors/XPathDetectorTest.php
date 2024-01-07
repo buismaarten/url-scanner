@@ -209,4 +209,14 @@ class XPathDetectorTest extends TestCase
             ],
         ];
     }
+
+    public function testDetectNoResults(): void
+    {
+        $detector = new XPathDetector;
+
+        $this->assertSame(
+            expected: [],
+            actual: iterator_to_array($detector->detect('https://localhost', '')),
+        );
+    }
 }

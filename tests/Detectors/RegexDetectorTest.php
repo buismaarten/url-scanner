@@ -108,4 +108,14 @@ class RegexDetectorTest extends TestCase
             ],
         ];
     }
+
+    public function testDetectNoResults(): void
+    {
+        $detector = new RegexDetector;
+
+        $this->assertSame(
+            expected: [],
+            actual: iterator_to_array($detector->detect('https://localhost', '')),
+        );
+    }
 }
