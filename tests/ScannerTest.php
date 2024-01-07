@@ -74,9 +74,7 @@ class ScannerTest extends TestCase
     {
         return [
             [
-                'expected' => [
-                    //
-                ],
+                'expected' => [],
                 'url' => 'https://localhost',
                 'content' => '<a href="://localhost">Link</a>',
             ],

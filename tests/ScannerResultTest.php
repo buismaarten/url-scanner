@@ -34,6 +34,10 @@ class ScannerResultTest extends TestCase
                     'http://127.0.0.1' => Utils::normalizeUrl('http://127.0.0.1', null),
                 ],
             ],
+            [
+                'expected' => [],
+                'urls' => [],
+            ],
         ];
     }
 
@@ -62,6 +66,10 @@ class ScannerResultTest extends TestCase
                     'https://localhost/#fragment' => Utils::normalizeUrl('https://localhost/#fragment', null),
                     'http://127.0.0.1/#fragment' => Utils::normalizeUrl('http://127.0.0.1/#fragment', null),
                 ],
+            ],
+            [
+                'expected' => [],
+                'urls' => [],
             ],
         ];
     }
