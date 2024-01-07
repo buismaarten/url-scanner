@@ -1,0 +1,45 @@
+{
+    "name": "buismaarten/url-scanner",
+    "description": "",
+    "license": "MIT",
+    "type": "library",
+    "support": {
+        "issues": "https://github.com/buismaarten/url-scanner/issues",
+        "source": "https://github.com/buismaarten/url-scanner"
+    },
+    "authors": [
+        {
+            "name": "Maarten Buis"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "league/uri": "^7.4",
+        "league/uri-interfaces": "^7.4",
+        "symfony/dom-crawler": "^7.0"
+    },
+    "require-dev": {
+        "guzzlehttp/guzzle": "^7.8",
+        "phpstan/phpstan": "^1.10",
+        "phpunit/phpunit": "^10.5",
+        "symfony/http-client": "^7.0"
+    },
+    "suggest": {
+        "guzzlehttp/guzzle": "Required to use the GuzzleDownloader",
+        "symfony/http-client": "Required to use the SymfonyDownloader"
+    },
+    "autoload": {
+        "psr-4": {
+            "Buismaarten\\UrlScanner\\": "src/"
+        }
+    },
+    "scripts": {
+        "analyse": "./vendor/bin/phpstan analyse -c ./phpstan.neon",
+        "test": "./vendor/bin/phpunit"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
