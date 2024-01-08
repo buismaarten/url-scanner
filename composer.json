@@ -1,6 +1,6 @@
 {
     "name": "buismaarten/url-scanner",
-    "description": "",
+    "description": "Lightweight library to detect URLs on websites.",
     "license": "MIT",
     "type": "library",
     "support": {
