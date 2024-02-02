@@ -119,11 +119,11 @@ class UtilsTest extends TestCase
     }
 
     #[DataProvider('validateHostProvider')]
-    public function testValidateHost(bool $expected, string $host): void
+    public function testValidateHost(bool $expected, string $url): void
     {
         $this->assertSame(
             expected: $expected,
-            actual: Utils::validateHost($host),
+            actual: Utils::validateHost($url),
         );
     }
 
@@ -146,11 +146,11 @@ class UtilsTest extends TestCase
     }
 
     #[DataProvider('normalizeHostProvider')]
-    public function testNormalizeHost(string $expected, string $host): void
+    public function testNormalizeHost(string $expected, string $url): void
     {
         $this->assertSame(
             expected: $expected,
-            actual: Utils::normalizeHost($host),
+            actual: Utils::normalizeHost($url),
         );
     }
 
