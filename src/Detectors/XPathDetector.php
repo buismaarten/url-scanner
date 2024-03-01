@@ -29,6 +29,7 @@ class XPathDetector implements DetectorInterface
             '//a[not(contains(@rel,"nofollow"))][@ping]' => 'ping',
             '//audio[@src]' => 'src',
             '//base[@href]' => 'href',
+            '//embed[@src]' => 'src',
             '//form[not(@method) or @method=""][@action]' => 'action',
             '//form[not(@method) or @method=""]//button[@formaction]' => 'formaction',
             '//form[not(@method) or @method=""]//input[@formaction]' => 'formaction',

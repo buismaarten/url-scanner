@@ -51,6 +51,12 @@ class XPathDetectorTest extends TestCase
             [
                 'expected' => [
                     'https://localhost/path',
+                ],
+                'content' => '<embed src="https://localhost/path">',
+            ],
+            [
+                'expected' => [
+                    'https://localhost/path',
                     'https://localhost/path',
                 ],
                 'content' => '<form action="https://localhost/path"></form><form action="https://localhost/path" method=""></form>',
